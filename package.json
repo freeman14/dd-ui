@@ -18,7 +18,7 @@
   "dependencies": {
     "angular": "1.5.5",
     "moment": "~2.15.1",
-    "ui-storybook": "0.0.8",
+    "ui-storybook": "0.0.9",
     "angular-date-range-picker": "https://github.com/freeman14/angular-date-range-picker.git"
   },
   "devDependencies": {
