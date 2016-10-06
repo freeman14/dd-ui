@@ -2,6 +2,7 @@
   "globalDependencies": {
     "angular": "registry:dt/angular#1.5.0+20160517064839",
     "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "moment": "registry:dt/moment#2.11.1+20160829143156",
     "source-map": "registry:dt/source-map#0.0.0+20160317120654",
     "uglify-js": "registry:dt/uglify-js#2.6.1+20160316155526"
   },
