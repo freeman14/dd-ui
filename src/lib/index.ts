@@ -1,6 +1,8 @@
 import * as angular from 'angular';
-const module: ng.IModule = angular.module('dd-ui', [
+import datePickerModule from './dateRangePicker/dateRangePicker.module';
 
+const module: ng.IModule = angular.module('dd-ui', [
+  datePickerModule,
 ]);
 
 export default module.name;
