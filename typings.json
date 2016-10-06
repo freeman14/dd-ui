@@ -1,6 +1,5 @@
 {
   "globalDependencies": {
-<<<<<<< HEAD
     "angular": "registry:dt/angular#1.5.0+20160517064839",
     "jquery": "registry:dt/jquery#1.10.0+20160417213236",
     "source-map": "registry:dt/source-map#0.0.0+20160317120654",
@@ -9,8 +8,5 @@
   "globalDevDependencies": {
     "angular-mocks": "registry:dt/angular-mocks#1.3.0+20160425155016",
     "jasmine": "registry:dt/jasmine#2.2.0+20160505161446"
-=======
-    "angular": "registry:dt/angular#1.5.0+20160922195358"
->>>>>>> b2ac93bb9fdddd137062e284167e69bac10f6061
   }
 }

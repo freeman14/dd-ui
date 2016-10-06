@@ -4,10 +4,4 @@
 node_modules
 .settings
 *.log
-<<<<<<< HEAD
 .idea
-=======
-.idea
-.editorconfig
-
->>>>>>> b2ac93bb9fdddd137062e284167e69bac10f6061
