@@ -1,8 +1,8 @@
 import * as angular from 'angular';
 import 'ui-storybook/helpers/ng';
-import components from './lib/index';
+import DDUI from './lib/index';
 
-angular.module('dd-ui', [
+angular.module('sb', [
     'helper',
-    components
+    DDUI
 ]);
