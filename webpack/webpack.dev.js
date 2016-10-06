@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: 'dist'
+        path: 'app'
     },
     resolve: {
         root: __dirname,
@@ -29,7 +29,7 @@ module.exports = {
             host: 'localhost',
             port: 8080,
             server: {
-                baseDir: 'dist'
+                baseDir: 'app'
             },
             ui: false,
             online: false,
