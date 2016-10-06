@@ -1,11 +1,15 @@
 var loaders = require("./loaders");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: ['./src/index.ts'],
+    entry: {
+        'dd-iu': ['./src/lib/index.ts'],
+        app: './src/index.ts',
+        stories: './src/stories',
+    },
     output: {
-        filename: 'build.js',
+        filename: '[name].js',
         path: 'dist'
     },
     devtool: 'source-map',
@@ -13,24 +17,20 @@ module.exports = {
         root: __dirname,
         extensions: ['', '.ts', '.js', '.json']
     },
+    externals: {
+        'angular': 'Angular'
+    },
     resolveLoader: {
         modulesDirectories: ["node_modules"]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(
-            {
-                warning: false,
-                mangle: true,
-                comments: false
-            }
-        )
-        // new HtmlWebpackPlugin({
-        //     template: './src/index.html',
-        //     inject: 'body',
-        //     hash: true
-        // })
+        new CopyWebpackPlugin([
+            { from: './src/preview.html', to: 'preview.html' },
+            { from: './src/index.html', to: 'index.html' }
+        ])
     ],
-    module:{
-        loaders: loaders
+    module: {
+        loaders: loaders,
+        noParse: [ "angular" ]
     }
 };
