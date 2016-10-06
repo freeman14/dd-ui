@@ -1,12 +1,12 @@
 var loaders = require("./loaders");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
+        'dd-iu': ['./src/lib/index.ts'],
         app: './src/index.ts',
         stories: './src/stories',
-        'dd-iu': './src/lib/index.ts'
     },
     output: {
         filename: '[name].js',
@@ -24,14 +24,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: './src/preview.html', to: 'preview.html' },
             { from: './src/index.html', to: 'index.html' }
-        ]),
-        new webpack.optimize.UglifyJsPlugin(
-            {
-                warning: false,
-                mangle: true,
-                comments: false
-            }
-        )
+        ])
     ],
     module: {
         loaders: loaders
