@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "module": "amd",
+        "target": "es5",
+        "inlineSourceMap": true
+    },
+    "exclude": [
+        // "node_modules"
+    ]
+}
