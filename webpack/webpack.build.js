@@ -17,6 +17,9 @@ module.exports = {
         root: __dirname,
         extensions: ['', '.ts', '.js', '.json']
     },
+    externals: {
+        'angular': 'Angular'
+    },
     resolveLoader: {
         modulesDirectories: ["node_modules"]
     },
@@ -27,6 +30,7 @@ module.exports = {
         ])
     ],
     module: {
-        loaders: loaders
+        loaders: loaders,
+        noParse: [ "angular" ]
     }
 };
