@@ -1,2 +1,2 @@
-require('./dist/dd-iu');
+require('./dist/dd-ui');
 module.exports = 'dd-ui';
