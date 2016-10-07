@@ -2,7 +2,7 @@
   "name": "dd-ui",
   "version": "0.0.1",
   "description": "DoubleDutch UI library",
-  "main": "/",
+  "main": "index.js",
   "scripts": {
     "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
     "test": "karma start --NODE_ENV=test",
