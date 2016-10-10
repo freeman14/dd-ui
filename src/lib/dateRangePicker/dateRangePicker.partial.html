@@ -4,9 +4,9 @@
     <div class="date-range-picker-date-btn-group"
          ng-class="{'date-range-picker-active-left': vm.selectedDate === vm.dateInputs.FIRST,
                     'date-range-picker-active-right': vm.selectedDate === vm.dateInputs.SECOND}">
-        <span class="date-range-picker-date date-range-picker-date-left" ng-bind="vm.startDate" ng-click="vm.onDateClick(vm.dateInputs.FIRST)"></span>
+        <span class="date-range-picker-date date-range-picker-date-left" ng-bind="vm.range.start.toDate() | date: 'MM/dd/yyyy'" ng-click="vm.onDateClick(vm.dateInputs.FIRST)"></span>
         <span>&rarr;</span>
-        <span class="date-range-picker-date date-range-picker-date-right" ng-bind="vm.endDate" ng-click="vm.onDateClick(vm.dateInputs.SECOND)"></span>
+        <span class="date-range-picker-date date-range-picker-date-right" ng-bind="vm.range.end.toDate() | date: 'MM/dd/yyyy'" ng-click="vm.onDateClick(vm.dateInputs.SECOND)"></span>
     </div>
     <div  ng-class="{'date-range-picker-popover-closed': !vm.opened}" class="date-range-picker-popover">
         <div class="date-range-picker-popover-arrow">

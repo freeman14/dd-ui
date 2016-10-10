@@ -6,7 +6,10 @@ export const DateRangePickerComponent: ng.IComponentOptions = {
   template: require('./dateRangePicker.partial.html'),
   transclude: true,
   bindings: {
-    title: '@titleText',
+    title: '@?titleText',
+    range: '<',
+    eventDurationRange: '<?eventRange',
+    api: '=?',
     onDateRangeChange: '&'
   }
 };
