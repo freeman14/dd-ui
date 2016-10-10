@@ -4,6 +4,8 @@ import * as angular from 'angular';
 import 'ui-storybook/sb';
 import 'ui-storybook/stories';
 import './dateRangePicker';
+import './tooltip';
+import './toggleButtons';
 
 let overview: stotybook.ISection = sb.section('Demo page');
 overview.story('Buttons')

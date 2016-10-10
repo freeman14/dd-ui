@@ -55,7 +55,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/// <reference path="../typings/index.d.ts" /> 
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(14)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, index_1) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(2), __webpack_require__(39), __webpack_require__(40)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, index_1) {
 	    "use strict";
 	    var mainModule = angular.module('sb', [
 	        'helper',
@@ -80,15 +80,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(3)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, dateRangePicker_module_1) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(3), __webpack_require__(13), __webpack_require__(36)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, dateRangePicker_module_1, tooltip_module_1, toggleButtons_module_1) {
 	    "use strict";
 	    var module = angular.module('dd-ui', [
 	        dateRangePicker_module_1.default,
+	        tooltip_module_1.default,
+	        toggleButtons_module_1.default
 	    ]);
 	    Object.defineProperty(exports, "__esModule", { value: true });
 	    exports.default = module.name;
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUdBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsT0FBTyxFQUFFO1FBQ2pELGdDQUFnQjtLQUNqQixDQUFDLENBQUM7SUFFSDtzQkFBZSxNQUFNLENBQUMsSUFBSSxDQUFDIn0=
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUtBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsT0FBTyxFQUFFO1FBQ2pELGdDQUFnQjtRQUNoQix3QkFBYTtRQUNiLDhCQUFtQjtLQUNwQixDQUFDLENBQUM7SUFFSDtzQkFBZSxNQUFNLENBQUMsSUFBSSxDQUFDIn0=
 
 /***/ },
 /* 3 */
@@ -601,18 +603,2642 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 13 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVjbGFyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRlY2xhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(14), __webpack_require__(15), __webpack_require__(16), __webpack_require__(18), __webpack_require__(32), __webpack_require__(34)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, tooltip_run_1, tooltip_config_1) {
+	    "use strict";
+	    var module = angular.module('ep.tooltip', [
+	        'ngSanitize',
+	        'ui.bootstrap.popover'
+	    ]);
+	    module.run(tooltip_run_1.default);
+	    module.config(tooltip_config_1.default);
+	    Object.defineProperty(exports, "__esModule", { value: true });
+	    exports.default = module.name;
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b29sdGlwLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQVVBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsWUFBWSxFQUFFO1FBQ3RELFlBQVk7UUFDWixzQkFBc0I7S0FDdkIsQ0FBQyxDQUFDO0lBRUgsTUFBTSxDQUFDLEdBQUcsQ0FBQyxxQkFBRyxDQUFDLENBQUM7SUFFaEIsTUFBTSxDQUFDLE1BQU0sQ0FBQyx3QkFBTSxDQUFDLENBQUM7SUFFdEI7c0JBQWUsTUFBTSxDQUFDLElBQUksQ0FBQyJ9
 
 /***/ },
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(15);
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports) {
+	    "use strict";
+	    // @ngInject
+	    runFunc.$inject = ["$templateCache"];
+	    function runFunc($templateCache) {
+	        $templateCache.put('uib/template/popover/popover-template.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\"\n\t\t\t\tuib-tooltip-template-transclude=\"contentExp()\"\n\t\t\t\ttooltip-template-transclude-scope=\"originScope()\">\n\t\t\t</div>\n\t\t</div>");
+	        $templateCache.put('uib/template/popover/popover.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\" ng-bind=\"content\"></div>\n\t\t</div>");
+	        $templateCache.put('uib/template/popover/popover-html.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\" ng-bind-html=\"contentExp()\"></div>\n\t\t</div>");
+	    }
+	    Object.defineProperty(exports, "__esModule", { value: true });
+	    exports.default = runFunc;
+	    ;
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5ydW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b29sdGlwLnJ1bi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUFBLFlBQVk7SUFDWixpQkFBZ0MsY0FBd0M7UUFFdEUsY0FBYyxDQUFDLEdBQUcsQ0FBQyw0Q0FBNEMsRUFDN0QseVVBT0ssQ0FDTixDQUFDO1FBRUYsY0FBYyxDQUFDLEdBQUcsQ0FBQyxtQ0FBbUMsRUFDcEQsOE5BSUssQ0FDTixDQUFDO1FBRUYsY0FBYyxDQUFDLEdBQUcsQ0FBQyx3Q0FBd0MsRUFDekQsd09BSUssQ0FDTixDQUFDO0lBQ0osQ0FBQztJQTVCRDs2QkE0QkMsQ0FBQTtJQUFBLENBQUMifQ==
 
 /***/ },
 /* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports) {
+	    "use strict";
+	    // @ngInject
+	    config.$inject = ["$uibTooltipProvider"];
+	    function config($uibTooltipProvider) {
+	        $uibTooltipProvider.options({
+	            animation: false,
+	            appendToBody: true,
+	            trigger: 'mouseenter'
+	        });
+	    }
+	    Object.defineProperty(exports, "__esModule", { value: true });
+	    exports.default = config;
+	    ;
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5jb25maWcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b29sdGlwLmNvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUFBLFlBQVk7SUFDWixnQkFBK0IsbUJBQXdCO1FBQ3JELG1CQUFtQixDQUFDLE9BQU8sQ0FBQztZQUMxQixTQUFTLEVBQUUsS0FBSztZQUNoQixZQUFZLEVBQUUsSUFBSTtZQUNsQixPQUFPLEVBQUUsWUFBWTtTQUN0QixDQUFDLENBQUM7SUFDTCxDQUFDO0lBTkQ7NEJBTUMsQ0FBQTtJQUFBLENBQUMifQ==
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(17);
+	module.exports = 'ngSanitize';
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license AngularJS v1.5.8
+	 * (c) 2010-2016 Google, Inc. http://angularjs.org
+	 * License: MIT
+	 */
+	(function(window, angular) {'use strict';
+
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *     Any commits to this file should be reviewed with security in mind.  *
+	 *   Changes to this file can potentially create security vulnerabilities. *
+	 *          An approval from 2 Core members with history of modifying      *
+	 *                         this file is required.                          *
+	 *                                                                         *
+	 *  Does the change somehow allow for arbitrary javascript to be executed? *
+	 *    Or allows for someone to change the prototype of built-in objects?   *
+	 *     Or gives undesired access to variables likes document or window?    *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+	var $sanitizeMinErr = angular.$$minErr('$sanitize');
+	var bind;
+	var extend;
+	var forEach;
+	var isDefined;
+	var lowercase;
+	var noop;
+	var htmlParser;
+	var htmlSanitizeWriter;
+
+	/**
+	 * @ngdoc module
+	 * @name ngSanitize
+	 * @description
+	 *
+	 * # ngSanitize
+	 *
+	 * The `ngSanitize` module provides functionality to sanitize HTML.
+	 *
+	 *
+	 * <div doc-module-components="ngSanitize"></div>
+	 *
+	 * See {@link ngSanitize.$sanitize `$sanitize`} for usage.
+	 */
+
+	/**
+	 * @ngdoc service
+	 * @name $sanitize
+	 * @kind function
+	 *
+	 * @description
+	 *   Sanitizes an html string by stripping all potentially dangerous tokens.
+	 *
+	 *   The input is sanitized by parsing the HTML into tokens. All safe tokens (from a whitelist) are
+	 *   then serialized back to properly escaped html string. This means that no unsafe input can make
+	 *   it into the returned string.
+	 *
+	 *   The whitelist for URL sanitization of attribute values is configured using the functions
+	 *   `aHrefSanitizationWhitelist` and `imgSrcSanitizationWhitelist` of {@link ng.$compileProvider
+	 *   `$compileProvider`}.
+	 *
+	 *   The input may also contain SVG markup if this is enabled via {@link $sanitizeProvider}.
+	 *
+	 * @param {string} html HTML input.
+	 * @returns {string} Sanitized HTML.
+	 *
+	 * @example
+	   <example module="sanitizeExample" deps="angular-sanitize.js">
+	   <file name="index.html">
+	     <script>
+	         angular.module('sanitizeExample', ['ngSanitize'])
+	           .controller('ExampleController', ['$scope', '$sce', function($scope, $sce) {
+	             $scope.snippet =
+	               '<p style="color:blue">an html\n' +
+	               '<em onmouseover="this.textContent=\'PWN3D!\'">click here</em>\n' +
+	               'snippet</p>';
+	             $scope.deliberatelyTrustDangerousSnippet = function() {
+	               return $sce.trustAsHtml($scope.snippet);
+	             };
+	           }]);
+	     </script>
+	     <div ng-controller="ExampleController">
+	        Snippet: <textarea ng-model="snippet" cols="60" rows="3"></textarea>
+	       <table>
+	         <tr>
+	           <td>Directive</td>
+	           <td>How</td>
+	           <td>Source</td>
+	           <td>Rendered</td>
+	         </tr>
+	         <tr id="bind-html-with-sanitize">
+	           <td>ng-bind-html</td>
+	           <td>Automatically uses $sanitize</td>
+	           <td><pre>&lt;div ng-bind-html="snippet"&gt;<br/>&lt;/div&gt;</pre></td>
+	           <td><div ng-bind-html="snippet"></div></td>
+	         </tr>
+	         <tr id="bind-html-with-trust">
+	           <td>ng-bind-html</td>
+	           <td>Bypass $sanitize by explicitly trusting the dangerous value</td>
+	           <td>
+	           <pre>&lt;div ng-bind-html="deliberatelyTrustDangerousSnippet()"&gt;
+	&lt;/div&gt;</pre>
+	           </td>
+	           <td><div ng-bind-html="deliberatelyTrustDangerousSnippet()"></div></td>
+	         </tr>
+	         <tr id="bind-default">
+	           <td>ng-bind</td>
+	           <td>Automatically escapes</td>
+	           <td><pre>&lt;div ng-bind="snippet"&gt;<br/>&lt;/div&gt;</pre></td>
+	           <td><div ng-bind="snippet"></div></td>
+	         </tr>
+	       </table>
+	       </div>
+	   </file>
+	   <file name="protractor.js" type="protractor">
+	     it('should sanitize the html snippet by default', function() {
+	       expect(element(by.css('#bind-html-with-sanitize div')).getInnerHtml()).
+	         toBe('<p>an html\n<em>click here</em>\nsnippet</p>');
+	     });
+
+	     it('should inline raw snippet if bound to a trusted value', function() {
+	       expect(element(by.css('#bind-html-with-trust div')).getInnerHtml()).
+	         toBe("<p style=\"color:blue\">an html\n" +
+	              "<em onmouseover=\"this.textContent='PWN3D!'\">click here</em>\n" +
+	              "snippet</p>");
+	     });
+
+	     it('should escape snippet without any filter', function() {
+	       expect(element(by.css('#bind-default div')).getInnerHtml()).
+	         toBe("&lt;p style=\"color:blue\"&gt;an html\n" +
+	              "&lt;em onmouseover=\"this.textContent='PWN3D!'\"&gt;click here&lt;/em&gt;\n" +
+	              "snippet&lt;/p&gt;");
+	     });
+
+	     it('should update', function() {
+	       element(by.model('snippet')).clear();
+	       element(by.model('snippet')).sendKeys('new <b onclick="alert(1)">text</b>');
+	       expect(element(by.css('#bind-html-with-sanitize div')).getInnerHtml()).
+	         toBe('new <b>text</b>');
+	       expect(element(by.css('#bind-html-with-trust div')).getInnerHtml()).toBe(
+	         'new <b onclick="alert(1)">text</b>');
+	       expect(element(by.css('#bind-default div')).getInnerHtml()).toBe(
+	         "new &lt;b onclick=\"alert(1)\"&gt;text&lt;/b&gt;");
+	     });
+	   </file>
+	   </example>
+	 */
+
+
+	/**
+	 * @ngdoc provider
+	 * @name $sanitizeProvider
+	 *
+	 * @description
+	 * Creates and configures {@link $sanitize} instance.
+	 */
+	function $SanitizeProvider() {
+	  var svgEnabled = false;
+
+	  this.$get = ['$$sanitizeUri', function($$sanitizeUri) {
+	    if (svgEnabled) {
+	      extend(validElements, svgElements);
+	    }
+	    return function(html) {
+	      var buf = [];
+	      htmlParser(html, htmlSanitizeWriter(buf, function(uri, isImage) {
+	        return !/^unsafe:/.test($$sanitizeUri(uri, isImage));
+	      }));
+	      return buf.join('');
+	    };
+	  }];
+
+
+	  /**
+	   * @ngdoc method
+	   * @name $sanitizeProvider#enableSvg
+	   * @kind function
+	   *
+	   * @description
+	   * Enables a subset of svg to be supported by the sanitizer.
+	   *
+	   * <div class="alert alert-warning">
+	   *   <p>By enabling this setting without taking other precautions, you might expose your
+	   *   application to click-hijacking attacks. In these attacks, sanitized svg elements could be positioned
+	   *   outside of the containing element and be rendered over other elements on the page (e.g. a login
+	   *   link). Such behavior can then result in phishing incidents.</p>
+	   *
+	   *   <p>To protect against these, explicitly setup `overflow: hidden` css rule for all potential svg
+	   *   tags within the sanitized content:</p>
+	   *
+	   *   <br>
+	   *
+	   *   <pre><code>
+	   *   .rootOfTheIncludedContent svg {
+	   *     overflow: hidden !important;
+	   *   }
+	   *   </code></pre>
+	   * </div>
+	   *
+	   * @param {boolean=} flag Enable or disable SVG support in the sanitizer.
+	   * @returns {boolean|ng.$sanitizeProvider} Returns the currently configured value if called
+	   *    without an argument or self for chaining otherwise.
+	   */
+	  this.enableSvg = function(enableSvg) {
+	    if (isDefined(enableSvg)) {
+	      svgEnabled = enableSvg;
+	      return this;
+	    } else {
+	      return svgEnabled;
+	    }
+	  };
+
+	  //////////////////////////////////////////////////////////////////////////////////////////////////
+	  // Private stuff
+	  //////////////////////////////////////////////////////////////////////////////////////////////////
+
+	  bind = angular.bind;
+	  extend = angular.extend;
+	  forEach = angular.forEach;
+	  isDefined = angular.isDefined;
+	  lowercase = angular.lowercase;
+	  noop = angular.noop;
+
+	  htmlParser = htmlParserImpl;
+	  htmlSanitizeWriter = htmlSanitizeWriterImpl;
+
+	  // Regular Expressions for parsing tags and attributes
+	  var SURROGATE_PAIR_REGEXP = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g,
+	    // Match everything outside of normal chars and " (quote character)
+	    NON_ALPHANUMERIC_REGEXP = /([^\#-~ |!])/g;
+
+
+	  // Good source of info about elements and attributes
+	  // http://dev.w3.org/html5/spec/Overview.html#semantics
+	  // http://simon.html5.org/html-elements
+
+	  // Safe Void Elements - HTML5
+	  // http://dev.w3.org/html5/spec/Overview.html#void-elements
+	  var voidElements = toMap("area,br,col,hr,img,wbr");
+
+	  // Elements that you can, intentionally, leave open (and which close themselves)
+	  // http://dev.w3.org/html5/spec/Overview.html#optional-tags
+	  var optionalEndTagBlockElements = toMap("colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr"),
+	      optionalEndTagInlineElements = toMap("rp,rt"),
+	      optionalEndTagElements = extend({},
+	                                              optionalEndTagInlineElements,
+	                                              optionalEndTagBlockElements);
+
+	  // Safe Block Elements - HTML5
+	  var blockElements = extend({}, optionalEndTagBlockElements, toMap("address,article," +
+	          "aside,blockquote,caption,center,del,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5," +
+	          "h6,header,hgroup,hr,ins,map,menu,nav,ol,pre,section,table,ul"));
+
+	  // Inline Elements - HTML5
+	  var inlineElements = extend({}, optionalEndTagInlineElements, toMap("a,abbr,acronym,b," +
+	          "bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,q,ruby,rp,rt,s," +
+	          "samp,small,span,strike,strong,sub,sup,time,tt,u,var"));
+
+	  // SVG Elements
+	  // https://wiki.whatwg.org/wiki/Sanitization_rules#svg_Elements
+	  // Note: the elements animate,animateColor,animateMotion,animateTransform,set are intentionally omitted.
+	  // They can potentially allow for arbitrary javascript to be executed. See #11290
+	  var svgElements = toMap("circle,defs,desc,ellipse,font-face,font-face-name,font-face-src,g,glyph," +
+	          "hkern,image,linearGradient,line,marker,metadata,missing-glyph,mpath,path,polygon,polyline," +
+	          "radialGradient,rect,stop,svg,switch,text,title,tspan");
+
+	  // Blocked Elements (will be stripped)
+	  var blockedElements = toMap("script,style");
+
+	  var validElements = extend({},
+	                                     voidElements,
+	                                     blockElements,
+	                                     inlineElements,
+	                                     optionalEndTagElements);
+
+	  //Attributes that have href and hence need to be sanitized
+	  var uriAttrs = toMap("background,cite,href,longdesc,src,xlink:href");
+
+	  var htmlAttrs = toMap('abbr,align,alt,axis,bgcolor,border,cellpadding,cellspacing,class,clear,' +
+	      'color,cols,colspan,compact,coords,dir,face,headers,height,hreflang,hspace,' +
+	      'ismap,lang,language,nohref,nowrap,rel,rev,rows,rowspan,rules,' +
+	      'scope,scrolling,shape,size,span,start,summary,tabindex,target,title,type,' +
+	      'valign,value,vspace,width');
+
+	  // SVG attributes (without "id" and "name" attributes)
+	  // https://wiki.whatwg.org/wiki/Sanitization_rules#svg_Attributes
+	  var svgAttrs = toMap('accent-height,accumulate,additive,alphabetic,arabic-form,ascent,' +
+	      'baseProfile,bbox,begin,by,calcMode,cap-height,class,color,color-rendering,content,' +
+	      'cx,cy,d,dx,dy,descent,display,dur,end,fill,fill-rule,font-family,font-size,font-stretch,' +
+	      'font-style,font-variant,font-weight,from,fx,fy,g1,g2,glyph-name,gradientUnits,hanging,' +
+	      'height,horiz-adv-x,horiz-origin-x,ideographic,k,keyPoints,keySplines,keyTimes,lang,' +
+	      'marker-end,marker-mid,marker-start,markerHeight,markerUnits,markerWidth,mathematical,' +
+	      'max,min,offset,opacity,orient,origin,overline-position,overline-thickness,panose-1,' +
+	      'path,pathLength,points,preserveAspectRatio,r,refX,refY,repeatCount,repeatDur,' +
+	      'requiredExtensions,requiredFeatures,restart,rotate,rx,ry,slope,stemh,stemv,stop-color,' +
+	      'stop-opacity,strikethrough-position,strikethrough-thickness,stroke,stroke-dasharray,' +
+	      'stroke-dashoffset,stroke-linecap,stroke-linejoin,stroke-miterlimit,stroke-opacity,' +
+	      'stroke-width,systemLanguage,target,text-anchor,to,transform,type,u1,u2,underline-position,' +
+	      'underline-thickness,unicode,unicode-range,units-per-em,values,version,viewBox,visibility,' +
+	      'width,widths,x,x-height,x1,x2,xlink:actuate,xlink:arcrole,xlink:role,xlink:show,xlink:title,' +
+	      'xlink:type,xml:base,xml:lang,xml:space,xmlns,xmlns:xlink,y,y1,y2,zoomAndPan', true);
+
+	  var validAttrs = extend({},
+	                                  uriAttrs,
+	                                  svgAttrs,
+	                                  htmlAttrs);
+
+	  function toMap(str, lowercaseKeys) {
+	    var obj = {}, items = str.split(','), i;
+	    for (i = 0; i < items.length; i++) {
+	      obj[lowercaseKeys ? lowercase(items[i]) : items[i]] = true;
+	    }
+	    return obj;
+	  }
+
+	  var inertBodyElement;
+	  (function(window) {
+	    var doc;
+	    if (window.document && window.document.implementation) {
+	      doc = window.document.implementation.createHTMLDocument("inert");
+	    } else {
+	      throw $sanitizeMinErr('noinert', "Can't create an inert html document");
+	    }
+	    var docElement = doc.documentElement || doc.getDocumentElement();
+	    var bodyElements = docElement.getElementsByTagName('body');
+
+	    // usually there should be only one body element in the document, but IE doesn't have any, so we need to create one
+	    if (bodyElements.length === 1) {
+	      inertBodyElement = bodyElements[0];
+	    } else {
+	      var html = doc.createElement('html');
+	      inertBodyElement = doc.createElement('body');
+	      html.appendChild(inertBodyElement);
+	      doc.appendChild(html);
+	    }
+	  })(window);
+
+	  /**
+	   * @example
+	   * htmlParser(htmlString, {
+	   *     start: function(tag, attrs) {},
+	   *     end: function(tag) {},
+	   *     chars: function(text) {},
+	   *     comment: function(text) {}
+	   * });
+	   *
+	   * @param {string} html string
+	   * @param {object} handler
+	   */
+	  function htmlParserImpl(html, handler) {
+	    if (html === null || html === undefined) {
+	      html = '';
+	    } else if (typeof html !== 'string') {
+	      html = '' + html;
+	    }
+	    inertBodyElement.innerHTML = html;
+
+	    //mXSS protection
+	    var mXSSAttempts = 5;
+	    do {
+	      if (mXSSAttempts === 0) {
+	        throw $sanitizeMinErr('uinput', "Failed to sanitize html because the input is unstable");
+	      }
+	      mXSSAttempts--;
+
+	      // strip custom-namespaced attributes on IE<=11
+	      if (window.document.documentMode) {
+	        stripCustomNsAttrs(inertBodyElement);
+	      }
+	      html = inertBodyElement.innerHTML; //trigger mXSS
+	      inertBodyElement.innerHTML = html;
+	    } while (html !== inertBodyElement.innerHTML);
+
+	    var node = inertBodyElement.firstChild;
+	    while (node) {
+	      switch (node.nodeType) {
+	        case 1: // ELEMENT_NODE
+	          handler.start(node.nodeName.toLowerCase(), attrToMap(node.attributes));
+	          break;
+	        case 3: // TEXT NODE
+	          handler.chars(node.textContent);
+	          break;
+	      }
+
+	      var nextNode;
+	      if (!(nextNode = node.firstChild)) {
+	      if (node.nodeType == 1) {
+	          handler.end(node.nodeName.toLowerCase());
+	        }
+	        nextNode = node.nextSibling;
+	        if (!nextNode) {
+	          while (nextNode == null) {
+	            node = node.parentNode;
+	            if (node === inertBodyElement) break;
+	            nextNode = node.nextSibling;
+	          if (node.nodeType == 1) {
+	              handler.end(node.nodeName.toLowerCase());
+	            }
+	          }
+	        }
+	      }
+	      node = nextNode;
+	    }
+
+	    while (node = inertBodyElement.firstChild) {
+	      inertBodyElement.removeChild(node);
+	    }
+	  }
+
+	  function attrToMap(attrs) {
+	    var map = {};
+	    for (var i = 0, ii = attrs.length; i < ii; i++) {
+	      var attr = attrs[i];
+	      map[attr.name] = attr.value;
+	    }
+	    return map;
+	  }
+
+
+	  /**
+	   * Escapes all potentially dangerous characters, so that the
+	   * resulting string can be safely inserted into attribute or
+	   * element text.
+	   * @param value
+	   * @returns {string} escaped text
+	   */
+	  function encodeEntities(value) {
+	    return value.
+	      replace(/&/g, '&amp;').
+	      replace(SURROGATE_PAIR_REGEXP, function(value) {
+	        var hi = value.charCodeAt(0);
+	        var low = value.charCodeAt(1);
+	        return '&#' + (((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000) + ';';
+	      }).
+	      replace(NON_ALPHANUMERIC_REGEXP, function(value) {
+	        return '&#' + value.charCodeAt(0) + ';';
+	      }).
+	      replace(/</g, '&lt;').
+	      replace(/>/g, '&gt;');
+	  }
+
+	  /**
+	   * create an HTML/XML writer which writes to buffer
+	   * @param {Array} buf use buf.join('') to get out sanitized html string
+	   * @returns {object} in the form of {
+	   *     start: function(tag, attrs) {},
+	   *     end: function(tag) {},
+	   *     chars: function(text) {},
+	   *     comment: function(text) {}
+	   * }
+	   */
+	  function htmlSanitizeWriterImpl(buf, uriValidator) {
+	    var ignoreCurrentElement = false;
+	    var out = bind(buf, buf.push);
+	    return {
+	      start: function(tag, attrs) {
+	        tag = lowercase(tag);
+	        if (!ignoreCurrentElement && blockedElements[tag]) {
+	          ignoreCurrentElement = tag;
+	        }
+	        if (!ignoreCurrentElement && validElements[tag] === true) {
+	          out('<');
+	          out(tag);
+	          forEach(attrs, function(value, key) {
+	            var lkey = lowercase(key);
+	            var isImage = (tag === 'img' && lkey === 'src') || (lkey === 'background');
+	            if (validAttrs[lkey] === true &&
+	              (uriAttrs[lkey] !== true || uriValidator(value, isImage))) {
+	              out(' ');
+	              out(key);
+	              out('="');
+	              out(encodeEntities(value));
+	              out('"');
+	            }
+	          });
+	          out('>');
+	        }
+	      },
+	      end: function(tag) {
+	        tag = lowercase(tag);
+	        if (!ignoreCurrentElement && validElements[tag] === true && voidElements[tag] !== true) {
+	          out('</');
+	          out(tag);
+	          out('>');
+	        }
+	        if (tag == ignoreCurrentElement) {
+	          ignoreCurrentElement = false;
+	        }
+	      },
+	      chars: function(chars) {
+	        if (!ignoreCurrentElement) {
+	          out(encodeEntities(chars));
+	        }
+	      }
+	    };
+	  }
+
+
+	  /**
+	   * When IE9-11 comes across an unknown namespaced attribute e.g. 'xlink:foo' it adds 'xmlns:ns1' attribute to declare
+	   * ns1 namespace and prefixes the attribute with 'ns1' (e.g. 'ns1:xlink:foo'). This is undesirable since we don't want
+	   * to allow any of these custom attributes. This method strips them all.
+	   *
+	   * @param node Root element to process
+	   */
+	  function stripCustomNsAttrs(node) {
+	    if (node.nodeType === window.Node.ELEMENT_NODE) {
+	      var attrs = node.attributes;
+	      for (var i = 0, l = attrs.length; i < l; i++) {
+	        var attrNode = attrs[i];
+	        var attrName = attrNode.name.toLowerCase();
+	        if (attrName === 'xmlns:ns1' || attrName.lastIndexOf('ns1:', 0) === 0) {
+	          node.removeAttributeNode(attrNode);
+	          i--;
+	          l--;
+	        }
+	      }
+	    }
+
+	    var nextNode = node.firstChild;
+	    if (nextNode) {
+	      stripCustomNsAttrs(nextNode);
+	    }
+
+	    nextNode = node.nextSibling;
+	    if (nextNode) {
+	      stripCustomNsAttrs(nextNode);
+	    }
+	  }
+	}
+
+	function sanitizeText(chars) {
+	  var buf = [];
+	  var writer = htmlSanitizeWriter(buf, noop);
+	  writer.chars(chars);
+	  return buf.join('');
+	}
+
+
+	// define ngSanitize module and register $sanitize service
+	angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
+
+	/**
+	 * @ngdoc filter
+	 * @name linky
+	 * @kind function
+	 *
+	 * @description
+	 * Finds links in text input and turns them into html links. Supports `http/https/ftp/mailto` and
+	 * plain email address links.
+	 *
+	 * Requires the {@link ngSanitize `ngSanitize`} module to be installed.
+	 *
+	 * @param {string} text Input text.
+	 * @param {string} target Window (`_blank|_self|_parent|_top`) or named frame to open links in.
+	 * @param {object|function(url)} [attributes] Add custom attributes to the link element.
+	 *
+	 *    Can be one of:
+	 *
+	 *    - `object`: A map of attributes
+	 *    - `function`: Takes the url as a parameter and returns a map of attributes
+	 *
+	 *    If the map of attributes contains a value for `target`, it overrides the value of
+	 *    the target parameter.
+	 *
+	 *
+	 * @returns {string} Html-linkified and {@link $sanitize sanitized} text.
+	 *
+	 * @usage
+	   <span ng-bind-html="linky_expression | linky"></span>
+	 *
+	 * @example
+	   <example module="linkyExample" deps="angular-sanitize.js">
+	     <file name="index.html">
+	       <div ng-controller="ExampleController">
+	       Snippet: <textarea ng-model="snippet" cols="60" rows="3"></textarea>
+	       <table>
+	         <tr>
+	           <th>Filter</th>
+	           <th>Source</th>
+	           <th>Rendered</th>
+	         </tr>
+	         <tr id="linky-filter">
+	           <td>linky filter</td>
+	           <td>
+	             <pre>&lt;div ng-bind-html="snippet | linky"&gt;<br>&lt;/div&gt;</pre>
+	           </td>
+	           <td>
+	             <div ng-bind-html="snippet | linky"></div>
+	           </td>
+	         </tr>
+	         <tr id="linky-target">
+	          <td>linky target</td>
+	          <td>
+	            <pre>&lt;div ng-bind-html="snippetWithSingleURL | linky:'_blank'"&gt;<br>&lt;/div&gt;</pre>
+	          </td>
+	          <td>
+	            <div ng-bind-html="snippetWithSingleURL | linky:'_blank'"></div>
+	          </td>
+	         </tr>
+	         <tr id="linky-custom-attributes">
+	          <td>linky custom attributes</td>
+	          <td>
+	            <pre>&lt;div ng-bind-html="snippetWithSingleURL | linky:'_self':{rel: 'nofollow'}"&gt;<br>&lt;/div&gt;</pre>
+	          </td>
+	          <td>
+	            <div ng-bind-html="snippetWithSingleURL | linky:'_self':{rel: 'nofollow'}"></div>
+	          </td>
+	         </tr>
+	         <tr id="escaped-html">
+	           <td>no filter</td>
+	           <td><pre>&lt;div ng-bind="snippet"&gt;<br>&lt;/div&gt;</pre></td>
+	           <td><div ng-bind="snippet"></div></td>
+	         </tr>
+	       </table>
+	     </file>
+	     <file name="script.js">
+	       angular.module('linkyExample', ['ngSanitize'])
+	         .controller('ExampleController', ['$scope', function($scope) {
+	           $scope.snippet =
+	             'Pretty text with some links:\n'+
+	             'http://angularjs.org/,\n'+
+	             'mailto:us@somewhere.org,\n'+
+	             'another@somewhere.org,\n'+
+	             'and one more: ftp://127.0.0.1/.';
+	           $scope.snippetWithSingleURL = 'http://angularjs.org/';
+	         }]);
+	     </file>
+	     <file name="protractor.js" type="protractor">
+	       it('should linkify the snippet with urls', function() {
+	         expect(element(by.id('linky-filter')).element(by.binding('snippet | linky')).getText()).
+	             toBe('Pretty text with some links: http://angularjs.org/, us@somewhere.org, ' +
+	                  'another@somewhere.org, and one more: ftp://127.0.0.1/.');
+	         expect(element.all(by.css('#linky-filter a')).count()).toEqual(4);
+	       });
+
+	       it('should not linkify snippet without the linky filter', function() {
+	         expect(element(by.id('escaped-html')).element(by.binding('snippet')).getText()).
+	             toBe('Pretty text with some links: http://angularjs.org/, mailto:us@somewhere.org, ' +
+	                  'another@somewhere.org, and one more: ftp://127.0.0.1/.');
+	         expect(element.all(by.css('#escaped-html a')).count()).toEqual(0);
+	       });
+
+	       it('should update', function() {
+	         element(by.model('snippet')).clear();
+	         element(by.model('snippet')).sendKeys('new http://link.');
+	         expect(element(by.id('linky-filter')).element(by.binding('snippet | linky')).getText()).
+	             toBe('new http://link.');
+	         expect(element.all(by.css('#linky-filter a')).count()).toEqual(1);
+	         expect(element(by.id('escaped-html')).element(by.binding('snippet')).getText())
+	             .toBe('new http://link.');
+	       });
+
+	       it('should work with the target property', function() {
+	        expect(element(by.id('linky-target')).
+	            element(by.binding("snippetWithSingleURL | linky:'_blank'")).getText()).
+	            toBe('http://angularjs.org/');
+	        expect(element(by.css('#linky-target a')).getAttribute('target')).toEqual('_blank');
+	       });
+
+	       it('should optionally add custom attributes', function() {
+	        expect(element(by.id('linky-custom-attributes')).
+	            element(by.binding("snippetWithSingleURL | linky:'_self':{rel: 'nofollow'}")).getText()).
+	            toBe('http://angularjs.org/');
+	        expect(element(by.css('#linky-custom-attributes a')).getAttribute('rel')).toEqual('nofollow');
+	       });
+	     </file>
+	   </example>
+	 */
+	angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
+	  var LINKY_URL_REGEXP =
+	        /((ftp|https?):\/\/|(www\.)|(mailto:)?[A-Za-z0-9._%+-]+@)\S*[^\s.;,(){}<>"\u201d\u2019]/i,
+	      MAILTO_REGEXP = /^mailto:/i;
+
+	  var linkyMinErr = angular.$$minErr('linky');
+	  var isDefined = angular.isDefined;
+	  var isFunction = angular.isFunction;
+	  var isObject = angular.isObject;
+	  var isString = angular.isString;
+
+	  return function(text, target, attributes) {
+	    if (text == null || text === '') return text;
+	    if (!isString(text)) throw linkyMinErr('notstring', 'Expected string but received: {0}', text);
+
+	    var attributesFn =
+	      isFunction(attributes) ? attributes :
+	      isObject(attributes) ? function getAttributesObject() {return attributes;} :
+	      function getEmptyAttributesObject() {return {};};
+
+	    var match;
+	    var raw = text;
+	    var html = [];
+	    var url;
+	    var i;
+	    while ((match = raw.match(LINKY_URL_REGEXP))) {
+	      // We can not end in these as they are sometimes found at the end of the sentence
+	      url = match[0];
+	      // if we did not match ftp/http/www/mailto then assume mailto
+	      if (!match[2] && !match[4]) {
+	        url = (match[3] ? 'http://' : 'mailto:') + url;
+	      }
+	      i = match.index;
+	      addText(raw.substr(0, i));
+	      addLink(url, match[0].replace(MAILTO_REGEXP, ''));
+	      raw = raw.substring(i + match[0].length);
+	    }
+	    addText(raw);
+	    return $sanitize(html.join(''));
+
+	    function addText(text) {
+	      if (!text) {
+	        return;
+	      }
+	      html.push(sanitizeText(text));
+	    }
+
+	    function addLink(url, text) {
+	      var key, linkAttributes = attributesFn(url);
+	      html.push('<a ');
+
+	      for (key in linkAttributes) {
+	        html.push(key + '="' + linkAttributes[key] + '" ');
+	      }
+
+	      if (isDefined(target) && !('target' in linkAttributes)) {
+	        html.push('target="',
+	                  target,
+	                  '" ');
+	      }
+	      html.push('href="',
+	                url.replace(/"/g, '&quot;'),
+	                '">');
+	      addText(text);
+	      html.push('</a>');
+	    }
+	  };
+	}]);
+
+
+	})(window, window.angular);
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(19);
+	__webpack_require__(28);
+	__webpack_require__(29);
+	__webpack_require__(30);
+	__webpack_require__(31);
+
+	var MODULE_NAME = 'ui.bootstrap.module.popover';
+
+	angular.module(MODULE_NAME, ['ui.bootstrap.popover', 'uib/template/popover/popover.html', 'uib/template/popover/popover-html.html', 'uib/template/popover/popover-template.html']);
+
+	module.exports = MODULE_NAME;
+
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(20);
+	__webpack_require__(22);
+	__webpack_require__(24);
+	__webpack_require__(25);
+	__webpack_require__(26);
+	__webpack_require__(27);
+
+	var MODULE_NAME = 'ui.bootstrap.module.tooltip';
+
+	angular.module(MODULE_NAME, ['ui.bootstrap.tooltip', 'uib/template/tooltip/tooltip-popup.html', 'uib/template/tooltip/tooltip-html-popup.html', 'uib/template/tooltip/tooltip-template-popup.html']);
+
+	module.exports = MODULE_NAME;
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(21);
+
+	var MODULE_NAME = 'ui.bootstrap.module.position';
+
+	angular.module(MODULE_NAME, ['ui.bootstrap.position']);
+
+	module.exports = MODULE_NAME;
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	angular.module('ui.bootstrap.position', [])
+
+	/**
+	 * A set of utility methods for working with the DOM.
+	 * It is meant to be used where we need to absolute-position elements in
+	 * relation to another element (this is the case for tooltips, popovers,
+	 * typeahead suggestions etc.).
+	 */
+	  .factory('$uibPosition', ['$document', '$window', function($document, $window) {
+	    /**
+	     * Used by scrollbarWidth() function to cache scrollbar's width.
+	     * Do not access this variable directly, use scrollbarWidth() instead.
+	     */
+	    var SCROLLBAR_WIDTH;
+	    /**
+	     * scrollbar on body and html element in IE and Edge overlay
+	     * content and should be considered 0 width.
+	     */
+	    var BODY_SCROLLBAR_WIDTH;
+	    var OVERFLOW_REGEX = {
+	      normal: /(auto|scroll)/,
+	      hidden: /(auto|scroll|hidden)/
+	    };
+	    var PLACEMENT_REGEX = {
+	      auto: /\s?auto?\s?/i,
+	      primary: /^(top|bottom|left|right)$/,
+	      secondary: /^(top|bottom|left|right|center)$/,
+	      vertical: /^(top|bottom)$/
+	    };
+	    var BODY_REGEX = /(HTML|BODY)/;
+
+	    return {
+
+	      /**
+	       * Provides a raw DOM element from a jQuery/jQLite element.
+	       *
+	       * @param {element} elem - The element to convert.
+	       *
+	       * @returns {element} A HTML element.
+	       */
+	      getRawNode: function(elem) {
+	        return elem.nodeName ? elem : elem[0] || elem;
+	      },
+
+	      /**
+	       * Provides a parsed number for a style property.  Strips
+	       * units and casts invalid numbers to 0.
+	       *
+	       * @param {string} value - The style value to parse.
+	       *
+	       * @returns {number} A valid number.
+	       */
+	      parseStyle: function(value) {
+	        value = parseFloat(value);
+	        return isFinite(value) ? value : 0;
+	      },
+
+	      /**
+	       * Provides the closest positioned ancestor.
+	       *
+	       * @param {element} element - The element to get the offest parent for.
+	       *
+	       * @returns {element} The closest positioned ancestor.
+	       */
+	      offsetParent: function(elem) {
+	        elem = this.getRawNode(elem);
+
+	        var offsetParent = elem.offsetParent || $document[0].documentElement;
+
+	        function isStaticPositioned(el) {
+	          return ($window.getComputedStyle(el).position || 'static') === 'static';
+	        }
+
+	        while (offsetParent && offsetParent !== $document[0].documentElement && isStaticPositioned(offsetParent)) {
+	          offsetParent = offsetParent.offsetParent;
+	        }
+
+	        return offsetParent || $document[0].documentElement;
+	      },
+
+	      /**
+	       * Provides the scrollbar width, concept from TWBS measureScrollbar()
+	       * function in https://github.com/twbs/bootstrap/blob/master/js/modal.js
+	       * In IE and Edge, scollbar on body and html element overlay and should
+	       * return a width of 0.
+	       *
+	       * @returns {number} The width of the browser scollbar.
+	       */
+	      scrollbarWidth: function(isBody) {
+	        if (isBody) {
+	          if (angular.isUndefined(BODY_SCROLLBAR_WIDTH)) {
+	            var bodyElem = $document.find('body');
+	            bodyElem.addClass('uib-position-body-scrollbar-measure');
+	            BODY_SCROLLBAR_WIDTH = $window.innerWidth - bodyElem[0].clientWidth;
+	            BODY_SCROLLBAR_WIDTH = isFinite(BODY_SCROLLBAR_WIDTH) ? BODY_SCROLLBAR_WIDTH : 0;
+	            bodyElem.removeClass('uib-position-body-scrollbar-measure');
+	          }
+	          return BODY_SCROLLBAR_WIDTH;
+	        }
+
+	        if (angular.isUndefined(SCROLLBAR_WIDTH)) {
+	          var scrollElem = angular.element('<div class="uib-position-scrollbar-measure"></div>');
+	          $document.find('body').append(scrollElem);
+	          SCROLLBAR_WIDTH = scrollElem[0].offsetWidth - scrollElem[0].clientWidth;
+	          SCROLLBAR_WIDTH = isFinite(SCROLLBAR_WIDTH) ? SCROLLBAR_WIDTH : 0;
+	          scrollElem.remove();
+	        }
+
+	        return SCROLLBAR_WIDTH;
+	      },
+
+	      /**
+	       * Provides the padding required on an element to replace the scrollbar.
+	       *
+	       * @returns {object} An object with the following properties:
+	       *   <ul>
+	       *     <li>**scrollbarWidth**: the width of the scrollbar</li>
+	       *     <li>**widthOverflow**: whether the the width is overflowing</li>
+	       *     <li>**right**: the amount of right padding on the element needed to replace the scrollbar</li>
+	       *     <li>**rightOriginal**: the amount of right padding currently on the element</li>
+	       *     <li>**heightOverflow**: whether the the height is overflowing</li>
+	       *     <li>**bottom**: the amount of bottom padding on the element needed to replace the scrollbar</li>
+	       *     <li>**bottomOriginal**: the amount of bottom padding currently on the element</li>
+	       *   </ul>
+	       */
+	      scrollbarPadding: function(elem) {
+	        elem = this.getRawNode(elem);
+
+	        var elemStyle = $window.getComputedStyle(elem);
+	        var paddingRight = this.parseStyle(elemStyle.paddingRight);
+	        var paddingBottom = this.parseStyle(elemStyle.paddingBottom);
+	        var scrollParent = this.scrollParent(elem, false, true);
+	        var scrollbarWidth = this.scrollbarWidth(scrollParent, BODY_REGEX.test(scrollParent.tagName));
+
+	        return {
+	          scrollbarWidth: scrollbarWidth,
+	          widthOverflow: scrollParent.scrollWidth > scrollParent.clientWidth,
+	          right: paddingRight + scrollbarWidth,
+	          originalRight: paddingRight,
+	          heightOverflow: scrollParent.scrollHeight > scrollParent.clientHeight,
+	          bottom: paddingBottom + scrollbarWidth,
+	          originalBottom: paddingBottom
+	         };
+	      },
+
+	      /**
+	       * Checks to see if the element is scrollable.
+	       *
+	       * @param {element} elem - The element to check.
+	       * @param {boolean=} [includeHidden=false] - Should scroll style of 'hidden' be considered,
+	       *   default is false.
+	       *
+	       * @returns {boolean} Whether the element is scrollable.
+	       */
+	      isScrollable: function(elem, includeHidden) {
+	        elem = this.getRawNode(elem);
+
+	        var overflowRegex = includeHidden ? OVERFLOW_REGEX.hidden : OVERFLOW_REGEX.normal;
+	        var elemStyle = $window.getComputedStyle(elem);
+	        return overflowRegex.test(elemStyle.overflow + elemStyle.overflowY + elemStyle.overflowX);
+	      },
+
+	      /**
+	       * Provides the closest scrollable ancestor.
+	       * A port of the jQuery UI scrollParent method:
+	       * https://github.com/jquery/jquery-ui/blob/master/ui/scroll-parent.js
+	       *
+	       * @param {element} elem - The element to find the scroll parent of.
+	       * @param {boolean=} [includeHidden=false] - Should scroll style of 'hidden' be considered,
+	       *   default is false.
+	       * @param {boolean=} [includeSelf=false] - Should the element being passed be
+	       * included in the scrollable llokup.
+	       *
+	       * @returns {element} A HTML element.
+	       */
+	      scrollParent: function(elem, includeHidden, includeSelf) {
+	        elem = this.getRawNode(elem);
+
+	        var overflowRegex = includeHidden ? OVERFLOW_REGEX.hidden : OVERFLOW_REGEX.normal;
+	        var documentEl = $document[0].documentElement;
+	        var elemStyle = $window.getComputedStyle(elem);
+	        if (includeSelf && overflowRegex.test(elemStyle.overflow + elemStyle.overflowY + elemStyle.overflowX)) {
+	          return elem;
+	        }
+	        var excludeStatic = elemStyle.position === 'absolute';
+	        var scrollParent = elem.parentElement || documentEl;
+
+	        if (scrollParent === documentEl || elemStyle.position === 'fixed') {
+	          return documentEl;
+	        }
+
+	        while (scrollParent.parentElement && scrollParent !== documentEl) {
+	          var spStyle = $window.getComputedStyle(scrollParent);
+	          if (excludeStatic && spStyle.position !== 'static') {
+	            excludeStatic = false;
+	          }
+
+	          if (!excludeStatic && overflowRegex.test(spStyle.overflow + spStyle.overflowY + spStyle.overflowX)) {
+	            break;
+	          }
+	          scrollParent = scrollParent.parentElement;
+	        }
+
+	        return scrollParent;
+	      },
+
+	      /**
+	       * Provides read-only equivalent of jQuery's position function:
+	       * http://api.jquery.com/position/ - distance to closest positioned
+	       * ancestor.  Does not account for margins by default like jQuery position.
+	       *
+	       * @param {element} elem - The element to caclulate the position on.
+	       * @param {boolean=} [includeMargins=false] - Should margins be accounted
+	       * for, default is false.
+	       *
+	       * @returns {object} An object with the following properties:
+	       *   <ul>
+	       *     <li>**width**: the width of the element</li>
+	       *     <li>**height**: the height of the element</li>
+	       *     <li>**top**: distance to top edge of offset parent</li>
+	       *     <li>**left**: distance to left edge of offset parent</li>
+	       *   </ul>
+	       */
+	      position: function(elem, includeMagins) {
+	        elem = this.getRawNode(elem);
+
+	        var elemOffset = this.offset(elem);
+	        if (includeMagins) {
+	          var elemStyle = $window.getComputedStyle(elem);
+	          elemOffset.top -= this.parseStyle(elemStyle.marginTop);
+	          elemOffset.left -= this.parseStyle(elemStyle.marginLeft);
+	        }
+	        var parent = this.offsetParent(elem);
+	        var parentOffset = {top: 0, left: 0};
+
+	        if (parent !== $document[0].documentElement) {
+	          parentOffset = this.offset(parent);
+	          parentOffset.top += parent.clientTop - parent.scrollTop;
+	          parentOffset.left += parent.clientLeft - parent.scrollLeft;
+	        }
+
+	        return {
+	          width: Math.round(angular.isNumber(elemOffset.width) ? elemOffset.width : elem.offsetWidth),
+	          height: Math.round(angular.isNumber(elemOffset.height) ? elemOffset.height : elem.offsetHeight),
+	          top: Math.round(elemOffset.top - parentOffset.top),
+	          left: Math.round(elemOffset.left - parentOffset.left)
+	        };
+	      },
+
+	      /**
+	       * Provides read-only equivalent of jQuery's offset function:
+	       * http://api.jquery.com/offset/ - distance to viewport.  Does
+	       * not account for borders, margins, or padding on the body
+	       * element.
+	       *
+	       * @param {element} elem - The element to calculate the offset on.
+	       *
+	       * @returns {object} An object with the following properties:
+	       *   <ul>
+	       *     <li>**width**: the width of the element</li>
+	       *     <li>**height**: the height of the element</li>
+	       *     <li>**top**: distance to top edge of viewport</li>
+	       *     <li>**right**: distance to bottom edge of viewport</li>
+	       *   </ul>
+	       */
+	      offset: function(elem) {
+	        elem = this.getRawNode(elem);
+
+	        var elemBCR = elem.getBoundingClientRect();
+	        return {
+	          width: Math.round(angular.isNumber(elemBCR.width) ? elemBCR.width : elem.offsetWidth),
+	          height: Math.round(angular.isNumber(elemBCR.height) ? elemBCR.height : elem.offsetHeight),
+	          top: Math.round(elemBCR.top + ($window.pageYOffset || $document[0].documentElement.scrollTop)),
+	          left: Math.round(elemBCR.left + ($window.pageXOffset || $document[0].documentElement.scrollLeft))
+	        };
+	      },
+
+	      /**
+	       * Provides offset distance to the closest scrollable ancestor
+	       * or viewport.  Accounts for border and scrollbar width.
+	       *
+	       * Right and bottom dimensions represent the distance to the
+	       * respective edge of the viewport element.  If the element
+	       * edge extends beyond the viewport, a negative value will be
+	       * reported.
+	       *
+	       * @param {element} elem - The element to get the viewport offset for.
+	       * @param {boolean=} [useDocument=false] - Should the viewport be the document element instead
+	       * of the first scrollable element, default is false.
+	       * @param {boolean=} [includePadding=true] - Should the padding on the offset parent element
+	       * be accounted for, default is true.
+	       *
+	       * @returns {object} An object with the following properties:
+	       *   <ul>
+	       *     <li>**top**: distance to the top content edge of viewport element</li>
+	       *     <li>**bottom**: distance to the bottom content edge of viewport element</li>
+	       *     <li>**left**: distance to the left content edge of viewport element</li>
+	       *     <li>**right**: distance to the right content edge of viewport element</li>
+	       *   </ul>
+	       */
+	      viewportOffset: function(elem, useDocument, includePadding) {
+	        elem = this.getRawNode(elem);
+	        includePadding = includePadding !== false ? true : false;
+
+	        var elemBCR = elem.getBoundingClientRect();
+	        var offsetBCR = {top: 0, left: 0, bottom: 0, right: 0};
+
+	        var offsetParent = useDocument ? $document[0].documentElement : this.scrollParent(elem);
+	        var offsetParentBCR = offsetParent.getBoundingClientRect();
+
+	        offsetBCR.top = offsetParentBCR.top + offsetParent.clientTop;
+	        offsetBCR.left = offsetParentBCR.left + offsetParent.clientLeft;
+	        if (offsetParent === $document[0].documentElement) {
+	          offsetBCR.top += $window.pageYOffset;
+	          offsetBCR.left += $window.pageXOffset;
+	        }
+	        offsetBCR.bottom = offsetBCR.top + offsetParent.clientHeight;
+	        offsetBCR.right = offsetBCR.left + offsetParent.clientWidth;
+
+	        if (includePadding) {
+	          var offsetParentStyle = $window.getComputedStyle(offsetParent);
+	          offsetBCR.top += this.parseStyle(offsetParentStyle.paddingTop);
+	          offsetBCR.bottom -= this.parseStyle(offsetParentStyle.paddingBottom);
+	          offsetBCR.left += this.parseStyle(offsetParentStyle.paddingLeft);
+	          offsetBCR.right -= this.parseStyle(offsetParentStyle.paddingRight);
+	        }
+
+	        return {
+	          top: Math.round(elemBCR.top - offsetBCR.top),
+	          bottom: Math.round(offsetBCR.bottom - elemBCR.bottom),
+	          left: Math.round(elemBCR.left - offsetBCR.left),
+	          right: Math.round(offsetBCR.right - elemBCR.right)
+	        };
+	      },
+
+	      /**
+	       * Provides an array of placement values parsed from a placement string.
+	       * Along with the 'auto' indicator, supported placement strings are:
+	       *   <ul>
+	       *     <li>top: element on top, horizontally centered on host element.</li>
+	       *     <li>top-left: element on top, left edge aligned with host element left edge.</li>
+	       *     <li>top-right: element on top, lerightft edge aligned with host element right edge.</li>
+	       *     <li>bottom: element on bottom, horizontally centered on host element.</li>
+	       *     <li>bottom-left: element on bottom, left edge aligned with host element left edge.</li>
+	       *     <li>bottom-right: element on bottom, right edge aligned with host element right edge.</li>
+	       *     <li>left: element on left, vertically centered on host element.</li>
+	       *     <li>left-top: element on left, top edge aligned with host element top edge.</li>
+	       *     <li>left-bottom: element on left, bottom edge aligned with host element bottom edge.</li>
+	       *     <li>right: element on right, vertically centered on host element.</li>
+	       *     <li>right-top: element on right, top edge aligned with host element top edge.</li>
+	       *     <li>right-bottom: element on right, bottom edge aligned with host element bottom edge.</li>
+	       *   </ul>
+	       * A placement string with an 'auto' indicator is expected to be
+	       * space separated from the placement, i.e: 'auto bottom-left'  If
+	       * the primary and secondary placement values do not match 'top,
+	       * bottom, left, right' then 'top' will be the primary placement and
+	       * 'center' will be the secondary placement.  If 'auto' is passed, true
+	       * will be returned as the 3rd value of the array.
+	       *
+	       * @param {string} placement - The placement string to parse.
+	       *
+	       * @returns {array} An array with the following values
+	       * <ul>
+	       *   <li>**[0]**: The primary placement.</li>
+	       *   <li>**[1]**: The secondary placement.</li>
+	       *   <li>**[2]**: If auto is passed: true, else undefined.</li>
+	       * </ul>
+	       */
+	      parsePlacement: function(placement) {
+	        var autoPlace = PLACEMENT_REGEX.auto.test(placement);
+	        if (autoPlace) {
+	          placement = placement.replace(PLACEMENT_REGEX.auto, '');
+	        }
+
+	        placement = placement.split('-');
+
+	        placement[0] = placement[0] || 'top';
+	        if (!PLACEMENT_REGEX.primary.test(placement[0])) {
+	          placement[0] = 'top';
+	        }
+
+	        placement[1] = placement[1] || 'center';
+	        if (!PLACEMENT_REGEX.secondary.test(placement[1])) {
+	          placement[1] = 'center';
+	        }
+
+	        if (autoPlace) {
+	          placement[2] = true;
+	        } else {
+	          placement[2] = false;
+	        }
+
+	        return placement;
+	      },
+
+	      /**
+	       * Provides coordinates for an element to be positioned relative to
+	       * another element.  Passing 'auto' as part of the placement parameter
+	       * will enable smart placement - where the element fits. i.e:
+	       * 'auto left-top' will check to see if there is enough space to the left
+	       * of the hostElem to fit the targetElem, if not place right (same for secondary
+	       * top placement).  Available space is calculated using the viewportOffset
+	       * function.
+	       *
+	       * @param {element} hostElem - The element to position against.
+	       * @param {element} targetElem - The element to position.
+	       * @param {string=} [placement=top] - The placement for the targetElem,
+	       *   default is 'top'. 'center' is assumed as secondary placement for
+	       *   'top', 'left', 'right', and 'bottom' placements.  Available placements are:
+	       *   <ul>
+	       *     <li>top</li>
+	       *     <li>top-right</li>
+	       *     <li>top-left</li>
+	       *     <li>bottom</li>
+	       *     <li>bottom-left</li>
+	       *     <li>bottom-right</li>
+	       *     <li>left</li>
+	       *     <li>left-top</li>
+	       *     <li>left-bottom</li>
+	       *     <li>right</li>
+	       *     <li>right-top</li>
+	       *     <li>right-bottom</li>
+	       *   </ul>
+	       * @param {boolean=} [appendToBody=false] - Should the top and left values returned
+	       *   be calculated from the body element, default is false.
+	       *
+	       * @returns {object} An object with the following properties:
+	       *   <ul>
+	       *     <li>**top**: Value for targetElem top.</li>
+	       *     <li>**left**: Value for targetElem left.</li>
+	       *     <li>**placement**: The resolved placement.</li>
+	       *   </ul>
+	       */
+	      positionElements: function(hostElem, targetElem, placement, appendToBody) {
+	        hostElem = this.getRawNode(hostElem);
+	        targetElem = this.getRawNode(targetElem);
+
+	        // need to read from prop to support tests.
+	        var targetWidth = angular.isDefined(targetElem.offsetWidth) ? targetElem.offsetWidth : targetElem.prop('offsetWidth');
+	        var targetHeight = angular.isDefined(targetElem.offsetHeight) ? targetElem.offsetHeight : targetElem.prop('offsetHeight');
+
+	        placement = this.parsePlacement(placement);
+
+	        var hostElemPos = appendToBody ? this.offset(hostElem) : this.position(hostElem);
+	        var targetElemPos = {top: 0, left: 0, placement: ''};
+
+	        if (placement[2]) {
+	          var viewportOffset = this.viewportOffset(hostElem, appendToBody);
+
+	          var targetElemStyle = $window.getComputedStyle(targetElem);
+	          var adjustedSize = {
+	            width: targetWidth + Math.round(Math.abs(this.parseStyle(targetElemStyle.marginLeft) + this.parseStyle(targetElemStyle.marginRight))),
+	            height: targetHeight + Math.round(Math.abs(this.parseStyle(targetElemStyle.marginTop) + this.parseStyle(targetElemStyle.marginBottom)))
+	          };
+
+	          placement[0] = placement[0] === 'top' && adjustedSize.height > viewportOffset.top && adjustedSize.height <= viewportOffset.bottom ? 'bottom' :
+	                         placement[0] === 'bottom' && adjustedSize.height > viewportOffset.bottom && adjustedSize.height <= viewportOffset.top ? 'top' :
+	                         placement[0] === 'left' && adjustedSize.width > viewportOffset.left && adjustedSize.width <= viewportOffset.right ? 'right' :
+	                         placement[0] === 'right' && adjustedSize.width > viewportOffset.right && adjustedSize.width <= viewportOffset.left ? 'left' :
+	                         placement[0];
+
+	          placement[1] = placement[1] === 'top' && adjustedSize.height - hostElemPos.height > viewportOffset.bottom && adjustedSize.height - hostElemPos.height <= viewportOffset.top ? 'bottom' :
+	                         placement[1] === 'bottom' && adjustedSize.height - hostElemPos.height > viewportOffset.top && adjustedSize.height - hostElemPos.height <= viewportOffset.bottom ? 'top' :
+	                         placement[1] === 'left' && adjustedSize.width - hostElemPos.width > viewportOffset.right && adjustedSize.width - hostElemPos.width <= viewportOffset.left ? 'right' :
+	                         placement[1] === 'right' && adjustedSize.width - hostElemPos.width > viewportOffset.left && adjustedSize.width - hostElemPos.width <= viewportOffset.right ? 'left' :
+	                         placement[1];
+
+	          if (placement[1] === 'center') {
+	            if (PLACEMENT_REGEX.vertical.test(placement[0])) {
+	              var xOverflow = hostElemPos.width / 2 - targetWidth / 2;
+	              if (viewportOffset.left + xOverflow < 0 && adjustedSize.width - hostElemPos.width <= viewportOffset.right) {
+	                placement[1] = 'left';
+	              } else if (viewportOffset.right + xOverflow < 0 && adjustedSize.width - hostElemPos.width <= viewportOffset.left) {
+	                placement[1] = 'right';
+	              }
+	            } else {
+	              var yOverflow = hostElemPos.height / 2 - adjustedSize.height / 2;
+	              if (viewportOffset.top + yOverflow < 0 && adjustedSize.height - hostElemPos.height <= viewportOffset.bottom) {
+	                placement[1] = 'top';
+	              } else if (viewportOffset.bottom + yOverflow < 0 && adjustedSize.height - hostElemPos.height <= viewportOffset.top) {
+	                placement[1] = 'bottom';
+	              }
+	            }
+	          }
+	        }
+
+	        switch (placement[0]) {
+	          case 'top':
+	            targetElemPos.top = hostElemPos.top - targetHeight;
+	            break;
+	          case 'bottom':
+	            targetElemPos.top = hostElemPos.top + hostElemPos.height;
+	            break;
+	          case 'left':
+	            targetElemPos.left = hostElemPos.left - targetWidth;
+	            break;
+	          case 'right':
+	            targetElemPos.left = hostElemPos.left + hostElemPos.width;
+	            break;
+	        }
+
+	        switch (placement[1]) {
+	          case 'top':
+	            targetElemPos.top = hostElemPos.top;
+	            break;
+	          case 'bottom':
+	            targetElemPos.top = hostElemPos.top + hostElemPos.height - targetHeight;
+	            break;
+	          case 'left':
+	            targetElemPos.left = hostElemPos.left;
+	            break;
+	          case 'right':
+	            targetElemPos.left = hostElemPos.left + hostElemPos.width - targetWidth;
+	            break;
+	          case 'center':
+	            if (PLACEMENT_REGEX.vertical.test(placement[0])) {
+	              targetElemPos.left = hostElemPos.left + hostElemPos.width / 2 - targetWidth / 2;
+	            } else {
+	              targetElemPos.top = hostElemPos.top + hostElemPos.height / 2 - targetHeight / 2;
+	            }
+	            break;
+	        }
+
+	        targetElemPos.top = Math.round(targetElemPos.top);
+	        targetElemPos.left = Math.round(targetElemPos.left);
+	        targetElemPos.placement = placement[1] === 'center' ? placement[0] : placement[0] + '-' + placement[1];
+
+	        return targetElemPos;
+	      },
+
+	      /**
+	       * Provides a way to adjust the top positioning after first
+	       * render to correctly align element to top after content
+	       * rendering causes resized element height
+	       *
+	       * @param {array} placementClasses - The array of strings of classes
+	       * element should have.
+	       * @param {object} containerPosition - The object with container
+	       * position information
+	       * @param {number} initialHeight - The initial height for the elem.
+	       * @param {number} currentHeight - The current height for the elem.
+	       */
+	      adjustTop: function(placementClasses, containerPosition, initialHeight, currentHeight) {
+	        if (placementClasses.indexOf('top') !== -1 && initialHeight !== currentHeight) {
+	          return {
+	            top: containerPosition.top - currentHeight + 'px'
+	          };
+	        }
+	      },
+
+	      /**
+	       * Provides a way for positioning tooltip & dropdown
+	       * arrows when using placement options beyond the standard
+	       * left, right, top, or bottom.
+	       *
+	       * @param {element} elem - The tooltip/dropdown element.
+	       * @param {string} placement - The placement for the elem.
+	       */
+	      positionArrow: function(elem, placement) {
+	        elem = this.getRawNode(elem);
+
+	        var innerElem = elem.querySelector('.tooltip-inner, .popover-inner');
+	        if (!innerElem) {
+	          return;
+	        }
+
+	        var isTooltip = angular.element(innerElem).hasClass('tooltip-inner');
+
+	        var arrowElem = isTooltip ? elem.querySelector('.tooltip-arrow') : elem.querySelector('.arrow');
+	        if (!arrowElem) {
+	          return;
+	        }
+
+	        var arrowCss = {
+	          top: '',
+	          bottom: '',
+	          left: '',
+	          right: ''
+	        };
+
+	        placement = this.parsePlacement(placement);
+	        if (placement[1] === 'center') {
+	          // no adjustment necessary - just reset styles
+	          angular.element(arrowElem).css(arrowCss);
+	          return;
+	        }
+
+	        var borderProp = 'border-' + placement[0] + '-width';
+	        var borderWidth = $window.getComputedStyle(arrowElem)[borderProp];
+
+	        var borderRadiusProp = 'border-';
+	        if (PLACEMENT_REGEX.vertical.test(placement[0])) {
+	          borderRadiusProp += placement[0] + '-' + placement[1];
+	        } else {
+	          borderRadiusProp += placement[1] + '-' + placement[0];
+	        }
+	        borderRadiusProp += '-radius';
+	        var borderRadius = $window.getComputedStyle(isTooltip ? innerElem : elem)[borderRadiusProp];
+
+	        switch (placement[0]) {
+	          case 'top':
+	            arrowCss.bottom = isTooltip ? '0' : '-' + borderWidth;
+	            break;
+	          case 'bottom':
+	            arrowCss.top = isTooltip ? '0' : '-' + borderWidth;
+	            break;
+	          case 'left':
+	            arrowCss.right = isTooltip ? '0' : '-' + borderWidth;
+	            break;
+	          case 'right':
+	            arrowCss.left = isTooltip ? '0' : '-' + borderWidth;
+	            break;
+	        }
+
+	        arrowCss[placement[1]] = borderRadius;
+
+	        angular.element(arrowElem).css(arrowCss);
+	      }
+	    };
+	  }]);
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(23);
+
+	var MODULE_NAME = 'ui.bootstrap.module.stackedMap';
+
+	angular.module(MODULE_NAME, ['ui.bootstrap.stackedMap']);
+
+	module.exports = MODULE_NAME;
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	angular.module('ui.bootstrap.stackedMap', [])
+	/**
+	 * A helper, internal data structure that acts as a map but also allows getting / removing
+	 * elements in the LIFO order
+	 */
+	  .factory('$$stackedMap', function() {
+	    return {
+	      createNew: function() {
+	        var stack = [];
+
+	        return {
+	          add: function(key, value) {
+	            stack.push({
+	              key: key,
+	              value: value
+	            });
+	          },
+	          get: function(key) {
+	            for (var i = 0; i < stack.length; i++) {
+	              if (key === stack[i].key) {
+	                return stack[i];
+	              }
+	            }
+	          },
+	          keys: function() {
+	            var keys = [];
+	            for (var i = 0; i < stack.length; i++) {
+	              keys.push(stack[i].key);
+	            }
+	            return keys;
+	          },
+	          top: function() {
+	            return stack[stack.length - 1];
+	          },
+	          remove: function(key) {
+	            var idx = -1;
+	            for (var i = 0; i < stack.length; i++) {
+	              if (key === stack[i].key) {
+	                idx = i;
+	                break;
+	              }
+	            }
+	            return stack.splice(idx, 1)[0];
+	          },
+	          removeTop: function() {
+	            return stack.pop();
+	          },
+	          length: function() {
+	            return stack.length;
+	          }
+	        };
+	      }
+	    };
+	  });
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	angular.module("uib/template/tooltip/tooltip-popup.html", []).run(["$templateCache", function($templateCache) {
+	  $templateCache.put("uib/template/tooltip/tooltip-popup.html",
+	    "<div class=\"tooltip-arrow\"></div>\n" +
+	    "<div class=\"tooltip-inner\" ng-bind=\"content\"></div>\n" +
+	    "");
+	}]);
+
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	angular.module("uib/template/tooltip/tooltip-html-popup.html", []).run(["$templateCache", function($templateCache) {
+	  $templateCache.put("uib/template/tooltip/tooltip-html-popup.html",
+	    "<div class=\"tooltip-arrow\"></div>\n" +
+	    "<div class=\"tooltip-inner\" ng-bind-html=\"contentExp()\"></div>\n" +
+	    "");
+	}]);
+
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	angular.module("uib/template/tooltip/tooltip-template-popup.html", []).run(["$templateCache", function($templateCache) {
+	  $templateCache.put("uib/template/tooltip/tooltip-template-popup.html",
+	    "<div class=\"tooltip-arrow\"></div>\n" +
+	    "<div class=\"tooltip-inner\"\n" +
+	    "  uib-tooltip-template-transclude=\"contentExp()\"\n" +
+	    "  tooltip-template-transclude-scope=\"originScope()\"></div>\n" +
+	    "");
+	}]);
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	/**
+	 * The following features are still outstanding: animation as a
+	 * function, placement as a function, inside, support for more triggers than
+	 * just mouse enter/leave, html tooltips, and selector delegation.
+	 */
+	angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.stackedMap'])
+
+	/**
+	 * The $tooltip service creates tooltip- and popover-like directives as well as
+	 * houses global options for them.
+	 */
+	.provider('$uibTooltip', function() {
+	  // The default options tooltip and popover.
+	  var defaultOptions = {
+	    placement: 'top',
+	    placementClassPrefix: '',
+	    animation: true,
+	    popupDelay: 0,
+	    popupCloseDelay: 0,
+	    useContentExp: false
+	  };
+
+	  // Default hide triggers for each show trigger
+	  var triggerMap = {
+	    'mouseenter': 'mouseleave',
+	    'click': 'click',
+	    'outsideClick': 'outsideClick',
+	    'focus': 'blur',
+	    'none': ''
+	  };
+
+	  // The options specified to the provider globally.
+	  var globalOptions = {};
+
+	  /**
+	   * `options({})` allows global configuration of all tooltips in the
+	   * application.
+	   *
+	   *   var app = angular.module( 'App', ['ui.bootstrap.tooltip'], function( $tooltipProvider ) {
+	   *     // place tooltips left instead of top by default
+	   *     $tooltipProvider.options( { placement: 'left' } );
+	   *   });
+	   */
+		this.options = function(value) {
+			angular.extend(globalOptions, value);
+		};
+
+	  /**
+	   * This allows you to extend the set of trigger mappings available. E.g.:
+	   *
+	   *   $tooltipProvider.setTriggers( { 'openTrigger': 'closeTrigger' } );
+	   */
+	  this.setTriggers = function setTriggers(triggers) {
+	    angular.extend(triggerMap, triggers);
+	  };
+
+	  /**
+	   * This is a helper function for translating camel-case to snake_case.
+	   */
+	  function snake_case(name) {
+	    var regexp = /[A-Z]/g;
+	    var separator = '-';
+	    return name.replace(regexp, function(letter, pos) {
+	      return (pos ? separator : '') + letter.toLowerCase();
+	    });
+	  }
+
+	  /**
+	   * Returns the actual instance of the $tooltip service.
+	   * TODO support multiple triggers
+	   */
+	  this.$get = ['$window', '$compile', '$timeout', '$document', '$uibPosition', '$interpolate', '$rootScope', '$parse', '$$stackedMap', function($window, $compile, $timeout, $document, $position, $interpolate, $rootScope, $parse, $$stackedMap) {
+	    var openedTooltips = $$stackedMap.createNew();
+	    $document.on('keyup', keypressListener);
+
+	    $rootScope.$on('$destroy', function() {
+	      $document.off('keyup', keypressListener);
+	    });
+
+	    function keypressListener(e) {
+	      if (e.which === 27) {
+	        var last = openedTooltips.top();
+	        if (last) {
+	          last.value.close();
+	          last = null;
+	        }
+	      }
+	    }
+
+	    return function $tooltip(ttType, prefix, defaultTriggerShow, options) {
+	      options = angular.extend({}, defaultOptions, globalOptions, options);
+
+	      /**
+	       * Returns an object of show and hide triggers.
+	       *
+	       * If a trigger is supplied,
+	       * it is used to show the tooltip; otherwise, it will use the `trigger`
+	       * option passed to the `$tooltipProvider.options` method; else it will
+	       * default to the trigger supplied to this directive factory.
+	       *
+	       * The hide trigger is based on the show trigger. If the `trigger` option
+	       * was passed to the `$tooltipProvider.options` method, it will use the
+	       * mapped trigger from `triggerMap` or the passed trigger if the map is
+	       * undefined; otherwise, it uses the `triggerMap` value of the show
+	       * trigger; else it will just use the show trigger.
+	       */
+	      function getTriggers(trigger) {
+	        var show = (trigger || options.trigger || defaultTriggerShow).split(' ');
+	        var hide = show.map(function(trigger) {
+	          return triggerMap[trigger] || trigger;
+	        });
+	        return {
+	          show: show,
+	          hide: hide
+	        };
+	      }
+
+	      var directiveName = snake_case(ttType);
+
+	      var startSym = $interpolate.startSymbol();
+	      var endSym = $interpolate.endSymbol();
+	      var template =
+	        '<div '+ directiveName + '-popup ' +
+	          'uib-title="' + startSym + 'title' + endSym + '" ' +
+	          (options.useContentExp ?
+	            'content-exp="contentExp()" ' :
+	            'content="' + startSym + 'content' + endSym + '" ') +
+	          'origin-scope="origScope" ' +
+	          'class="uib-position-measure ' + prefix + '" ' +
+	          'tooltip-animation-class="fade"' +
+	          'uib-tooltip-classes ' +
+	          'ng-class="{ in: isOpen }" ' +
+	          '>' +
+	        '</div>';
+
+	      return {
+	        compile: function(tElem, tAttrs) {
+	          var tooltipLinker = $compile(template);
+
+	          return function link(scope, element, attrs, tooltipCtrl) {
+	            var tooltip;
+	            var tooltipLinkedScope;
+	            var transitionTimeout;
+	            var showTimeout;
+	            var hideTimeout;
+	            var positionTimeout;
+	            var appendToBody = angular.isDefined(options.appendToBody) ? options.appendToBody : false;
+	            var triggers = getTriggers(undefined);
+	            var hasEnableExp = angular.isDefined(attrs[prefix + 'Enable']);
+	            var ttScope = scope.$new(true);
+	            var repositionScheduled = false;
+	            var isOpenParse = angular.isDefined(attrs[prefix + 'IsOpen']) ? $parse(attrs[prefix + 'IsOpen']) : false;
+	            var contentParse = options.useContentExp ? $parse(attrs[ttType]) : false;
+	            var observers = [];
+	            var lastPlacement;
+
+	            var positionTooltip = function() {
+	              // check if tooltip exists and is not empty
+	              if (!tooltip || !tooltip.html()) { return; }
+
+	              if (!positionTimeout) {
+	                positionTimeout = $timeout(function() {
+	                  var ttPosition = $position.positionElements(element, tooltip, ttScope.placement, appendToBody);
+	                  var initialHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
+	                  var elementPos = appendToBody ? $position.offset(element) : $position.position(element);
+	                  tooltip.css({ top: ttPosition.top + 'px', left: ttPosition.left + 'px' });
+	                  var placementClasses = ttPosition.placement.split('-');
+
+	                  if (!tooltip.hasClass(placementClasses[0])) {
+	                    tooltip.removeClass(lastPlacement.split('-')[0]);
+	                    tooltip.addClass(placementClasses[0]);
+	                  }
+
+	                  if (!tooltip.hasClass(options.placementClassPrefix + ttPosition.placement)) {
+	                    tooltip.removeClass(options.placementClassPrefix + lastPlacement);
+	                    tooltip.addClass(options.placementClassPrefix + ttPosition.placement);
+	                  }
+
+	                  $timeout(function() {
+	                    var currentHeight = angular.isDefined(tooltip.offsetHeight) ? tooltip.offsetHeight : tooltip.prop('offsetHeight');
+	                    var adjustment = $position.adjustTop(placementClasses, elementPos, initialHeight, currentHeight);
+	                    if (adjustment) {
+	                      tooltip.css(adjustment);
+	                    }
+	                  }, 0, false);
+
+	                  // first time through tt element will have the
+	                  // uib-position-measure class or if the placement
+	                  // has changed we need to position the arrow.
+	                  if (tooltip.hasClass('uib-position-measure')) {
+	                    $position.positionArrow(tooltip, ttPosition.placement);
+	                    tooltip.removeClass('uib-position-measure');
+	                  } else if (lastPlacement !== ttPosition.placement) {
+	                    $position.positionArrow(tooltip, ttPosition.placement);
+	                  }
+	                  lastPlacement = ttPosition.placement;
+
+	                  positionTimeout = null;
+	                }, 0, false);
+	              }
+	            };
+
+	            // Set up the correct scope to allow transclusion later
+	            ttScope.origScope = scope;
+
+	            // By default, the tooltip is not open.
+	            // TODO add ability to start tooltip opened
+	            ttScope.isOpen = false;
+
+	            function toggleTooltipBind() {
+	              if (!ttScope.isOpen) {
+	                showTooltipBind();
+	              } else {
+	                hideTooltipBind();
+	              }
+	            }
+
+	            // Show the tooltip with delay if specified, otherwise show it immediately
+	            function showTooltipBind() {
+	              if (hasEnableExp && !scope.$eval(attrs[prefix + 'Enable'])) {
+	                return;
+	              }
+
+	              cancelHide();
+	              prepareTooltip();
+
+	              if (ttScope.popupDelay) {
+	                // Do nothing if the tooltip was already scheduled to pop-up.
+	                // This happens if show is triggered multiple times before any hide is triggered.
+	                if (!showTimeout) {
+	                  showTimeout = $timeout(show, ttScope.popupDelay, false);
+	                }
+	              } else {
+	                show();
+	              }
+	            }
+
+	            function hideTooltipBind() {
+	              cancelShow();
+
+	              if (ttScope.popupCloseDelay) {
+	                if (!hideTimeout) {
+	                  hideTimeout = $timeout(hide, ttScope.popupCloseDelay, false);
+	                }
+	              } else {
+	                hide();
+	              }
+	            }
+
+	            // Show the tooltip popup element.
+	            function show() {
+	              cancelShow();
+	              cancelHide();
+
+	              // Don't show empty tooltips.
+	              if (!ttScope.content) {
+	                return angular.noop;
+	              }
+
+	              createTooltip();
+
+	              // And show the tooltip.
+	              ttScope.$evalAsync(function() {
+	                ttScope.isOpen = true;
+	                assignIsOpen(true);
+	                positionTooltip();
+	              });
+	            }
+
+	            function cancelShow() {
+	              if (showTimeout) {
+	                $timeout.cancel(showTimeout);
+	                showTimeout = null;
+	              }
+
+	              if (positionTimeout) {
+	                $timeout.cancel(positionTimeout);
+	                positionTimeout = null;
+	              }
+	            }
+
+	            // Hide the tooltip popup element.
+	            function hide() {
+	              if (!ttScope) {
+	                return;
+	              }
+
+	              // First things first: we don't show it anymore.
+	              ttScope.$evalAsync(function() {
+	                if (ttScope) {
+	                  ttScope.isOpen = false;
+	                  assignIsOpen(false);
+	                  // And now we remove it from the DOM. However, if we have animation, we
+	                  // need to wait for it to expire beforehand.
+	                  // FIXME: this is a placeholder for a port of the transitions library.
+	                  // The fade transition in TWBS is 150ms.
+	                  if (ttScope.animation) {
+	                    if (!transitionTimeout) {
+	                      transitionTimeout = $timeout(removeTooltip, 150, false);
+	                    }
+	                  } else {
+	                    removeTooltip();
+	                  }
+	                }
+	              });
+	            }
+
+	            function cancelHide() {
+	              if (hideTimeout) {
+	                $timeout.cancel(hideTimeout);
+	                hideTimeout = null;
+	              }
+
+	              if (transitionTimeout) {
+	                $timeout.cancel(transitionTimeout);
+	                transitionTimeout = null;
+	              }
+	            }
+
+	            function createTooltip() {
+	              // There can only be one tooltip element per directive shown at once.
+	              if (tooltip) {
+	                return;
+	              }
+
+	              tooltipLinkedScope = ttScope.$new();
+	              tooltip = tooltipLinker(tooltipLinkedScope, function(tooltip) {
+	                if (appendToBody) {
+	                  $document.find('body').append(tooltip);
+	                } else {
+	                  element.after(tooltip);
+	                }
+	              });
+
+	              openedTooltips.add(ttScope, {
+	                close: hide
+	              });
+
+	              prepObservers();
+	            }
+
+	            function removeTooltip() {
+	              cancelShow();
+	              cancelHide();
+	              unregisterObservers();
+
+	              if (tooltip) {
+	                tooltip.remove();
+	                tooltip = null;
+	              }
+
+	              openedTooltips.remove(ttScope);
+	              
+	              if (tooltipLinkedScope) {
+	                tooltipLinkedScope.$destroy();
+	                tooltipLinkedScope = null;
+	              }
+	            }
+
+	            /**
+	             * Set the initial scope values. Once
+	             * the tooltip is created, the observers
+	             * will be added to keep things in sync.
+	             */
+	            function prepareTooltip() {
+	              ttScope.title = attrs[prefix + 'Title'];
+	              if (contentParse) {
+	                ttScope.content = contentParse(scope);
+	              } else {
+	                ttScope.content = attrs[ttType];
+	              }
+
+	              ttScope.popupClass = attrs[prefix + 'Class'];
+	              ttScope.placement = angular.isDefined(attrs[prefix + 'Placement']) ? attrs[prefix + 'Placement'] : options.placement;
+	              var placement = $position.parsePlacement(ttScope.placement);
+	              lastPlacement = placement[1] ? placement[0] + '-' + placement[1] : placement[0];
+
+	              var delay = parseInt(attrs[prefix + 'PopupDelay'], 10);
+	              var closeDelay = parseInt(attrs[prefix + 'PopupCloseDelay'], 10);
+	              ttScope.popupDelay = !isNaN(delay) ? delay : options.popupDelay;
+	              ttScope.popupCloseDelay = !isNaN(closeDelay) ? closeDelay : options.popupCloseDelay;
+	            }
+
+	            function assignIsOpen(isOpen) {
+	              if (isOpenParse && angular.isFunction(isOpenParse.assign)) {
+	                isOpenParse.assign(scope, isOpen);
+	              }
+	            }
+
+	            ttScope.contentExp = function() {
+	              return ttScope.content;
+	            };
+
+	            /**
+	             * Observe the relevant attributes.
+	             */
+	            attrs.$observe('disabled', function(val) {
+	              if (val) {
+	                cancelShow();
+	              }
+
+	              if (val && ttScope.isOpen) {
+	                hide();
+	              }
+	            });
+
+	            if (isOpenParse) {
+	              scope.$watch(isOpenParse, function(val) {
+	                if (ttScope && !val === ttScope.isOpen) {
+	                  toggleTooltipBind();
+	                }
+	              });
+	            }
+
+	            function prepObservers() {
+	              observers.length = 0;
+
+	              if (contentParse) {
+	                observers.push(
+	                  scope.$watch(contentParse, function(val) {
+	                    ttScope.content = val;
+	                    if (!val && ttScope.isOpen) {
+	                      hide();
+	                    }
+	                  })
+	                );
+
+	                observers.push(
+	                  tooltipLinkedScope.$watch(function() {
+	                    if (!repositionScheduled) {
+	                      repositionScheduled = true;
+	                      tooltipLinkedScope.$$postDigest(function() {
+	                        repositionScheduled = false;
+	                        if (ttScope && ttScope.isOpen) {
+	                          positionTooltip();
+	                        }
+	                      });
+	                    }
+	                  })
+	                );
+	              } else {
+	                observers.push(
+	                  attrs.$observe(ttType, function(val) {
+	                    ttScope.content = val;
+	                    if (!val && ttScope.isOpen) {
+	                      hide();
+	                    } else {
+	                      positionTooltip();
+	                    }
+	                  })
+	                );
+	              }
+
+	              observers.push(
+	                attrs.$observe(prefix + 'Title', function(val) {
+	                  ttScope.title = val;
+	                  if (ttScope.isOpen) {
+	                    positionTooltip();
+	                  }
+	                })
+	              );
+
+	              observers.push(
+	                attrs.$observe(prefix + 'Placement', function(val) {
+	                  ttScope.placement = val ? val : options.placement;
+	                  if (ttScope.isOpen) {
+	                    positionTooltip();
+	                  }
+	                })
+	              );
+	            }
+
+	            function unregisterObservers() {
+	              if (observers.length) {
+	                angular.forEach(observers, function(observer) {
+	                  observer();
+	                });
+	                observers.length = 0;
+	              }
+	            }
+
+	            // hide tooltips/popovers for outsideClick trigger
+	            function bodyHideTooltipBind(e) {
+	              if (!ttScope || !ttScope.isOpen || !tooltip) {
+	                return;
+	              }
+	              // make sure the tooltip/popover link or tool tooltip/popover itself were not clicked
+	              if (!element[0].contains(e.target) && !tooltip[0].contains(e.target)) {
+	                hideTooltipBind();
+	              }
+	            }
+
+	            var unregisterTriggers = function() {
+	              triggers.show.forEach(function(trigger) {
+	                if (trigger === 'outsideClick') {
+	                  element.off('click', toggleTooltipBind);
+	                } else {
+	                  element.off(trigger, showTooltipBind);
+	                  element.off(trigger, toggleTooltipBind);
+	                }
+	              });
+	              triggers.hide.forEach(function(trigger) {
+	                if (trigger === 'outsideClick') {
+	                  $document.off('click', bodyHideTooltipBind);
+	                } else {
+	                  element.off(trigger, hideTooltipBind);
+	                }
+	              });
+	            };
+
+	            function prepTriggers() {
+	              var showTriggers = [], hideTriggers = [];
+	              var val = scope.$eval(attrs[prefix + 'Trigger']);
+	              unregisterTriggers();
+
+	              if (angular.isObject(val)) {
+	                Object.keys(val).forEach(function(key) {
+	                  showTriggers.push(key);
+	                  hideTriggers.push(val[key]);
+	                });
+	                triggers = {
+	                  show: showTriggers,
+	                  hide: hideTriggers
+	                };
+	              } else {
+	                triggers = getTriggers(val);
+	              }
+
+	              if (triggers.show !== 'none') {
+	                triggers.show.forEach(function(trigger, idx) {
+	                  if (trigger === 'outsideClick') {
+	                    element.on('click', toggleTooltipBind);
+	                    $document.on('click', bodyHideTooltipBind);
+	                  } else if (trigger === triggers.hide[idx]) {
+	                    element.on(trigger, toggleTooltipBind);
+	                  } else if (trigger) {
+	                    element.on(trigger, showTooltipBind);
+	                    element.on(triggers.hide[idx], hideTooltipBind);
+	                  }
+
+	                  element.on('keypress', function(e) {
+	                    if (e.which === 27) {
+	                      hideTooltipBind();
+	                    }
+	                  });
+	                });
+	              }
+	            }
+
+	            prepTriggers();
+
+	            var animation = scope.$eval(attrs[prefix + 'Animation']);
+	            ttScope.animation = angular.isDefined(animation) ? !!animation : options.animation;
+
+	            var appendToBodyVal;
+	            var appendKey = prefix + 'AppendToBody';
+	            if (appendKey in attrs && attrs[appendKey] === undefined) {
+	              appendToBodyVal = true;
+	            } else {
+	              appendToBodyVal = scope.$eval(attrs[appendKey]);
+	            }
+
+	            appendToBody = angular.isDefined(appendToBodyVal) ? appendToBodyVal : appendToBody;
+
+	            // Make sure tooltip is destroyed and removed.
+	            scope.$on('$destroy', function onDestroyTooltip() {
+	              unregisterTriggers();
+	              removeTooltip();
+	              ttScope = null;
+	            });
+	          };
+	        }
+	      };
+	    };
+	  }];
+	})
+
+	// This is mostly ngInclude code but with a custom scope
+	.directive('uibTooltipTemplateTransclude', [
+	         '$animate', '$sce', '$compile', '$templateRequest',
+	function ($animate, $sce, $compile, $templateRequest) {
+	  return {
+	    link: function(scope, elem, attrs) {
+	      var origScope = scope.$eval(attrs.tooltipTemplateTranscludeScope);
+
+	      var changeCounter = 0,
+	        currentScope,
+	        previousElement,
+	        currentElement;
+
+	      var cleanupLastIncludeContent = function() {
+	        if (previousElement) {
+	          previousElement.remove();
+	          previousElement = null;
+	        }
+
+	        if (currentScope) {
+	          currentScope.$destroy();
+	          currentScope = null;
+	        }
+
+	        if (currentElement) {
+	          $animate.leave(currentElement).then(function() {
+	            previousElement = null;
+	          });
+	          previousElement = currentElement;
+	          currentElement = null;
+	        }
+	      };
+
+	      scope.$watch($sce.parseAsResourceUrl(attrs.uibTooltipTemplateTransclude), function(src) {
+	        var thisChangeId = ++changeCounter;
+
+	        if (src) {
+	          //set the 2nd param to true to ignore the template request error so that the inner
+	          //contents and scope can be cleaned up.
+	          $templateRequest(src, true).then(function(response) {
+	            if (thisChangeId !== changeCounter) { return; }
+	            var newScope = origScope.$new();
+	            var template = response;
+
+	            var clone = $compile(template)(newScope, function(clone) {
+	              cleanupLastIncludeContent();
+	              $animate.enter(clone, elem);
+	            });
+
+	            currentScope = newScope;
+	            currentElement = clone;
+
+	            currentScope.$emit('$includeContentLoaded', src);
+	          }, function() {
+	            if (thisChangeId === changeCounter) {
+	              cleanupLastIncludeContent();
+	              scope.$emit('$includeContentError', src);
+	            }
+	          });
+	          scope.$emit('$includeContentRequested', src);
+	        } else {
+	          cleanupLastIncludeContent();
+	        }
+	      });
+
+	      scope.$on('$destroy', cleanupLastIncludeContent);
+	    }
+	  };
+	}])
+
+	/**
+	 * Note that it's intentional that these classes are *not* applied through $animate.
+	 * They must not be animated as they're expected to be present on the tooltip on
+	 * initialization.
+	 */
+	.directive('uibTooltipClasses', ['$uibPosition', function($uibPosition) {
+	  return {
+	    restrict: 'A',
+	    link: function(scope, element, attrs) {
+	      // need to set the primary position so the
+	      // arrow has space during position measure.
+	      // tooltip.positionTooltip()
+	      if (scope.placement) {
+	        // // There are no top-left etc... classes
+	        // // in TWBS, so we need the primary position.
+	        var position = $uibPosition.parsePlacement(scope.placement);
+	        element.addClass(position[0]);
+	      }
+
+	      if (scope.popupClass) {
+	        element.addClass(scope.popupClass);
+	      }
+
+	      if (scope.animation) {
+	        element.addClass(attrs.tooltipAnimationClass);
+	      }
+	    }
+	  };
+	}])
+
+	.directive('uibTooltipPopup', function() {
+	  return {
+	    restrict: 'A',
+	    scope: { content: '@' },
+	    templateUrl: 'uib/template/tooltip/tooltip-popup.html'
+	  };
+	})
+
+	.directive('uibTooltip', [ '$uibTooltip', function($uibTooltip) {
+	  return $uibTooltip('uibTooltip', 'tooltip', 'mouseenter');
+	}])
+
+	.directive('uibTooltipTemplatePopup', function() {
+	  return {
+	    restrict: 'A',
+	    scope: { contentExp: '&', originScope: '&' },
+	    templateUrl: 'uib/template/tooltip/tooltip-template-popup.html'
+	  };
+	})
+
+	.directive('uibTooltipTemplate', ['$uibTooltip', function($uibTooltip) {
+	  return $uibTooltip('uibTooltipTemplate', 'tooltip', 'mouseenter', {
+	    useContentExp: true
+	  });
+	}])
+
+	.directive('uibTooltipHtmlPopup', function() {
+	  return {
+	    restrict: 'A',
+	    scope: { contentExp: '&' },
+	    templateUrl: 'uib/template/tooltip/tooltip-html-popup.html'
+	  };
+	})
+
+	.directive('uibTooltipHtml', ['$uibTooltip', function($uibTooltip) {
+	  return $uibTooltip('uibTooltipHtml', 'tooltip', 'mouseenter', {
+	    useContentExp: true
+	  });
+	}]);
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	angular.module("uib/template/popover/popover.html", []).run(["$templateCache", function($templateCache) {
+	  $templateCache.put("uib/template/popover/popover.html",
+	    "<div class=\"arrow\"></div>\n" +
+	    "\n" +
+	    "<div class=\"popover-inner\">\n" +
+	    "    <h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n" +
+	    "    <div class=\"popover-content\" ng-bind=\"content\"></div>\n" +
+	    "</div>\n" +
+	    "");
+	}]);
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	angular.module("uib/template/popover/popover-html.html", []).run(["$templateCache", function($templateCache) {
+	  $templateCache.put("uib/template/popover/popover-html.html",
+	    "<div class=\"arrow\"></div>\n" +
+	    "\n" +
+	    "<div class=\"popover-inner\">\n" +
+	    "    <h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n" +
+	    "    <div class=\"popover-content\" ng-bind-html=\"contentExp()\"></div>\n" +
+	    "</div>\n" +
+	    "");
+	}]);
+
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	angular.module("uib/template/popover/popover-template.html", []).run(["$templateCache", function($templateCache) {
+	  $templateCache.put("uib/template/popover/popover-template.html",
+	    "<div class=\"arrow\"></div>\n" +
+	    "\n" +
+	    "<div class=\"popover-inner\">\n" +
+	    "    <h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n" +
+	    "    <div class=\"popover-content\"\n" +
+	    "      uib-tooltip-template-transclude=\"contentExp()\"\n" +
+	    "      tooltip-template-transclude-scope=\"originScope()\"></div>\n" +
+	    "</div>\n" +
+	    "");
+	}]);
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	/**
+	 * The following features are still outstanding: popup delay, animation as a
+	 * function, placement as a function, inside, support for more triggers than
+	 * just mouse enter/leave, and selector delegatation.
+	 */
+	angular.module('ui.bootstrap.popover', ['ui.bootstrap.tooltip'])
+
+	.directive('uibPopoverTemplatePopup', function() {
+	  return {
+	    restrict: 'A',
+	    scope: { uibTitle: '@', contentExp: '&', originScope: '&' },
+	    templateUrl: 'uib/template/popover/popover-template.html'
+	  };
+	})
+
+	.directive('uibPopoverTemplate', ['$uibTooltip', function($uibTooltip) {
+	  return $uibTooltip('uibPopoverTemplate', 'popover', 'click', {
+	    useContentExp: true
+	  });
+	}])
+
+	.directive('uibPopoverHtmlPopup', function() {
+	  return {
+	    restrict: 'A',
+	    scope: { contentExp: '&', uibTitle: '@' },
+	    templateUrl: 'uib/template/popover/popover-html.html'
+	  };
+	})
+
+	.directive('uibPopoverHtml', ['$uibTooltip', function($uibTooltip) {
+	  return $uibTooltip('uibPopoverHtml', 'popover', 'click', {
+	    useContentExp: true
+	  });
+	}])
+
+	.directive('uibPopoverPopup', function() {
+	  return {
+	    restrict: 'A',
+	    scope: { uibTitle: '@', content: '@' },
+	    templateUrl: 'uib/template/popover/popover.html'
+	  };
+	})
+
+	.directive('uibPopover', ['$uibTooltip', function($uibTooltip) {
+	  return $uibTooltip('uibPopover', 'popover', 'click');
+	}]);
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(33);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../css-loader/index.js!./tooltip.css", function() {
+				var newContent = require("!!./../../../css-loader/index.js!./tooltip.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,\n[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,\n[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,\n[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,\n[uib-popover-popup].popover.top-left > .arrow,\n[uib-popover-popup].popover.top-right > .arrow,\n[uib-popover-popup].popover.bottom-left > .arrow,\n[uib-popover-popup].popover.bottom-right > .arrow,\n[uib-popover-popup].popover.left-top > .arrow,\n[uib-popover-popup].popover.left-bottom > .arrow,\n[uib-popover-popup].popover.right-top > .arrow,\n[uib-popover-popup].popover.right-bottom > .arrow,\n[uib-popover-html-popup].popover.top-left > .arrow,\n[uib-popover-html-popup].popover.top-right > .arrow,\n[uib-popover-html-popup].popover.bottom-left > .arrow,\n[uib-popover-html-popup].popover.bottom-right > .arrow,\n[uib-popover-html-popup].popover.left-top > .arrow,\n[uib-popover-html-popup].popover.left-bottom > .arrow,\n[uib-popover-html-popup].popover.right-top > .arrow,\n[uib-popover-html-popup].popover.right-bottom > .arrow,\n[uib-popover-template-popup].popover.top-left > .arrow,\n[uib-popover-template-popup].popover.top-right > .arrow,\n[uib-popover-template-popup].popover.bottom-left > .arrow,\n[uib-popover-template-popup].popover.bottom-right > .arrow,\n[uib-popover-template-popup].popover.left-top > .arrow,\n[uib-popover-template-popup].popover.left-bottom > .arrow,\n[uib-popover-template-popup].popover.right-top > .arrow,\n[uib-popover-template-popup].popover.right-bottom > .arrow {\n  top: auto;\n  bottom: auto;\n  left: auto;\n  right: auto;\n  margin: 0;\n}\n\n[uib-popover-popup].popover,\n[uib-popover-html-popup].popover,\n[uib-popover-template-popup].popover {\n  display: block !important;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(35);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./tooltip.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./tooltip.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 400px;\n  padding: 1px;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 14px;\n  background-color: #ffffff;\n  -webkit-background-clip: padding-box;\n  background-clip: padding-box;\n  border: 1px solid #cccccc;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.38);\n  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.38);\n}\n.popover.top {\n  margin-top: -80px;\n}\n.popover.right {\n  margin-left: 10px;\n  margin-top: -65px;\n}\n.popover.bottom {\n  margin-top: -50px;\n}\n.popover.left {\n  margin-left: -10px;\n  margin-top: -65px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n}\n.popover-content a {\n  color: #02BAF2;\n  text-decoration: none;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: #999999;\n  border-top-color: rgba(0, 0, 0, 0.25);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #ffffff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: #999999;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #ffffff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: #999999;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #ffffff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: #999999;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #ffffff;\n  bottom: -10px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(37)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular) {
+	    "use strict";
+	    var module = angular.module('ep.toggleButtons', [
+	        'ui.bootstrap.buttons'
+	    ]);
+	    Object.defineProperty(exports, "__esModule", { value: true });
+	    exports.default = module.name;
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9nZ2xlQnV0dG9ucy5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b2dnbGVCdXR0b25zLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUlBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsa0JBQWtCLEVBQUU7UUFDNUQsc0JBQXNCO0tBQ3ZCLENBQUMsQ0FBQztJQUVIO3NCQUFlLE1BQU0sQ0FBQyxJQUFJLENBQUMifQ==
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(38);
+
+	var MODULE_NAME = 'ui.bootstrap.module.buttons';
+
+	angular.module(MODULE_NAME, ['ui.bootstrap.buttons']);
+
+	module.exports = MODULE_NAME;
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	angular.module('ui.bootstrap.buttons', [])
+
+	.constant('uibButtonConfig', {
+	  activeClass: 'active',
+	  toggleEvent: 'click'
+	})
+
+	.controller('UibButtonsController', ['uibButtonConfig', function(buttonConfig) {
+	  this.activeClass = buttonConfig.activeClass || 'active';
+	  this.toggleEvent = buttonConfig.toggleEvent || 'click';
+	}])
+
+	.directive('uibBtnRadio', ['$parse', function($parse) {
+	  return {
+	    require: ['uibBtnRadio', 'ngModel'],
+	    controller: 'UibButtonsController',
+	    controllerAs: 'buttons',
+	    link: function(scope, element, attrs, ctrls) {
+	      var buttonsCtrl = ctrls[0], ngModelCtrl = ctrls[1];
+	      var uncheckableExpr = $parse(attrs.uibUncheckable);
+
+	      element.find('input').css({display: 'none'});
+
+	      //model -> UI
+	      ngModelCtrl.$render = function() {
+	        element.toggleClass(buttonsCtrl.activeClass, angular.equals(ngModelCtrl.$modelValue, scope.$eval(attrs.uibBtnRadio)));
+	      };
+
+	      //ui->model
+	      element.on(buttonsCtrl.toggleEvent, function() {
+	        if (attrs.disabled) {
+	          return;
+	        }
+
+	        var isActive = element.hasClass(buttonsCtrl.activeClass);
+
+	        if (!isActive || angular.isDefined(attrs.uncheckable)) {
+	          scope.$apply(function() {
+	            ngModelCtrl.$setViewValue(isActive ? null : scope.$eval(attrs.uibBtnRadio));
+	            ngModelCtrl.$render();
+	          });
+	        }
+	      });
+
+	      if (attrs.uibUncheckable) {
+	        scope.$watch(uncheckableExpr, function(uncheckable) {
+	          attrs.$set('uncheckable', uncheckable ? '' : undefined);
+	        });
+	      }
+	    }
+	  };
+	}])
+
+	.directive('uibBtnCheckbox', function() {
+	  return {
+	    require: ['uibBtnCheckbox', 'ngModel'],
+	    controller: 'UibButtonsController',
+	    controllerAs: 'button',
+	    link: function(scope, element, attrs, ctrls) {
+	      var buttonsCtrl = ctrls[0], ngModelCtrl = ctrls[1];
+
+	      element.find('input').css({display: 'none'});
+
+	      function getTrueValue() {
+	        return getCheckboxValue(attrs.btnCheckboxTrue, true);
+	      }
+
+	      function getFalseValue() {
+	        return getCheckboxValue(attrs.btnCheckboxFalse, false);
+	      }
+
+	      function getCheckboxValue(attribute, defaultValue) {
+	        return angular.isDefined(attribute) ? scope.$eval(attribute) : defaultValue;
+	      }
+
+	      //model -> UI
+	      ngModelCtrl.$render = function() {
+	        element.toggleClass(buttonsCtrl.activeClass, angular.equals(ngModelCtrl.$modelValue, getTrueValue()));
+	      };
+
+	      //ui->model
+	      element.on(buttonsCtrl.toggleEvent, function() {
+	        if (attrs.disabled) {
+	          return;
+	        }
+
+	        scope.$apply(function() {
+	          ngModelCtrl.$setViewValue(element.hasClass(buttonsCtrl.activeClass) ? getFalseValue() : getTrueValue());
+	          ngModelCtrl.$render();
+	        });
+	      });
+	    }
+	  };
+	});
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVjbGFyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRlY2xhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(41);
+
+/***/ },
+/* 41 */
 /***/ function(module, exports) {
 
 	/******/ (function(modules) { // webpackBootstrap
