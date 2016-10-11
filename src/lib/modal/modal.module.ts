@@ -3,6 +3,7 @@ import 'angular-sanitize';
 
 import 'angular-ui-bootstrap/src/modal/index-nocss.js';
 import 'angular-ui-bootstrap/src/position/position.css';
+import './modal.less';
 
 import run from './modal.run';
 import config from './modal.config';
