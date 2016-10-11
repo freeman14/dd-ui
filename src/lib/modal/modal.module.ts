@@ -6,7 +6,6 @@ import 'angular-ui-bootstrap/src/position/position.css';
 import './modal.less';
 
 import run from './modal.run';
-import config from './modal.config';
 
 const module: ng.IModule = angular.module('ep.modal', [
   'ngSanitize',
@@ -14,7 +13,5 @@ const module: ng.IModule = angular.module('ep.modal', [
 ]);
 
 module.run(run);
-
-module.config(config);
 
 export default module.name;
