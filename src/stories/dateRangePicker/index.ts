@@ -1,6 +1,6 @@
 import * as moment from 'moment';
 
-let overview: stotybook.ISection = sb.section('Date range picker');
+let overview: stotybook.ISection = sb.section('UI components');
 overview.story('Date range picker')
   .add('Simple date range picker', '<ep-date-range-picker title-text="{{vm.title}}" range="vm.range" event-range="vm.eventRange"></ep-date-range-picker>',
     {

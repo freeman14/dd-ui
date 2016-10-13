@@ -1,4 +1,4 @@
-let toggleButtons: stotybook.ISection = sb.section('Toggle buttons');
+let toggleButtons: stotybook.ISection = sb.section('UI components');
 toggleButtons.story('Toggle buttons')
   .add('Simple toggle group', `<div class="btn-group">
         <button class="btn btn-primary" ng-model="vm.radioModel" uib-btn-radio="'Left'">Left</button>

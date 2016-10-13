@@ -1,4 +1,4 @@
-let tooltip: stotybook.ISection = sb.section('Tooltip');
+let tooltip: stotybook.ISection = sb.section('UI components');
 tooltip.story('Tooltip')
   .add('Simple tooltip', '<div popover-placement="bottom" popover-title="{{vm.title}}" uib-popover="{{vm.text}}" >Some text with tooltip</div>',
     {
