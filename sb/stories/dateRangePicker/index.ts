@@ -20,7 +20,9 @@ overview.story('Date range picker')
   })
   .add('Date picker with custom footer',
   `<ep-date-range-picker title-text="{{vm.title}}" range="vm.range" event-range="vm.eventRange">
-    <div>This is custom footer</div>
+    <div>
+      This is custom footer
+    </div>
   </ep-date-range-picker>`,
   {
     title: 'Date picker',
