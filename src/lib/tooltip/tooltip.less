@@ -1,3 +1,7 @@
+@border-color: #DEDEDE;
+@arrow-border-color: rgba(0, 0, 0, 0.12);
+@shadow-color: rgba(0, 0, 0, 0.2);
+
 .popover {
   position: absolute;
   top: 0;
@@ -25,11 +29,10 @@
   background-color: #ffffff;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid #cccccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid @border-color;
   border-radius: 6px;
-  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.38);
-  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.38)
+  -webkit-box-shadow: 0 1px 7px @shadow-color;
+  box-shadow: 0 1px 7px @shadow-color;
 }
 .popover.top {
   margin-top: -80px;
@@ -55,6 +58,7 @@
 }
 .popover-content {
   padding: 9px 14px;
+  font-weight: lighter;
   a {
     color: #02BAF2;
     text-decoration: none;
@@ -80,8 +84,7 @@
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999999;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: @arrow-border-color;
   bottom: -11px;
 }
 .popover.top > .arrow:after {
@@ -96,8 +99,7 @@
   left: -11px;
   margin-top: -11px;
   border-left-width: 0;
-  border-right-color: #999999;
-  border-right-color: rgba(0, 0, 0, 0.25);
+  border-right-color: @arrow-border-color;
 }
 .popover.right > .arrow:after {
   content: " ";
@@ -110,8 +112,7 @@
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-bottom-color: @arrow-border-color;
   top: -11px;
 }
 .popover.bottom > .arrow:after {
@@ -126,8 +127,7 @@
   right: -11px;
   margin-top: -11px;
   border-right-width: 0;
-  border-left-color: #999999;
-  border-left-color: rgba(0, 0, 0, 0.25);
+  border-left-color: @arrow-border-color;
 }
 .popover.left > .arrow:after {
   content: " ";
