@@ -4,8 +4,8 @@
   "description": "DoubleDutch UI library",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
-    "test": "karma start --NODE_ENV=test",
+    // "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
+    // "test": "karma start --NODE_ENV=test",
     "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production",
     "postinstall": "typings i",
     "sb": "node ./sb/.webpack/server.js --NODE_ENV=dev",

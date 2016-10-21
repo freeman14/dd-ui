@@ -1,13 +1,10 @@
 var loaders = require("./loaders");
 var webpack = require('webpack');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
   entry: {
-    'dd-ui': ['./src/lib/index.ts'],
-    app: './src/index.ts',
-    stories: './src/stories'
+    'dd-ui': ['./src/index.ts']
   },
   output: {
     libraryTarget: 'umd',
@@ -29,14 +26,10 @@ module.exports = {
   plugins: [
     new NgAnnotatePlugin({
       add: true
-    }),
-    new CopyWebpackPlugin([
-      { from: './src/preview.html', to: 'preview.html' },
-      { from: './src/index.html', to: 'index.html' }
-    ])
+    })
   ],
   module: {
     loaders: loaders,
-    noParse: [ "angular" ]
+    noParse: ["angular"]
   }
 };
