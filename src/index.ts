@@ -1,21 +1,14 @@
-/// <reference path="../typings/index.d.ts" /> 
-
 import * as angular from 'angular';
+import datePickerModule from './dateRangePicker/dateRangePicker.module';
+import tooltipModule from './tooltip/tooltip.module';
+import toggleButtonsModule from './toggleButtons/toggleButtons.module';
+import modalModule from './modal/modal.module';
 
-import './declare';
-
-import 'ui-storybook/helpers/ng';
-import DDUI from './lib/index';
-
-const mainModule = angular.module('sb', [
-  'helper',
-  DDUI
+const module: ng.IModule = angular.module('dd-ui', [
+  datePickerModule,
+  tooltipModule,
+  toggleButtonsModule,
+  modalModule
 ]);
 
-let preview = document.createElement('preview-helper');
-document.body.appendChild(preview);
-
-angular.element(preview)
-  .ready(() => {
-    angular.bootstrap(preview, [mainModule.name], { strictDi: false });
-  });
+export default module.name;
