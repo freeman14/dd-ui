@@ -55,7 +55,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/// <reference path="../typings/index.d.ts" /> 
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(2), __webpack_require__(48), __webpack_require__(49)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, index_1) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(2), __webpack_require__(50), __webpack_require__(51)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, index_1) {
 	    "use strict";
 	    var mainModule = angular.module('sb', [
 	        'helper',
@@ -80,7 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(3), __webpack_require__(13), __webpack_require__(36), __webpack_require__(39)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, dateRangePicker_module_1, tooltip_module_1, toggleButtons_module_1, modal_module_1) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(3), __webpack_require__(13), __webpack_require__(36), __webpack_require__(39), __webpack_require__(48)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, dateRangePicker_module_1, tooltip_module_1, toggleButtons_module_1, modal_module_1) {
 	    "use strict";
 	    var module = angular.module('dd-ui', [
 	        dateRangePicker_module_1.default,
@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Object.defineProperty(exports, "__esModule", { value: true });
 	    exports.default = module.name;
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQU1BLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsT0FBTyxFQUFFO1FBQ2pELGdDQUFnQjtRQUNoQix3QkFBYTtRQUNiLDhCQUFtQjtRQUNuQixzQkFBVztLQUNaLENBQUMsQ0FBQztJQUVIO3NCQUFlLE1BQU0sQ0FBQyxJQUFJLENBQUMifQ==
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQVFBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsT0FBTyxFQUFFO1FBQ2pELGdDQUFnQjtRQUNoQix3QkFBYTtRQUNiLDhCQUFtQjtRQUNuQixzQkFBVztLQUNaLENBQUMsQ0FBQztJQUVIO3NCQUFlLE1BQU0sQ0FBQyxJQUFJLENBQUMifQ==
 
 /***/ },
 /* 3 */
@@ -100,7 +100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(4), __webpack_require__(5), __webpack_require__(8), __webpack_require__(9)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, moment, dateRangePicker_component_1) {
 	    "use strict";
 	    var module = angular.module('ep.dateRangePicker', ['obDateRangePicker']);
-	    module.component('epDateRangePicker', dateRangePicker_component_1.DateRangePickerComponent);
+	    module.component('epDateRangePicker', dateRangePicker_component_1.dateRangePickerComponent);
 	    module.constant('moment', moment); // todo: remove dirty hack
 	    Object.defineProperty(exports, "__esModule", { value: true });
 	    exports.default = module.name;
@@ -119,7 +119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(6)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, dateRangePicker_controller_1) {
 	    "use strict";
-	    exports.DateRangePickerComponent = {
+	    exports.dateRangePickerComponent = {
 	        controller: dateRangePicker_controller_1.DateRangePickerController,
 	        controllerAs: 'vm',
 	        template: __webpack_require__(7),
@@ -3094,7 +3094,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 400px;\n  padding: 1px;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 14px;\n  background-color: #ffffff;\n  -webkit-background-clip: padding-box;\n  background-clip: padding-box;\n  border: 1px solid #cccccc;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.38);\n  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.38);\n}\n.popover.top {\n  margin-top: -80px;\n}\n.popover.right {\n  margin-left: 20px;\n  margin-top: -65px;\n}\n.popover.bottom {\n  margin-top: -50px;\n}\n.popover.left {\n  margin-left: -20px;\n  margin-top: -65px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n}\n.popover-content a {\n  color: #02BAF2;\n  text-decoration: none;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: #999999;\n  border-top-color: rgba(0, 0, 0, 0.25);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #ffffff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: #999999;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #ffffff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: #999999;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #ffffff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: #999999;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #ffffff;\n  bottom: -10px;\n}\n", ""]);
+	exports.push([module.id, ".popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 400px;\n  padding: 1px;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 14px;\n  background-color: #ffffff;\n  -webkit-background-clip: padding-box;\n  background-clip: padding-box;\n  border: 1px solid #DEDEDE;\n  border-radius: 6px;\n  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);\n}\n.popover.top {\n  margin-top: -80px;\n}\n.popover.right {\n  margin-left: 20px;\n  margin-top: -65px;\n}\n.popover.bottom {\n  margin-top: -50px;\n}\n.popover.left {\n  margin-left: -20px;\n  margin-top: -65px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n  font-weight: lighter;\n}\n.popover-content a {\n  color: #02BAF2;\n  text-decoration: none;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: rgba(0, 0, 0, 0.12);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #ffffff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: rgba(0, 0, 0, 0.12);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #ffffff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: rgba(0, 0, 0, 0.12);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #ffffff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: rgba(0, 0, 0, 0.12);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #ffffff;\n  bottom: -10px;\n}\n", ""]);
 
 	// exports
 
@@ -4209,18 +4209,58 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 48 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVjbGFyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRlY2xhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(49);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./style.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./style.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(50);
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "html,\nbody {\n  height: 100%;\n  width: 100%;\n}\nbody {\n  background-color: rgba(0, 0, 0, 0.05);\n  background-image: repeating-linear-gradient(0deg, transparent, transparent 7px, rgba(0, 0, 0, 0.2) 1px, transparent 8px), repeating-linear-gradient(90deg, transparent, transparent 7px, rgba(0, 0, 0, 0.2) 1px, transparent 8px);\n  background-size: 15px 15px;\n}\n", ""]);
+
+	// exports
+
 
 /***/ },
 /* 50 */
+/***/ function(module, exports) {
+
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVjbGFyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRlY2xhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(52);
+
+/***/ },
+/* 52 */
 /***/ function(module, exports) {
 
 	/******/ (function(modules) { // webpackBootstrap
