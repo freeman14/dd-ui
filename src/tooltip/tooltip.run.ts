@@ -1,5 +1,5 @@
-// @ngInject
 export default function runFunc($templateCache: ng.ITemplateCacheService): void {
+  'ngInject';
 
   $templateCache.put('uib/template/popover/popover-template.html',
     `<div class="arrow"></div>

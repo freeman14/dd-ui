@@ -24,9 +24,7 @@ module.exports = {
     modulesDirectories: ["node_modules"]
   },
   plugins: [
-    new NgAnnotatePlugin({
-      add: true
-    })
+    new NgAnnotatePlugin({ add: true })
   ],
   module: {
     loaders: loaders,

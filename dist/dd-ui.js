@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("angular"), require("moment")) : factory(root["angular"], root["moment"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_4__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_4__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -54,45 +54,51 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(2);
+	module.exports = __webpack_require__(1);
 
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+	"use strict";
+	var angular = __webpack_require__(2);
+	var dateRangePicker_module_1 = __webpack_require__(3);
+	var tooltip_module_1 = __webpack_require__(13);
+	var toggleButtons_module_1 = __webpack_require__(36);
+	var modal_module_1 = __webpack_require__(39);
+	var module = angular.module('dd-ui', [
+	    dateRangePicker_module_1.default,
+	    tooltip_module_1.default,
+	    toggleButtons_module_1.default,
+	    modal_module_1.default
+	]);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
 
 /***/ },
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(3), __webpack_require__(13), __webpack_require__(36), __webpack_require__(39), __webpack_require__(48)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, dateRangePicker_module_1, tooltip_module_1, toggleButtons_module_1, modal_module_1) {
-	    "use strict";
-	    var module = angular.module('dd-ui', [
-	        dateRangePicker_module_1.default,
-	        tooltip_module_1.default,
-	        toggleButtons_module_1.default,
-	        modal_module_1.default
-	    ]);
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = module.name;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQVFBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsT0FBTyxFQUFFO1FBQ2pELGdDQUFnQjtRQUNoQix3QkFBYTtRQUNiLDhCQUFtQjtRQUNuQixzQkFBVztLQUNaLENBQUMsQ0FBQztJQUVIO3NCQUFlLE1BQU0sQ0FBQyxJQUFJLENBQUMifQ==
+	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(4), __webpack_require__(5), __webpack_require__(8), __webpack_require__(9)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, moment, dateRangePicker_component_1) {
-	    "use strict";
-	    var module = angular.module('ep.dateRangePicker', ['obDateRangePicker']);
-	    module.component('epDateRangePicker', dateRangePicker_component_1.dateRangePickerComponent);
-	    module.constant('moment', moment); // todo: remove dirty hack
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = module.name;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0ZVJhbmdlUGlja2VyLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRhdGVSYW5nZVBpY2tlci5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7SUFRQSxJQUFNLE1BQU0sR0FBZSxPQUFPLENBQUMsTUFBTSxDQUFDLG9CQUFvQixFQUFFLENBQUMsbUJBQW1CLENBQUMsQ0FBQyxDQUFDO0lBQ3ZGLE1BQU0sQ0FBQyxTQUFTLENBQUMsbUJBQW1CLEVBQUUsb0RBQXdCLENBQUMsQ0FBQztJQUNoRSxNQUFNLENBQUMsUUFBUSxDQUFDLFFBQVEsRUFBRSxNQUFNLENBQUMsQ0FBQyxDQUFDLDBCQUEwQjtJQUU3RDtzQkFBZSxNQUFNLENBQUMsSUFBSSxDQUFDIn0=
+	"use strict";
+	var angular = __webpack_require__(2);
+	var moment = __webpack_require__(4);
+	__webpack_require__(5);
+	var dateRangePicker_component_1 = __webpack_require__(6);
+	__webpack_require__(9);
+	var module = angular.module('ep.dateRangePicker', ['obDateRangePicker']);
+	module.component('epDateRangePicker', dateRangePicker_component_1.dateRangePickerComponent);
+	module.constant('moment', moment);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
 
 /***/ },
 /* 4 */
@@ -102,132 +108,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(6)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, dateRangePicker_controller_1) {
-	    "use strict";
-	    exports.dateRangePickerComponent = {
-	        controller: dateRangePicker_controller_1.DateRangePickerController,
-	        controllerAs: 'vm',
-	        template: __webpack_require__(7),
-	        transclude: true,
-	        bindings: {
-	            title: '@?titleText',
-	            range: '<',
-	            eventDurationRange: '<?eventRange',
-	            api: '=?',
-	            onDateRangeChange: '&'
-	        }
-	    };
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0ZVJhbmdlUGlja2VyLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRhdGVSYW5nZVBpY2tlci5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7SUFFYSxnQ0FBd0IsR0FBeUI7UUFDNUQsVUFBVSxFQUFFLHNEQUF5QjtRQUNyQyxZQUFZLEVBQUUsSUFBSTtRQUNsQixRQUFRLEVBQUUsT0FBTyxDQUFDLGdDQUFnQyxDQUFDO1FBQ25ELFVBQVUsRUFBRSxJQUFJO1FBQ2hCLFFBQVEsRUFBRTtZQUNSLEtBQUssRUFBRSxhQUFhO1lBQ3BCLEtBQUssRUFBRSxHQUFHO1lBQ1Ysa0JBQWtCLEVBQUUsY0FBYztZQUNsQyxHQUFHLEVBQUUsSUFBSTtZQUNULGlCQUFpQixFQUFFLEdBQUc7U0FDdkI7S0FDRixDQUFDIn0=
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(4), __webpack_require__(1)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, moment, angular) {
-	    "use strict";
-	    var DATE_INPUTS = {
-	        FIRST: 'first',
-	        SECOND: 'second',
-	    };
-	    var DateRangePickerController = (function () {
-	        // @ngInject
-	        DateRangePickerController.$inject = ["$scope"];
-	        function DateRangePickerController($scope) {
-	            this.$scope = $scope;
-	        }
-	        DateRangePickerController.prototype.$onInit = function () {
-	            this.dateInputs = DATE_INPUTS;
-	            this.opened = false;
-	            this.maxDate = moment();
-	            this.turn = DATE_INPUTS.FIRST;
-	            this.dateRangeApi = {};
-	            this.linked = true;
-	            this.removeSelection();
-	            this.api = {
-	                close: this.closeCalendar.bind(this)
-	            };
-	            this.popover = document.querySelector('.date-range-picker-popover');
-	            this.popover.addEventListener('click', this.stopEventPropagation, false);
-	            this.input = document.querySelector('.date-range-picker-date-btn-group');
-	            this.input.addEventListener('click', this.stopEventPropagation, false);
-	            document.body.addEventListener('click', this.closeCalendarOnWindowClick.bind(this), false);
-	        };
-	        DateRangePickerController.prototype.$onChanges = function (changes) {
-	            if (changes.eventDurationRange && changes.eventDurationRange.currentValue) {
-	                this.eventDurationRange.start = moment(angular.extend({}, changes.eventDurationRange.currentValue.start));
-	                this.eventDurationRange.end = moment(angular.extend({}, changes.eventDurationRange.currentValue.end));
-	            }
-	            if (changes.range && changes.range.currentValue) {
-	                this.range.start = moment(angular.extend({}, changes.range.currentValue.start));
-	                this.range.end = moment(angular.extend({}, changes.range.currentValue.end));
-	            }
-	            if (changes.range || changes.eventDurationRange) {
-	                this.updateCalendar();
-	            }
-	        };
-	        DateRangePickerController.prototype.$onDestroy = function () {
-	            document.body.removeEventListener('click', this.closeCalendarOnWindowClick.bind(this), false);
-	            this.popover.removeEventListener('click', this.stopEventPropagation, false);
-	            this.input.removeEventListener('click', this.stopEventPropagation, false);
-	        };
-	        DateRangePickerController.prototype.openCalendar = function () {
-	            this.opened = true;
-	        };
-	        DateRangePickerController.prototype.closeCalendar = function () {
-	            this.removeSelection();
-	            this.opened = false;
-	        };
-	        DateRangePickerController.prototype.firstDaySelected = function (days) {
-	            this.onDateClick(DATE_INPUTS.SECOND);
-	            this.onDateRangeChange({ start: days.start.clone(), end: days.end.clone() });
-	        };
-	        DateRangePickerController.prototype.secondDaySelected = function (days) {
-	            this.onDateRangeChange({ start: days.start.clone(), end: days.end.clone() });
-	            this.closeCalendar();
-	        };
-	        DateRangePickerController.prototype.removeSelection = function () {
-	            this.selectedDate = null;
-	        };
-	        DateRangePickerController.prototype.onDateClick = function (day) {
-	            this.openCalendar();
-	            this.turn = day;
-	            this.selectedDate = day;
-	        };
-	        DateRangePickerController.prototype.closeCalendarOnWindowClick = function () {
-	            this.closeCalendar();
-	            this.$scope.$digest();
-	        };
-	        DateRangePickerController.prototype.updateCalendar = function () {
-	            var _this = this;
-	            // TODO
-	            // Need to six it inside DP library
-	            try {
-	                this.dateRangeApi.render();
-	            }
-	            catch (e) {
-	                setTimeout(function () { return _this.dateRangeApi.render(); }, 0);
-	            }
-	        };
-	        DateRangePickerController.prototype.stopEventPropagation = function (event) {
-	            event.stopPropagation();
-	        };
-	        return DateRangePickerController;
-	    }());
-	    exports.DateRangePickerController = DateRangePickerController;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0ZVJhbmdlUGlja2VyLmNvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJkYXRlUmFuZ2VQaWNrZXIuY29udHJvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUlBLElBQU0sV0FBVyxHQUFRO1FBQ3ZCLEtBQUssRUFBRSxPQUFPO1FBQ2QsTUFBTSxFQUFFLFFBQVE7S0FDakIsQ0FBQztJQUVGO1FBb0JFLFlBQVk7UUFDWixtQ0FBb0IsTUFBaUI7WUFBakIsV0FBTSxHQUFOLE1BQU0sQ0FBVztRQUNyQyxDQUFDO1FBRUQsMkNBQU8sR0FBUDtZQUNFLElBQUksQ0FBQyxVQUFVLEdBQUcsV0FBVyxDQUFDO1lBRTlCLElBQUksQ0FBQyxNQUFNLEdBQUcsS0FBSyxDQUFDO1lBRXBCLElBQUksQ0FBQyxPQUFPLEdBQUcsTUFBTSxFQUFFLENBQUM7WUFDeEIsSUFBSSxDQUFDLElBQUksR0FBRyxXQUFXLENBQUMsS0FBSyxDQUFDO1lBQzlCLElBQUksQ0FBQyxZQUFZLEdBQUcsRUFBRSxDQUFDO1lBQ3ZCLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1lBRW5CLElBQUksQ0FBQyxlQUFlLEVBQUUsQ0FBQztZQUV2QixJQUFJLENBQUMsR0FBRyxHQUFHO2dCQUNULEtBQUssRUFBRSxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUM7YUFDckMsQ0FBQztZQUVGLElBQUksQ0FBQyxPQUFPLEdBQUcsUUFBUSxDQUFDLGFBQWEsQ0FBQyw0QkFBNEIsQ0FBQyxDQUFDO1lBQ3BFLElBQUksQ0FBQyxPQUFPLENBQUMsZ0JBQWdCLENBQUMsT0FBTyxFQUFFLElBQUksQ0FBQyxvQkFBb0IsRUFBRSxLQUFLLENBQUMsQ0FBQztZQUV6RSxJQUFJLENBQUMsS0FBSyxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsbUNBQW1DLENBQUMsQ0FBQztZQUN6RSxJQUFJLENBQUMsS0FBSyxDQUFDLGdCQUFnQixDQUFDLE9B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
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"date-range-picker\">\n    <div class=\"date-range-picker-title\" ng-bind=\"vm.title\"></div>\n\n    <div class=\"date-range-picker-date-btn-group\"\n         ng-class=\"{'date-range-picker-active-left': vm.selectedDate === vm.dateInputs.FIRST,\n                    'date-range-picker-active-right': vm.selectedDate === vm.dateInputs.SECOND}\">\n        <span class=\"date-range-picker-date date-range-picker-date-left\" ng-bind=\"vm.range.start.toDate() | date: 'MM/dd/yyyy'\" ng-click=\"vm.onDateClick(vm.dateInputs.FIRST)\"></span>\n        <span>&rarr;</span>\n        <span class=\"date-range-picker-date date-range-picker-date-right\" ng-bind=\"vm.range.end.toDate() | date: 'MM/dd/yyyy'\" ng-click=\"vm.onDateClick(vm.dateInputs.SECOND)\"></span>\n    </div>\n    <div  ng-class=\"{'date-range-picker-popover-closed': !vm.opened}\" class=\"date-range-picker-popover\">\n        <div class=\"date-range-picker-popover-arrow\">\n        </div>\n        <ob-daterangepicker\n                min-day=\"vm.minDate\"\n                max-day=\"vm.maxDate\"\n                linked-calendars=\"vm.linked\"\n                first-day-change=\"vm.firstDaySelected(days)\"\n                second-day-change=\"vm.secondDaySelected(days)\"\n                range=\"vm.range\"\n                static=\"vm.eventDurationRange\"\n                api=\"vm.dateRangeApi\"\n                turn=\"vm.turn\">\n        </ob-daterangepicker>\n        <div class=\"date-range-picker-popover-footer\">\n            <ng-transclude></ng-transclude>\n        </div>\n    </div>\n</div>\n"
-
-/***/ },
-/* 8 */
 /***/ function(module, exports) {
 
 	/******/!function(e){function t(n){if(a[n])return a[n].exports;var i=a[n]={exports:{},id:n,loaded:!1};return e[n].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}// webpackBootstrap
@@ -240,6 +120,167 @@ return /******/ (function(modules) { // webpackBootstrap
 	e.put("app/directives/ob-day-picker/ob-day-picker.html",'<div ng-form="{{::dayPicker.formName}}" class="picker-dropdown-container" ng-class="{\'open\': dayPicker.isPickerVisible, \'disabled\': dayPicker.disabled(), \'invalid\': !dayPicker.dayValidity}"><input class="picker-input" ng-model="dayPicker.value" ng-change="dayPicker.updateValidity()" ng-keydown="dayPicker.dateInputEntered($event, dayPicker.value)" ng-click="dayPicker.showPicker()" ng-disabled="dayPicker.disabled()"><div class="picker" ng-show="dayPicker.isPickerVisible"><calendar class="calendar" api="dayPicker.calendarApi" min-day="dayPicker._getMinDay()" max-day="dayPicker._getMaxDay()" week-start="dayPicker.weekStart()" month="dayPicker._selectedDay" interceptors="dayPicker.calendarInterceptors" selected-day="dayPicker._selectedDay" min-month="dayPicker.startCalendar" week-days-name="dayPicker.weekDaysName()" month-format="dayPicker.monthFormat()" show-input="false"></calendar></div></div>')}]);
 	//# sourceMappingURL=../maps/scripts/ob-daterangepicker.js.map
 
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var dateRangePicker_controller_1 = __webpack_require__(7);
+	exports.dateRangePickerComponent = {
+	    controller: dateRangePicker_controller_1.DateRangePickerController,
+	    controllerAs: 'vm',
+	    template: __webpack_require__(8),
+	    transclude: true,
+	    bindings: {
+	        title: '@?titleText',
+	        range: '<',
+	        eventDurationRange: '<?eventRange',
+	        api: '=?',
+	        onDateRangeChange: '&'
+	    }
+	};
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var moment = __webpack_require__(4);
+	var angular = __webpack_require__(2);
+	var DATE_INPUTS = {
+	    FIRST: 'first',
+	    SECOND: 'second',
+	};
+	var KEY = {
+	    RIGHT: 39,
+	    LEFT: 37,
+	    ESC: 27
+	};
+	var DateRangePickerController = (function () {
+	    DateRangePickerController.$inject = ["$scope"];
+	    function DateRangePickerController($scope) {
+	        'ngInject';
+	        this.$scope = $scope;
+	    }
+	    DateRangePickerController.prototype.$onInit = function () {
+	        this.dateInputs = DATE_INPUTS;
+	        this.opened = false;
+	        this.isHotKeysOn = false;
+	        this.hotKeysHandlerFunc = this.handleHotKeys.bind(this);
+	        this.closeCalendarFunc = this.closeCalendarOnWindowClick.bind(this);
+	        this.maxDate = moment();
+	        this.turn = DATE_INPUTS.FIRST;
+	        this.dateRangeApi = {};
+	        this.linked = true;
+	        this.removeSelection();
+	        this.api = {
+	            close: this.closeCalendar.bind(this)
+	        };
+	        this.popover = document.querySelector('.date-range-picker-popover');
+	        this.popover.addEventListener('click', this.stopEventPropagation, false);
+	        this.input = document.querySelector('.date-range-picker-date-btn-group');
+	        this.input.addEventListener('click', this.stopEventPropagation, false);
+	        document.body.addEventListener('click', this.closeCalendarFunc, false);
+	    };
+	    DateRangePickerController.prototype.$onChanges = function (changes) {
+	        if (changes.eventDurationRange && changes.eventDurationRange.currentValue) {
+	            this.eventDurationRange.start = moment(angular.extend({}, changes.eventDurationRange.currentValue.start));
+	            this.eventDurationRange.end = moment(angular.extend({}, changes.eventDurationRange.currentValue.end));
+	        }
+	        if (changes.range && changes.range.currentValue) {
+	            this.range.start = moment(angular.extend({}, changes.range.currentValue.start));
+	            this.range.end = moment(angular.extend({}, changes.range.currentValue.end));
+	        }
+	        if (changes.range || changes.eventDurationRange) {
+	            this.updateCalendar();
+	        }
+	    };
+	    DateRangePickerController.prototype.$onDestroy = function () {
+	        document.body.removeEventListener('click', this.closeCalendarFunc, false);
+	        this.popover.removeEventListener('click', this.stopEventPropagation, false);
+	        this.input.removeEventListener('click', this.stopEventPropagation, false);
+	    };
+	    DateRangePickerController.prototype.openCalendar = function () {
+	        this.opened = true;
+	        this.turnOnHotKeys();
+	    };
+	    DateRangePickerController.prototype.closeCalendar = function () {
+	        this.removeSelection();
+	        this.opened = false;
+	        this.turnOffHotKeys();
+	    };
+	    DateRangePickerController.prototype.firstDaySelected = function (days) {
+	        this.onDateClick(DATE_INPUTS.SECOND);
+	        this.onDateRangeChange({ start: days.start.clone(), end: days.end.clone() });
+	    };
+	    DateRangePickerController.prototype.secondDaySelected = function (days) {
+	        this.onDateRangeChange({ start: days.start.clone(), end: days.end.clone() });
+	        this.closeCalendar();
+	    };
+	    DateRangePickerController.prototype.removeSelection = function () {
+	        this.selectedDate = null;
+	    };
+	    DateRangePickerController.prototype.onDateClick = function (day) {
+	        this.openCalendar();
+	        this.turn = day;
+	        this.selectedDate = day;
+	    };
+	    DateRangePickerController.prototype.closeCalendarOnWindowClick = function () {
+	        this.closeCalendar();
+	        this.$scope.$digest();
+	    };
+	    DateRangePickerController.prototype.updateCalendar = function () {
+	        var _this = this;
+	        try {
+	            this.dateRangeApi.render();
+	        }
+	        catch (e) {
+	            setTimeout(function () { return _this.dateRangeApi.render(); }, 0);
+	        }
+	    };
+	    DateRangePickerController.prototype.turnOnHotKeys = function () {
+	        if (!this.isHotKeysOn) {
+	            document.body.addEventListener('keyup', this.hotKeysHandlerFunc, false);
+	            this.isHotKeysOn = true;
+	        }
+	    };
+	    DateRangePickerController.prototype.turnOffHotKeys = function () {
+	        if (this.isHotKeysOn) {
+	            document.body.removeEventListener('keyup', this.hotKeysHandlerFunc, false);
+	            this.isHotKeysOn = false;
+	        }
+	    };
+	    DateRangePickerController.prototype.handleHotKeys = function (e) {
+	        var key = e.keyCode;
+	        if (e.altKey) {
+	            if (key === KEY.RIGHT) {
+	                this.onDateClick(DATE_INPUTS.SECOND);
+	                this.$scope.$digest();
+	            }
+	            else if (key === KEY.LEFT) {
+	                this.onDateClick(DATE_INPUTS.FIRST);
+	                this.$scope.$digest();
+	            }
+	        }
+	        else if (key === KEY.ESC) {
+	            this.closeCalendarOnWindowClick();
+	        }
+	    };
+	    DateRangePickerController.prototype.stopEventPropagation = function (event) {
+	        event.stopPropagation();
+	    };
+	    return DateRangePickerController;
+	}());
+	exports.DateRangePickerController = DateRangePickerController;
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"date-range-picker\">\n    <div class=\"date-range-picker-title\" ng-bind=\"vm.title\"></div>\n\n    <div class=\"date-range-picker-date-btn-group\"\n         ng-class=\"{'date-range-picker-active-left': vm.selectedDate === vm.dateInputs.FIRST,\n                    'date-range-picker-active-right': vm.selectedDate === vm.dateInputs.SECOND}\">\n        <span class=\"date-range-picker-date date-range-picker-date-left\" ng-bind=\"vm.range.start.toDate() | date: 'MM/dd/yyyy'\" ng-click=\"vm.onDateClick(vm.dateInputs.FIRST)\"></span>\n        <span>&rarr;</span>\n        <span class=\"date-range-picker-date date-range-picker-date-right\" ng-bind=\"vm.range.end.toDate() | date: 'MM/dd/yyyy'\" ng-click=\"vm.onDateClick(vm.dateInputs.SECOND)\"></span>\n    </div>\n    <div  ng-class=\"{'date-range-picker-popover-closed': !vm.opened}\" class=\"date-range-picker-popover\">\n        <div class=\"date-range-picker-popover-arrow\">\n        </div>\n        <ob-daterangepicker\n                min-day=\"vm.minDate\"\n                max-day=\"vm.maxDate\"\n                linked-calendars=\"vm.linked\"\n                first-day-change=\"vm.firstDaySelected(days)\"\n                second-day-change=\"vm.secondDaySelected(days)\"\n                range=\"vm.range\"\n                static=\"vm.eventDurationRange\"\n                api=\"vm.dateRangeApi\"\n                turn=\"vm.turn\">\n        </ob-daterangepicker>\n        <div class=\"date-range-picker-popover-footer\">\n            <ng-transclude></ng-transclude>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 9 */
@@ -257,8 +298,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./dateRangePicker.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./dateRangePicker.less");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./dateRangePicker.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./dateRangePicker.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -593,69 +634,34 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(14), __webpack_require__(15), __webpack_require__(16), __webpack_require__(18), __webpack_require__(32), __webpack_require__(34)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, tooltip_run_1, tooltip_config_1) {
-	    "use strict";
-	    var module = angular.module('ep.tooltip', [
-	        'ngSanitize',
-	        'ui.bootstrap.popover'
-	    ]);
-	    module.run(tooltip_run_1.default);
-	    module.config(tooltip_config_1.default);
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = module.name;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b29sdGlwLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQVVBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsWUFBWSxFQUFFO1FBQ3RELFlBQVk7UUFDWixzQkFBc0I7S0FDdkIsQ0FBQyxDQUFDO0lBRUgsTUFBTSxDQUFDLEdBQUcsQ0FBQyxxQkFBRyxDQUFDLENBQUM7SUFFaEIsTUFBTSxDQUFDLE1BQU0sQ0FBQyx3QkFBTSxDQUFDLENBQUM7SUFFdEI7c0JBQWUsTUFBTSxDQUFDLElBQUksQ0FBQyJ9
+	"use strict";
+	var angular = __webpack_require__(2);
+	__webpack_require__(14);
+	__webpack_require__(16);
+	__webpack_require__(30);
+	__webpack_require__(32);
+	var tooltip_run_1 = __webpack_require__(34);
+	var tooltip_config_1 = __webpack_require__(35);
+	var module = angular.module('ep.tooltip', [
+	    'ngSanitize',
+	    'ui.bootstrap.popover'
+	]);
+	module.run(tooltip_run_1.default);
+	module.config(tooltip_config_1.default);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
 
 /***/ },
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports) {
-	    "use strict";
-	    // @ngInject
-	    runFunc.$inject = ["$templateCache"];
-	    function runFunc($templateCache) {
-	        $templateCache.put('uib/template/popover/popover-template.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\"\n\t\t\t\tuib-tooltip-template-transclude=\"contentExp()\"\n\t\t\t\ttooltip-template-transclude-scope=\"originScope()\">\n\t\t\t</div>\n\t\t</div>");
-	        $templateCache.put('uib/template/popover/popover.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\" ng-bind=\"content\"></div>\n\t\t</div>");
-	        $templateCache.put('uib/template/popover/popover-html.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\" ng-bind-html=\"contentExp()\"></div>\n\t\t</div>");
-	    }
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = runFunc;
-	    ;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5ydW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b29sdGlwLnJ1bi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUFBLFlBQVk7SUFDWixpQkFBZ0MsY0FBd0M7UUFFdEUsY0FBYyxDQUFDLEdBQUcsQ0FBQyw0Q0FBNEMsRUFDN0QseVVBT0ssQ0FDTixDQUFDO1FBRUYsY0FBYyxDQUFDLEdBQUcsQ0FBQyxtQ0FBbUMsRUFDcEQsOE5BSUssQ0FDTixDQUFDO1FBRUYsY0FBYyxDQUFDLEdBQUcsQ0FBQyx3Q0FBd0MsRUFDekQsd09BSUssQ0FDTixDQUFDO0lBQ0osQ0FBQztJQTVCRDs2QkE0QkMsQ0FBQTtJQUFBLENBQUMifQ==
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports) {
-	    "use strict";
-	    // @ngInject
-	    config.$inject = ["$uibTooltipProvider"];
-	    function config($uibTooltipProvider) {
-	        $uibTooltipProvider.options({
-	            animation: false,
-	            appendToBody: true,
-	            trigger: 'mouseenter'
-	        });
-	    }
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = config;
-	    ;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC5jb25maWcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b29sdGlwLmNvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUFBLFlBQVk7SUFDWixnQkFBK0IsbUJBQXdCO1FBQ3JELG1CQUFtQixDQUFDLE9BQU8sQ0FBQztZQUMxQixTQUFTLEVBQUUsS0FBSztZQUNoQixZQUFZLEVBQUUsSUFBSTtZQUNsQixPQUFPLEVBQUUsWUFBWTtTQUN0QixDQUFDLENBQUM7SUFDTCxDQUFDO0lBTkQ7NEJBTUMsQ0FBQTtJQUFBLENBQUMifQ==
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(17);
+	__webpack_require__(15);
 	module.exports = 'ngSanitize';
 
 
 /***/ },
-/* 17 */
+/* 15 */
 /***/ function(module, exports) {
 
 	/**
@@ -1399,14 +1405,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 18 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(19);
+	__webpack_require__(17);
+	__webpack_require__(26);
+	__webpack_require__(27);
 	__webpack_require__(28);
 	__webpack_require__(29);
-	__webpack_require__(30);
-	__webpack_require__(31);
 
 	var MODULE_NAME = 'ui.bootstrap.module.popover';
 
@@ -1416,15 +1422,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 19 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(18);
 	__webpack_require__(20);
 	__webpack_require__(22);
+	__webpack_require__(23);
 	__webpack_require__(24);
 	__webpack_require__(25);
-	__webpack_require__(26);
-	__webpack_require__(27);
 
 	var MODULE_NAME = 'ui.bootstrap.module.tooltip';
 
@@ -1434,10 +1440,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 20 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(21);
+	__webpack_require__(19);
 
 	var MODULE_NAME = 'ui.bootstrap.module.position';
 
@@ -1447,7 +1453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 21 */
+/* 19 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.position', [])
@@ -2073,10 +2079,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(23);
+	__webpack_require__(21);
 
 	var MODULE_NAME = 'ui.bootstrap.module.stackedMap';
 
@@ -2086,7 +2092,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 23 */
+/* 21 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.stackedMap', [])
@@ -2145,7 +2151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/tooltip/tooltip-popup.html", []).run(["$templateCache", function($templateCache) {
@@ -2157,7 +2163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 23 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/tooltip/tooltip-html-popup.html", []).run(["$templateCache", function($templateCache) {
@@ -2169,7 +2175,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 26 */
+/* 24 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/tooltip/tooltip-template-popup.html", []).run(["$templateCache", function($templateCache) {
@@ -2183,7 +2189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 27 */
+/* 25 */
 /***/ function(module, exports) {
 
 	/**
@@ -2905,7 +2911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 28 */
+/* 26 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/popover/popover.html", []).run(["$templateCache", function($templateCache) {
@@ -2921,7 +2927,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 29 */
+/* 27 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/popover/popover-html.html", []).run(["$templateCache", function($templateCache) {
@@ -2937,7 +2943,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 30 */
+/* 28 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/popover/popover-template.html", []).run(["$templateCache", function($templateCache) {
@@ -2955,7 +2961,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 31 */
+/* 29 */
 /***/ function(module, exports) {
 
 	/**
@@ -3007,13 +3013,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 32 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(33);
+	var content = __webpack_require__(31);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -3033,7 +3039,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 33 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -3047,13 +3053,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 34 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(35);
+	var content = __webpack_require__(33);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -3062,8 +3068,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./tooltip.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./tooltip.less");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./tooltip.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./tooltip.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3073,7 +3079,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 35 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -3087,18 +3093,54 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	"use strict";
+	runFunc.$inject = ["$templateCache"];
+	function runFunc($templateCache) {
+	    'ngInject';
+	    $templateCache.put('uib/template/popover/popover-template.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\"\n\t\t\t\tuib-tooltip-template-transclude=\"contentExp()\"\n\t\t\t\ttooltip-template-transclude-scope=\"originScope()\">\n\t\t\t</div>\n\t\t</div>");
+	    $templateCache.put('uib/template/popover/popover.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\" ng-bind=\"content\"></div>\n\t\t</div>");
+	    $templateCache.put('uib/template/popover/popover-html.html', "<div class=\"arrow\"></div>\n\t\t<div class=\"popover-inner\">\n\t\t\t<h3 class=\"popover-title\" ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n\t\t\t<div class=\"popover-content\" ng-bind-html=\"contentExp()\"></div>\n\t\t</div>");
+	}
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = runFunc;
+	;
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	"use strict";
+	config.$inject = ["$uibTooltipProvider"];
+	function config($uibTooltipProvider) {
+	    'ngInject';
+	    $uibTooltipProvider.options({
+	        animation: false,
+	        appendToBody: true,
+	        trigger: 'mouseenter'
+	    });
+	}
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = config;
+	;
+
+
+/***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(37)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular) {
-	    "use strict";
-	    var module = angular.module('ep.toggleButtons', [
-	        'ui.bootstrap.buttons'
-	    ]);
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = module.name;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9nZ2xlQnV0dG9ucy5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0b2dnbGVCdXR0b25zLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztJQUlBLElBQU0sTUFBTSxHQUFlLE9BQU8sQ0FBQyxNQUFNLENBQUMsa0JBQWtCLEVBQUU7UUFDNUQsc0JBQXNCO0tBQ3ZCLENBQUMsQ0FBQztJQUVIO3NCQUFlLE1BQU0sQ0FBQyxJQUFJLENBQUMifQ==
+	"use strict";
+	var angular = __webpack_require__(2);
+	__webpack_require__(37);
+	var module = angular.module('ep.toggleButtons', [
+	    'ui.bootstrap.buttons'
+	]);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
 
 /***/ },
 /* 37 */
@@ -3217,43 +3259,30 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(1), __webpack_require__(40), __webpack_require__(16), __webpack_require__(41), __webpack_require__(44), __webpack_require__(46)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, angular, modal_run_1) {
-	    "use strict";
-	    var module = angular.module('ep.modal', [
-	        'ngSanitize',
-	        'ui.bootstrap.modal'
-	    ]);
-	    module.run(modal_run_1.default);
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = module.name;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kYWwubW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibW9kYWwubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0lBU0EsSUFBTSxNQUFNLEdBQWUsT0FBTyxDQUFDLE1BQU0sQ0FBQyxVQUFVLEVBQUU7UUFDcEQsWUFBWTtRQUNaLG9CQUFvQjtLQUNyQixDQUFDLENBQUM7SUFFSCxNQUFNLENBQUMsR0FBRyxDQUFDLG1CQUFHLENBQUMsQ0FBQztJQUVoQjtzQkFBZSxNQUFNLENBQUMsSUFBSSxDQUFDIn0=
+	"use strict";
+	var angular = __webpack_require__(2);
+	__webpack_require__(14);
+	__webpack_require__(40);
+	__webpack_require__(43);
+	__webpack_require__(45);
+	var modal_run_1 = __webpack_require__(47);
+	var module = angular.module('ep.modal', [
+	    'ngSanitize',
+	    'ui.bootstrap.modal'
+	]);
+	module.run(modal_run_1.default);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
 
 /***/ },
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports) {
-	    "use strict";
-	    // @ngInject
-	    runFunc.$inject = ["$templateCache"];
-	    function runFunc($templateCache) {
-	        $templateCache.put('uib/template/modal/window.html', "<div class=\"modal-dialog {{size ? 'modal-' + size : ''}}\">\n      <div class=\"modal-content\" uib-modal-transclude></div>\n    </div>");
-	    }
-	    Object.defineProperty(exports, "__esModule", { value: true });
-	    exports.default = runFunc;
-	    ;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kYWwucnVuLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibW9kYWwucnVuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0lBQUEsWUFBWTtJQUNaLGlCQUFnQyxjQUF3QztRQUV0RSxjQUFjLENBQUMsR0FBRyxDQUFDLGdDQUFnQyxFQUNqRCwwSUFFTyxDQUFDLENBQUM7SUFDYixDQUFDO0lBTkQ7NkJBTUMsQ0FBQTtJQUFBLENBQUMifQ==
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
+	__webpack_require__(18);
 	__webpack_require__(20);
-	__webpack_require__(22);
+	__webpack_require__(41);
 	__webpack_require__(42);
-	__webpack_require__(43);
 
 	var MODULE_NAME = 'ui.bootstrap.module.modal';
 
@@ -3263,7 +3292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/modal/window.html", []).run(["$templateCache", function($templateCache) {
@@ -3274,7 +3303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.modal', ['ui.bootstrap.stackedMap', 'ui.bootstrap.position'])
@@ -4115,13 +4144,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(45);
+	var content = __webpack_require__(44);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -4141,7 +4170,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -4155,13 +4184,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(47);
+	var content = __webpack_require__(46);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -4170,8 +4199,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./modal.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./modal.less");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./modal.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./modal.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -4181,7 +4210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -4195,43 +4224,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
+/* 47 */
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(49);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./style.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./style.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
+	"use strict";
+	runFunc.$inject = ["$templateCache"];
+	function runFunc($templateCache) {
+	    'ngInject';
+	    $templateCache.put('uib/template/modal/window.html', "<div class=\"modal-dialog {{size ? 'modal-' + size : ''}}\">\n      <div class=\"modal-content\" uib-modal-transclude></div>\n    </div>");
 	}
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(11)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "html,\nbody {\n  height: 100%;\n  width: 100%;\n}\nbody {\n  background-color: rgba(0, 0, 0, 0.05);\n  background-image: repeating-linear-gradient(0deg, transparent, transparent 7px, rgba(0, 0, 0, 0.2) 1px, transparent 8px), repeating-linear-gradient(90deg, transparent, transparent 7px, rgba(0, 0, 0, 0.2) 1px, transparent 8px);\n  background-size: 15px 15px;\n}\n", ""]);
-
-	// exports
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = runFunc;
+	;
 
 
 /***/ }

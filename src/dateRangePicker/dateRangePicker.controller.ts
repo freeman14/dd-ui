@@ -7,6 +7,12 @@ const DATE_INPUTS: any = {
   SECOND: 'second',
 };
 
+const KEY: any = {
+  RIGHT: 39,
+  LEFT: 37,
+  ESC: 27
+};
+
 export class DateRangePickerController {
   public minDate: Moment;
   public maxDate: Moment;
@@ -26,15 +32,21 @@ export class DateRangePickerController {
 
   private popover: Element;
   private input: Element;
+  private isHotKeysOn: boolean;
+  private hotKeysHandlerFunc: EventListener;
+  private closeCalendarFunc: EventListener;
 
-  // @ngInject
   constructor(private $scope: ng.IScope) {
+    'ngInject';
   }
 
   $onInit(): void {
     this.dateInputs = DATE_INPUTS;
 
     this.opened = false;
+    this.isHotKeysOn = false;
+    this.hotKeysHandlerFunc = this.handleHotKeys.bind(this);
+    this.closeCalendarFunc = this.closeCalendarOnWindowClick.bind(this);
 
     this.maxDate = moment();
     this.turn = DATE_INPUTS.FIRST;
@@ -53,7 +65,7 @@ export class DateRangePickerController {
     this.input = document.querySelector('.date-range-picker-date-btn-group');
     this.input.addEventListener('click', this.stopEventPropagation, false);
 
-    document.body.addEventListener('click', this.closeCalendarOnWindowClick.bind(this), false);
+    document.body.addEventListener('click', this.closeCalendarFunc, false);
   }
 
   $onChanges(changes: any): void {
@@ -73,18 +85,20 @@ export class DateRangePickerController {
   }
 
   $onDestroy(): void {
-    document.body.removeEventListener('click', this.closeCalendarOnWindowClick.bind(this), false);
+    document.body.removeEventListener('click', this.closeCalendarFunc, false);
     this.popover.removeEventListener('click', this.stopEventPropagation, false);
     this.input.removeEventListener('click', this.stopEventPropagation, false);
   }
 
   public openCalendar():void {
     this.opened = true;
+    this.turnOnHotKeys();
   }
 
   public closeCalendar(): void {
     this.removeSelection();
     this.opened = false;
+    this.turnOffHotKeys();
   }
 
   public firstDaySelected(days:{ start: Moment, end: Moment }): void {
@@ -122,7 +136,36 @@ export class DateRangePickerController {
     }
   }
 
-  private stopEventPropagation(event:Event): void {
+  private turnOnHotKeys(): void {
+    if (!this.isHotKeysOn) {
+      document.body.addEventListener('keyup', this.hotKeysHandlerFunc, false);
+      this.isHotKeysOn = true;
+    }
+  }
+
+  private turnOffHotKeys(): void {
+    if (this.isHotKeysOn) {
+      document.body.removeEventListener('keyup', this.hotKeysHandlerFunc, false);
+      this.isHotKeysOn = false;
+    }
+  }
+
+  private handleHotKeys(e: KeyboardEvent): void {
+    const key: number = e.keyCode;
+    if (e.altKey) {
+      if (key === KEY.RIGHT) {
+        this.onDateClick(DATE_INPUTS.SECOND);
+        this.$scope.$digest();
+      } else if (key === KEY.LEFT) {
+        this.onDateClick(DATE_INPUTS.FIRST);
+        this.$scope.$digest();
+      }
+    } else if (key === KEY.ESC) {
+      this.closeCalendarOnWindowClick();
+    }
+  }
+
+  private stopEventPropagation(event: Event): void {
     event.stopPropagation();
   }
 }
