@@ -1,6 +1,10 @@
 module.exports = [
     { test: /\.ts(x?)$/, loader: 'ts-loader' },
     {
+      test: /\.json$/,
+      loader: 'json'
+    },
+    {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
     }, {

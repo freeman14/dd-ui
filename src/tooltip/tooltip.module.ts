@@ -1,5 +1,4 @@
 import * as angular from 'angular';
-import 'angular-sanitize';
 
 import 'angular-ui-bootstrap/src/popover/index-nocss';
 import 'angular-ui-bootstrap/src/tooltip/tooltip.css';

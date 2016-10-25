@@ -18,7 +18,8 @@ module.exports = {
   },
   externals: {
     'angular': 'angular',
-    'moment': 'moment'
+    'moment': 'moment',
+    'moment-timezone': 'moment' //todo: check if it works
   },
   resolveLoader: {
     modulesDirectories: ["node_modules"]
