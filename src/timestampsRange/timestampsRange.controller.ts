@@ -13,7 +13,8 @@ export class TimestampsRangeController {
     format: string;
 
     dateFormat: string;
-    timeFormat: string;
+    startTimeFormat: string;
+    endTimeFormat: string;
     isSameDate: boolean;
 
     // @ngInject
@@ -28,7 +29,8 @@ export class TimestampsRangeController {
       const startMoment: Moment = momentTz.tz(start, tz);
       const endMoment: Moment = momentTz.tz(end, tz);
       this.isSameDate = startMoment.isSame(endMoment, 'day');
-      this.timeFormat = this.getTimeFormat(startMoment);
+      this.startTimeFormat = this.getTimeFormat(startMoment);
+      this.endTimeFormat = this.getTimeFormat(endMoment);
     }
 
     private getTimeFormat(moment: Moment): string {
