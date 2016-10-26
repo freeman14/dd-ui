@@ -1,7 +1,8 @@
-/// <reference path="./.config/sb.d.ts" /> 
+/// <reference path="./.config/sb.d.ts" />
 
 import * as angular from 'angular';
 import 'ui-storybook/helpers/ng';
+import 'angular-sanitize';
 
 // SB basic styles
 import './style.less';

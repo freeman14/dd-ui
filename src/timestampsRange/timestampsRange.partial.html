@@ -1,0 +1,9 @@
+<div class="timestamps-range">
+  <span class="bold"><timestamp date="vm.start" timezone="vm.tz" format="vm.dateFormat"></timestamp></span>
+  <timestamp date="vm.start" timezone="vm.tz" format="vm.startTimeFormat"></timestamp>
+  <span ng-if="vm.end">
+    <span>&#8211;</span>
+    <span ng-if="!vm.isSameDate" class="bold"><timestamp date="vm.end" timezone="vm.tz" format="vm.dateFormat"></timestamp></span>
+    <timestamp date="vm.end" timezone="vm.tz" format="vm.endTimeFormat"></timestamp>
+  </span>
+</div>

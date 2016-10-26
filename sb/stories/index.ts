@@ -6,3 +6,4 @@ sb.section('UI components');
 import './dateRangePicker';
 import './tooltip';
 import './toggleButtons';
+import './timestamp';

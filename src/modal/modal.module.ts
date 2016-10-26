@@ -1,5 +1,4 @@
 import * as angular from 'angular';
-import 'angular-sanitize';
 
 import 'angular-ui-bootstrap/src/modal/index-nocss.js';
 import 'angular-ui-bootstrap/src/position/position.css';
