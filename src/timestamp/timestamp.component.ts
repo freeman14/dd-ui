@@ -6,7 +6,7 @@ export const timestampComponent: ng.IComponentOptions = {
   template: require('./timestamp.partial.html'),
   bindings: {
     date: '<',
-    format: '@?',
+    format: '<?',
     timezone: '<?'
   }
 };

@@ -19,7 +19,9 @@
   "dependencies": {
     "angular": "1.5.5",
     "angular-date-range-picker": "https://github.com/freeman14/angular-date-range-picker.git",
+    "json-loader": "~0.5.4",
     "moment": "~2.15.1",
+    "moment-timezone": "~0.5.7",
     "ui-storybook": "^1.0.6",
     "webpack-dev-middleware": "~1.8.4"
   },
