@@ -9,9 +9,14 @@ export class TimestampController {
 
   formattedDate: string;
 
-  constructor() {}
+  constructor() { }
 
-  $onInit(): void{
+  $onInit(): void {
+    this.initParams();
+    this.formatDate();
+  }
+
+  $onChanges(): void {
     this.initParams();
     this.formatDate();
   }
@@ -21,7 +26,7 @@ export class TimestampController {
     this.format = this.format || 'dddd, MMMM Do YYYY, h:mm a';
   }
 
-  private formatDate() {
+  private formatDate(): void {
     let date: Moment;
 
     if (this.timezone) {

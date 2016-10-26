@@ -17,13 +17,17 @@ export class TimestampsRangeController {
     endTimeFormat: string;
     isSameDate: boolean;
 
-    // @ngInject
-    constructor() {}
+  // @ngInject
+  constructor() { }
 
     $onInit(): void {
       this.dateFormat = this.format || DATE_FORMAT;
       this.processDates(this.start, this.end, this.tz);
     }
+
+  $onChanges(): void {
+    this.processDates(this.start, this.end, this.tz);
+  }
 
     private processDates(start: string, end: string, tz: string): void {
       const startMoment: Moment = momentTz.tz(start, tz);
