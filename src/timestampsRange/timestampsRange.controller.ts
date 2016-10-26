@@ -25,9 +25,9 @@ export class TimestampsRangeController {
       this.processDates(this.start, this.end, this.tz);
     }
 
-  $onChanges(): void {
-    this.processDates(this.start, this.end, this.tz);
-  }
+    $onChanges(): void {
+      this.processDates(this.start, this.end, this.tz);
+    }
 
     private processDates(start: string, end: string, tz: string): void {
       const startMoment: Moment = momentTz.tz(start, tz);
