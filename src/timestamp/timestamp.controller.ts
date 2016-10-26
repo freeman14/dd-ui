@@ -1,6 +1,5 @@
 import * as moment from 'moment';
 import * as momentTz from 'moment-timezone';
-import Moment = moment.Moment;
 
 export class TimestampController {
   date: string;
@@ -27,7 +26,7 @@ export class TimestampController {
   }
 
   private formatDate(): void {
-    let date: Moment;
+    let date: moment.Moment;
 
     if (this.timezone) {
       date = momentTz.tz(this.date, this.timezone);

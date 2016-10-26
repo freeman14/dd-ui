@@ -1,6 +1,5 @@
 import * as moment from 'moment';
 import * as momentTz from 'moment-timezone';
-import Moment = moment.Moment;
 
 const DATE_FORMAT: string = 'ddd, MMM D, YYYY';
 const TIME_FORMAT: string = 'h:mma';
@@ -30,14 +29,14 @@ export class TimestampsRangeController {
     }
 
     private processDates(start: string, end: string, tz: string): void {
-      const startMoment: Moment = momentTz.tz(start, tz);
-      const endMoment: Moment = momentTz.tz(end, tz);
+      const startMoment: moment.Moment = momentTz.tz(start, tz);
+      const endMoment: moment.Moment = momentTz.tz(end, tz);
       this.isSameDate = startMoment.isSame(endMoment, 'day');
       this.startTimeFormat = this.getTimeFormat(startMoment);
       this.endTimeFormat = this.getTimeFormat(endMoment);
     }
 
-    private getTimeFormat(moment: Moment): string {
+    private getTimeFormat(moment: moment.Moment): string {
       return moment.minutes() > 0 ? TIME_FORMAT : SHORT_TIME_FORMAT;
     }
 }
