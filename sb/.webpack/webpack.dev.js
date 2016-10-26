@@ -6,7 +6,12 @@ var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: ['./sb/index.ts'],
+        app: [
+            'webpack/hot/dev-server',
+            'webpack-hot-middleware/client?noInfo=true',
+            './sb/index.ts'
+        ],
+        // app: ['./sb/index.ts'],
         stories: './sb/stories'
     },
     output: {
@@ -27,9 +32,6 @@ module.exports = {
             { from: './sb/.static/preview.html', to: 'preview.html' },
             { from: './sb/.static/index.html', to: 'index.html' }
         ]),
-        new ngAnnotatePlugin({
-            add: true
-        }),
         new webpack.HotModuleReplacementPlugin()
     ],
     module: {
