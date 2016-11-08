@@ -1,6 +1,7 @@
 @border-color: #DEDEDE;
 @arrow-border-color: rgba(0, 0, 0, 0.12);
 @shadow-color: rgba(0, 0, 0, 0.2);
+@arrow-size: 10px;
 
 .popover {
   position: absolute;
@@ -34,20 +35,21 @@
   -webkit-box-shadow: 0 1px 7px @shadow-color;
   box-shadow: 0 1px 7px @shadow-color;
 }
-.popover.top {
-  margin-top: -80px;
+.popover {
+  &.top {
+    margin-top: -@arrow-size;
+  }
+  &.right {
+    margin-left: @arrow-size;
+  }
+  &.bottom {
+    margin-top: @arrow-size;
+  }
+  &.left {
+    margin-left: -@arrow-size;
+  }
 }
-.popover.right {
-  margin-left: 20px;
-  margin-top: -65px;
-}
-.popover.bottom {
-  margin-top: -50px;
-}
-.popover.left {
-  margin-left: -20px;
-  margin-top: -65px;
-}
+
 .popover-title {
   margin: 0;
   padding: 8px 14px;
