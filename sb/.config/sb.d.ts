@@ -1,6 +1,6 @@
 declare var sb: stotybook.ISB;
 
-declare namespace stotybook { 
+declare namespace stotybook {
 
     interface ISB {
         /**
@@ -30,9 +30,9 @@ declare namespace stotybook {
          * @param model Object witch need to include into component scope
          */
         add(
-            title: string, 
-            template: string, 
-            model: Object ): IStory;
+            title: string,
+            template: string,
+            model?: Object): IStory;
     }
 
 }
