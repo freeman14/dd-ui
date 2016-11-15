@@ -1,8 +1,10 @@
 import 'ui-storybook/sb';
 import 'ui-storybook/stories';
 
-import './dateRangePicker';
-import './tooltip';
-import './toggleButtons';
-import './timestamp';
+import './jsComponents/jsComponents.section';
+
+import './jsComponents/dateRangePicker';
+import './jsComponents/tooltip';
+import './jsComponents/toggleButtons';
+import './jsComponents/timestamp';
 import './directives/inputLimit';
