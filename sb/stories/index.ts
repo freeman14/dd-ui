@@ -7,3 +7,4 @@ import './dateRangePicker';
 import './tooltip';
 import './toggleButtons';
 import './timestamp';
+import './directives/inputLimit';
