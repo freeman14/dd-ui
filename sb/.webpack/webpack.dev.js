@@ -12,7 +12,7 @@ module.exports = {
             './sb/index.ts'
         ],
         // app: ['./sb/index.ts'],
-        stories: './sb/stories'
+        stories: './stories'
     },
     output: {
         filename: '[name].js',
