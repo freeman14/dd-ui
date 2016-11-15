@@ -25,7 +25,6 @@
   "devDependencies": {
     "json-loader": "~0.5.4",
     "webpack-dev-middleware": "~1.8.4",
-    "ui-storybook": "^1.0.6",
     "angular-mocks": "1.5.5",
     "angular-sanitize": "~1.5.8",
     "angular-ui-bootstrap": "~2.1.4",
@@ -63,7 +62,7 @@
     "ts-loader": "0.8.2",
     "typescript": "1.8.10",
     "typings": "1.0.4",
-    "ui-storybook": "^1.0.2",
+    "ui-storybook": "^1.0.6",
     "url-loader": "0.5.7",
     "wallaby-webpack": "0.0.22",
     "webpack": "1.13.1",
