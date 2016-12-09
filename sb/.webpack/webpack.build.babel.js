@@ -6,7 +6,7 @@ var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 module.exports = {
     entry: {
         app: ['./sb/index.ts'],
-        stories: './sb/stories'
+        stories: './stories'
     },
     output: {
         filename: '[name].js',
