@@ -1,10 +1,14 @@
 module.exports = [
-    { test: /\.ts(x?)$/, loader: 'ts-loader' },
     {
-      test: /\.json$/,
-      loader: 'json'
-    },
-    {
+        test: /\.ts(x?)$/,
+        loader: 'ts-loader'
+    }, {
+        test: /\.json$/,
+        loader: 'json'
+    }, {
+        test: /\.font\.(js|json)$/,
+        loader: 'style!raw!string-replace?search=url%5C("%5C/&replace=url("&flags=gm!fontgen'
+    }, {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
     }, {

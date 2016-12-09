@@ -1,0 +1,82 @@
+.height-animation() {
+
+    &.ng-enter, &.ng-leave {
+        transition: all ease-in-out 0.2s;
+        overflow: hidden;
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity:0;
+        max-height: 0;
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        max-height: 9999px;
+        opacity:1;
+    }
+
+}
+
+.material-show-animation() {
+
+    &.ng-enter, &.ng-leave {
+        transition: all ease-in-out 0.3s;
+        overflow: hidden;
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity:0;
+        transform: translate(0, 20px); 
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        transform: translate(0, 0);
+        opacity:1;
+    }
+
+}
+
+.blink() {
+    animation: blink 5s ease 0s infinite;
+    transition: all ease-in-out 0.5s;
+}
+
+.border-blink() {
+    animation: border-blink 5s ease 0s infinite;
+    transition: all ease-in-out 0.5s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background: @gainsboro; 
+    }
+    25% {
+        background: @silver; 
+    }
+    50% {
+        background: @gainsboro;    
+    }
+    75% {
+        background: @silver; 
+    }
+}
+
+@keyframes border-blink {
+    0%, 100% {
+        border-color: @gainsboro; 
+    }
+    25% {
+        border-color: @silver; 
+    }
+    50% {
+        border-color: @gainsboro;    
+    }
+    75% {
+        border-color: @silver; 
+    }
+}
+

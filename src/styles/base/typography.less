@@ -1,0 +1,56 @@
+@main-font: 'Open Sans', sans-serif;
+
+.font-face(@fontweight: 400, @fontsize: 14px) {
+    font-family: @main-font;
+    font-weight: @fontweight;
+    font-size: @fontsize;
+    margin: 0;
+    padding: 0;
+}
+
+/* H 1-6 */
+
+h1 {
+    .font-face(300, 34px);
+}
+
+h2 {
+    .font-face(300, 30px);
+    color: @silver-tree;
+}
+
+h3 {
+    .font-face(400, 24px);
+    color: @river-bed;
+}
+
+h4 {
+    .font-face(300, 20px);
+    color: @river-bed;
+}
+
+h5 {
+    .font-face(400, 18px);
+    color: @river-bed;
+}
+
+h6 {
+    .font-face(bold, 16px);
+    color: @river-bed;
+}
+
+/* Paragraph */
+
+.text {
+    .font-face();
+    color: @river-bed;
+}
+
+.text__secondary {
+    .font-face();
+    color: @gray;
+}
+
+.text__small {
+    font-size: 12px;
+}

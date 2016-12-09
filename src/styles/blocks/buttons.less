@@ -1,0 +1,184 @@
+/* Mixins */
+
+.btn__link__mixin (@color, @hover-color) {
+    
+    color: @color;
+    
+    &:hover {
+        color: @hover-color;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        color: @color;
+    }
+
+    &:disabled {
+        opacity: 0.3;
+    }
+} 
+
+.btn__mixin (@background, @border-color, @color, @background-hover, @border-hover-color, @hover-color) {
+  
+  color: @color;
+  background-color: @background;
+  border: 1px solid @border-color;
+
+  &:hover {
+    border-color: @border-hover-color;
+    background-color: @background-hover;
+    color: @hover-color;
+  }
+
+  &:disabled {
+      border: 1px solid @border-color;
+      background-color: @background;
+      opacity: 0.3;
+  }
+
+}
+
+/* Mixins end */
+
+
+
+/* Normal buttons start */
+
+.btn {
+    color: @white;
+    outline: none;
+    height: 44px;
+    min-width: 200px;
+    vertical-align: middle;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.btn--primary {
+    .btn__mixin(@blaze-orange, @blaze-orange, @white, @clementine, @clementine, @white)
+}
+
+.btn--default {
+    .btn__mixin(@white, @submarine, @submarine, @athens-gray, @submarine, @submarine)
+}
+
+.btn--hollow {
+    .btn__mixin(@white, @blaze-orange, @blaze-orange, @clementine, @clementine, @white)
+}
+
+/* Normal buttons end */
+
+
+
+/* Small buttons start */
+
+.btn--sm {
+    min-width: 120px;
+    font-size: 13px;
+}
+
+.btn--xs {
+    min-width: 33px;
+    height: 33px;
+    font-size: 13px;
+}
+
+/* Normal buttons end */
+
+
+/* Link buttons start */
+
+.btn__link {
+    background: none;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+}
+
+.btn__link--primary {
+    .btn__link__mixin(@shakespeare, @shakespeare)
+}
+
+/* Normal buttons end */
+
+
+
+/* Icon buttons start */
+
+.btn__icon {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 4px;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    margin: 0 5px;
+    background: transparent;
+    border: none;
+
+    &.btn__icon--small {
+        width: 33px !important;
+        height: 33px !important;
+    }    
+
+}
+
+.btn__icon--inner {
+    border: none;
+    background: @white;
+    font-size: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: @river-bed;
+    padding: 0;
+    outline: none;
+}
+
+/* Icon buttons end */
+
+
+
+/* Buttons animation */
+
+// Button slide animation
+
+.btn--slide {
+
+    transition: max-width 0.2s;
+    overflow: hidden;
+
+    > span {
+        transition: opacity 0.2s;
+        display: block;
+        white-space: nowrap;
+    }
+
+    &.btn--xs {
+        max-width: 33px;
+
+        > span {
+            padding: 10px;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+    }
+
+    &:hover {
+        max-width: 100%;
+
+        > span {
+            opacity: 1;
+        }
+
+    }
+
+}

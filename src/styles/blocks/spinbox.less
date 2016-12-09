@@ -1,0 +1,57 @@
+@boxSize: 15;
+@color: #E96300;
+@color2: #529CCF;
+@color3: #62B989;
+@color4: #F3BC65;
+
+.spin__box {
+  position: absolute;
+  margin: auto;
+  left: 0; 
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%;
+  width: @boxSize * 1px;
+  height: @boxSize * 1px;
+  box-shadow: 
+    @boxSize*1px  @boxSize*1px @color,
+    @boxSize*-1px  @boxSize*1px @color2,
+    @boxSize*-1px  @boxSize*-1px @color3,
+    @boxSize*1px  @boxSize*-1px @color4;
+    animation: spin ease infinite 3s;
+}
+
+@keyframes spin {
+  0%, 100% {
+      box-shadow: 
+      @boxSize*1px  @boxSize*1px @color2,
+      @boxSize*-1px  @boxSize*1px @color3,
+      @boxSize*-1px  @boxSize*-1px @color4,
+      @boxSize*1px  @boxSize*-1px @color;
+  }
+  
+  25% {
+      box-shadow: 
+      @boxSize*-1px  @boxSize*1px @color3,
+      @boxSize*-1px  @boxSize*-1px @color4,
+      @boxSize*1px  @boxSize*-1px @color,
+      @boxSize*1px  @boxSize*1px @color2;
+  }
+  
+  50% {
+      box-shadow: 
+      @boxSize*-1px  @boxSize*-1px @color4,
+      @boxSize*1px  @boxSize*-1px @color,
+      @boxSize*1px  @boxSize*1px @color2,
+      @boxSize*-1px  @boxSize*1px @color3;
+  }
+  
+  75% {
+      box-shadow: 
+      @boxSize*1px  @boxSize*-1px @color,
+      @boxSize*1px  @boxSize*1px @color2,
+      @boxSize*-1px  @boxSize*1px @color3,
+      @boxSize*-1px  @boxSize*-1px @color4;
+  }
+}

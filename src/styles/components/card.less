@@ -1,0 +1,79 @@
+dd-card {
+    display: flex;
+}
+
+.dotted .dd__card {
+    border: 2px dotted @gainsboro;
+}
+
+.dd__card {
+
+    transition: all 0.2s;
+    width: 100%;
+    // padding: 20px;
+    border: 1px solid @gainsboro;
+    border-radius: 4px;
+    margin: 10px;
+
+    .divider {
+        transition: all 0.2s;
+        // margin: 0 -20px;
+        opacity: 0;
+    }
+
+    .dd__card-header {
+        margin: 20px;
+    }
+
+    .dd__card-title {
+        margin: 0 20px 15px;
+    }
+
+    .dd__card-text {
+        .font-face();
+        color: @gray;
+        line-height: 1.5;
+        margin: 0 20px 15px;   
+    }
+
+    .dd__card-footer {
+        transition: all 0.2s;
+
+        display: flex;
+        margin: 20px;
+
+        .btn {
+            margin: 0 3px;
+        }
+
+        .btn:first-child {
+            margin-left: 0;
+        }
+
+        .btn:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+}
+
+.hover__action > .dd__card {
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+
+        .divider {
+            transform: translateY(-20px);
+            opacity: 1;
+        }
+
+        .dd__card-footer {
+            transform: translateY(-10px);
+            border-color: @gainsboro;
+        }
+
+    }
+
+}
