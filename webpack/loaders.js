@@ -7,7 +7,7 @@ module.exports = [
         loader: 'json'
     }, {
         test: /\.font\.(js|json)$/,
-        loader: 'style!raw!string-replace?search=url%5C("%5C/&replace=url("&flags=gm!fontgen'
+        loader: 'style!raw!string-replace?search=url%5C("%5C/&replace=url("./&flags=gm!fontgen?fileName=fonts/[hash]-[fontname][ext]'
     }, {
         test: /\.css$/,
         loader: 'style-loader!css-loader'

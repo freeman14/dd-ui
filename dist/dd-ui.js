@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("angular"), require("moment")) : factory(root["angular"], root["moment"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_11__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_29__, __WEBPACK_EXTERNAL_MODULE_35__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -54,97 +54,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(2);
+	module.exports = __webpack_require__(28);
 
 
 /***/ },
 /* 1 */,
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var angular = __webpack_require__(3);
-	var directives_module_1 = __webpack_require__(4);
-	var dateRangePicker_module_1 = __webpack_require__(10);
-	var tooltip_module_1 = __webpack_require__(18);
-	var toggleButtons_module_1 = __webpack_require__(39);
-	var modal_module_1 = __webpack_require__(42);
-	var timestamp_module_1 = __webpack_require__(51);
-	var timestampsRange_module_1 = __webpack_require__(55);
-	var module = angular.module('dd-ui', [
-	    dateRangePicker_module_1.default,
-	    tooltip_module_1.default,
-	    toggleButtons_module_1.default,
-	    modal_module_1.default,
-	    timestamp_module_1.default,
-	    timestampsRange_module_1.default,
-	    directives_module_1.default
-	]);
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = module.name;
-
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
-
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	__webpack_require__(5);
-	var limit_1 = __webpack_require__(9);
-	var module = angular.module('directives', []);
-	module.directive('textLimit', limit_1.InputLimit.instance());
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = module.name;
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(6);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./directives.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./directives.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(7)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".text-limit-wrapper {\n  position: relative;\n}\n.limit-indicator {\n  position: absolute;\n  right: 0;\n  bottom: 3px;\n  color: #71BF44;\n}\ntextarea + .limit-indicator {\n  bottom: 10px;\n  right: 15px;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 7 */
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ function(module, exports) {
 
 	/*
@@ -200,7 +135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 8 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -452,7 +387,96 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 9 */
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var angular = __webpack_require__(29);
+	var directives_module_1 = __webpack_require__(30);
+	var dateRangePicker_module_1 = __webpack_require__(34);
+	var tooltip_module_1 = __webpack_require__(42);
+	var toggleButtons_module_1 = __webpack_require__(63);
+	var modal_module_1 = __webpack_require__(66);
+	var timestamp_module_1 = __webpack_require__(75);
+	var timestampsRange_module_1 = __webpack_require__(79);
+	var module = angular.module('dd-ui', [
+	    dateRangePicker_module_1.default,
+	    tooltip_module_1.default,
+	    toggleButtons_module_1.default,
+	    modal_module_1.default,
+	    timestamp_module_1.default,
+	    timestampsRange_module_1.default,
+	    directives_module_1.default
+	]);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_29__;
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	__webpack_require__(31);
+	var limit_1 = __webpack_require__(33);
+	var module = angular.module('directives', []);
+	module.directive('textLimit', limit_1.InputLimit.instance());
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = module.name;
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(32);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(23)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./directives.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./directives.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(22)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".text-limit-wrapper {\n  position: relative;\n}\n.limit-indicator {\n  position: absolute;\n  right: 0;\n  bottom: 3px;\n  color: #71BF44;\n}\ntextarea + .limit-indicator {\n  bottom: 10px;\n  right: 15px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 33 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -504,15 +528,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 10 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var angular = __webpack_require__(3);
-	var moment = __webpack_require__(11);
-	__webpack_require__(12);
-	var dateRangePicker_component_1 = __webpack_require__(13);
-	__webpack_require__(16);
+	var angular = __webpack_require__(29);
+	var moment = __webpack_require__(35);
+	__webpack_require__(36);
+	var dateRangePicker_component_1 = __webpack_require__(37);
+	__webpack_require__(40);
 	var module = angular.module('ep.dateRangePicker', ['obDateRangePicker']);
 	module.component('epDateRangePicker', dateRangePicker_component_1.dateRangePickerComponent);
 	module.constant('moment', moment);
@@ -521,13 +545,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 11 */
+/* 35 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_11__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_35__;
 
 /***/ },
-/* 12 */
+/* 36 */
 /***/ function(module, exports) {
 
 	/******/!function(e){function t(n){if(a[n])return a[n].exports;var i=a[n]={exports:{},id:n,loaded:!1};return e[n].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}// webpackBootstrap
@@ -542,15 +566,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 13 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var dateRangePicker_controller_1 = __webpack_require__(14);
+	var dateRangePicker_controller_1 = __webpack_require__(38);
 	exports.dateRangePickerComponent = {
 	    controller: dateRangePicker_controller_1.DateRangePickerController,
 	    controllerAs: 'vm',
-	    template: __webpack_require__(15),
+	    template: __webpack_require__(39),
 	    transclude: true,
 	    bindings: {
 	        title: '@?titleText',
@@ -563,12 +587,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 14 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var moment = __webpack_require__(11);
-	var angular = __webpack_require__(3);
+	var moment = __webpack_require__(35);
+	var angular = __webpack_require__(29);
 	var DATE_INPUTS = {
 	    FIRST: 'first',
 	    SECOND: 'second',
@@ -697,22 +721,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 15 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"date-range-picker\">\n    <div class=\"date-range-picker-title\" ng-bind=\"vm.title\"></div>\n\n    <div class=\"date-range-picker-date-btn-group\"\n         ng-class=\"{'date-range-picker-active-left': vm.selectedDate === vm.dateInputs.FIRST,\n                    'date-range-picker-active-right': vm.selectedDate === vm.dateInputs.SECOND}\">\n        <span class=\"date-range-picker-date date-range-picker-date-left\" ng-bind=\"vm.range.start.toDate() | date: 'MM/dd/yyyy'\" ng-click=\"vm.onDateClick(vm.dateInputs.FIRST)\"></span>\n        <span>&rarr;</span>\n        <span class=\"date-range-picker-date date-range-picker-date-right\" ng-bind=\"vm.range.end.toDate() | date: 'MM/dd/yyyy'\" ng-click=\"vm.onDateClick(vm.dateInputs.SECOND)\"></span>\n    </div>\n    <div  ng-class=\"{'date-range-picker-popover-closed': !vm.opened}\" class=\"date-range-picker-popover\">\n        <div class=\"date-range-picker-popover-arrow\">\n        </div>\n        <ob-daterangepicker\n                min-day=\"vm.minDate\"\n                max-day=\"vm.maxDate\"\n                linked-calendars=\"vm.linked\"\n                first-day-change=\"vm.firstDaySelected(days)\"\n                second-day-change=\"vm.secondDaySelected(days)\"\n                range=\"vm.range\"\n                static=\"vm.eventDurationRange\"\n                api=\"vm.dateRangeApi\"\n                turn=\"vm.turn\">\n        </ob-daterangepicker>\n        <div class=\"date-range-picker-popover-footer\">\n            <ng-transclude></ng-transclude>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
-/* 16 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(17);
+	var content = __webpack_require__(41);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -729,10 +753,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 17 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -743,16 +767,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 18 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var angular = __webpack_require__(3);
-	__webpack_require__(19);
-	__webpack_require__(33);
-	__webpack_require__(35);
-	var tooltip_run_1 = __webpack_require__(37);
-	var tooltip_config_1 = __webpack_require__(38);
+	var angular = __webpack_require__(29);
+	__webpack_require__(43);
+	__webpack_require__(57);
+	__webpack_require__(59);
+	var tooltip_run_1 = __webpack_require__(61);
+	var tooltip_config_1 = __webpack_require__(62);
 	var module = angular.module('ep.tooltip', [
 	    'ngSanitize',
 	    'ui.bootstrap.popover'
@@ -764,14 +788,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 19 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(20);
-	__webpack_require__(29);
-	__webpack_require__(30);
-	__webpack_require__(31);
-	__webpack_require__(32);
+	__webpack_require__(44);
+	__webpack_require__(53);
+	__webpack_require__(54);
+	__webpack_require__(55);
+	__webpack_require__(56);
 
 	var MODULE_NAME = 'ui.bootstrap.module.popover';
 
@@ -781,15 +805,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 20 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(21);
-	__webpack_require__(23);
-	__webpack_require__(25);
-	__webpack_require__(26);
-	__webpack_require__(27);
-	__webpack_require__(28);
+	__webpack_require__(45);
+	__webpack_require__(47);
+	__webpack_require__(49);
+	__webpack_require__(50);
+	__webpack_require__(51);
+	__webpack_require__(52);
 
 	var MODULE_NAME = 'ui.bootstrap.module.tooltip';
 
@@ -799,10 +823,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 21 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(22);
+	__webpack_require__(46);
 
 	var MODULE_NAME = 'ui.bootstrap.module.position';
 
@@ -812,7 +836,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
+/* 46 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.position', [])
@@ -1438,10 +1462,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 23 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(24);
+	__webpack_require__(48);
 
 	var MODULE_NAME = 'ui.bootstrap.module.stackedMap';
 
@@ -1451,7 +1475,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 24 */
+/* 48 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.stackedMap', [])
@@ -1510,7 +1534,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 
 /***/ },
-/* 25 */
+/* 49 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/tooltip/tooltip-popup.html", []).run(["$templateCache", function($templateCache) {
@@ -1522,7 +1546,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 26 */
+/* 50 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/tooltip/tooltip-html-popup.html", []).run(["$templateCache", function($templateCache) {
@@ -1534,7 +1558,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 27 */
+/* 51 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/tooltip/tooltip-template-popup.html", []).run(["$templateCache", function($templateCache) {
@@ -1548,7 +1572,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 28 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/**
@@ -2270,7 +2294,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 29 */
+/* 53 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/popover/popover.html", []).run(["$templateCache", function($templateCache) {
@@ -2286,7 +2310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 30 */
+/* 54 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/popover/popover-html.html", []).run(["$templateCache", function($templateCache) {
@@ -2302,7 +2326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 31 */
+/* 55 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/popover/popover-template.html", []).run(["$templateCache", function($templateCache) {
@@ -2320,7 +2344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 32 */
+/* 56 */
 /***/ function(module, exports) {
 
 	/**
@@ -2372,16 +2396,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 33 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(34);
+	var content = __webpack_require__(58);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2398,10 +2422,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 34 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -2412,16 +2436,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 35 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(36);
+	var content = __webpack_require__(60);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2438,10 +2462,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 36 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -2452,7 +2476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 37 */
+/* 61 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2469,7 +2493,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 38 */
+/* 62 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2488,12 +2512,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 39 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var angular = __webpack_require__(3);
-	__webpack_require__(40);
+	var angular = __webpack_require__(29);
+	__webpack_require__(64);
 	var module = angular.module('ep.toggleButtons', [
 	    'ui.bootstrap.buttons'
 	]);
@@ -2502,10 +2526,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 40 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(41);
+	__webpack_require__(65);
 
 	var MODULE_NAME = 'ui.bootstrap.module.buttons';
 
@@ -2515,7 +2539,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 41 */
+/* 65 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.buttons', [])
@@ -2615,15 +2639,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 42 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var angular = __webpack_require__(3);
-	__webpack_require__(43);
-	__webpack_require__(46);
-	__webpack_require__(48);
-	var modal_run_1 = __webpack_require__(50);
+	var angular = __webpack_require__(29);
+	__webpack_require__(67);
+	__webpack_require__(70);
+	__webpack_require__(72);
+	var modal_run_1 = __webpack_require__(74);
 	var module = angular.module('ep.modal', [
 	    'ngSanitize',
 	    'ui.bootstrap.modal'
@@ -2634,13 +2658,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 43 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(21);
-	__webpack_require__(23);
-	__webpack_require__(44);
 	__webpack_require__(45);
+	__webpack_require__(47);
+	__webpack_require__(68);
+	__webpack_require__(69);
 
 	var MODULE_NAME = 'ui.bootstrap.module.modal';
 
@@ -2650,7 +2674,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 44 */
+/* 68 */
 /***/ function(module, exports) {
 
 	angular.module("uib/template/modal/window.html", []).run(["$templateCache", function($templateCache) {
@@ -2661,7 +2685,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 45 */
+/* 69 */
 /***/ function(module, exports) {
 
 	angular.module('ui.bootstrap.modal', ['ui.bootstrap.stackedMap', 'ui.bootstrap.position'])
@@ -3502,16 +3526,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 46 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(47);
+	var content = __webpack_require__(71);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3528,10 +3552,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 47 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -3542,16 +3566,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 48 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(49);
+	var content = __webpack_require__(73);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3568,10 +3592,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 49 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -3582,7 +3606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 50 */
+/* 74 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3597,12 +3621,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 51 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var angular = __webpack_require__(3);
-	var timestamp_component_1 = __webpack_require__(52);
+	var angular = __webpack_require__(29);
+	var timestamp_component_1 = __webpack_require__(76);
 	var module = angular.module('ep.timestamp', []);
 	module.component('timestamp', timestamp_component_1.timestampComponent);
 	Object.defineProperty(exports, "__esModule", { value: true });
@@ -3610,15 +3634,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 52 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var timestamp_controller_1 = __webpack_require__(53);
+	var timestamp_controller_1 = __webpack_require__(77);
 	exports.timestampComponent = {
 	    controller: timestamp_controller_1.TimestampController,
 	    controllerAs: 'vm',
-	    template: __webpack_require__(54),
+	    template: __webpack_require__(78),
 	    bindings: {
 	        date: '<',
 	        format: '<?',
@@ -3628,12 +3652,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 53 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var moment = __webpack_require__(11);
-	var momentTz = __webpack_require__(11);
+	var moment = __webpack_require__(35);
+	var momentTz = __webpack_require__(35);
 	var TimestampController = (function () {
 	    function TimestampController() {
 	    }
@@ -3665,19 +3689,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 54 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = "<span ng-bind=\"vm.formattedDate\"></span>\n"
 
 /***/ },
-/* 55 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var angular = __webpack_require__(3);
-	var timestampsRange_component_1 = __webpack_require__(56);
-	__webpack_require__(59);
+	var angular = __webpack_require__(29);
+	var timestampsRange_component_1 = __webpack_require__(80);
+	__webpack_require__(83);
 	var module = angular.module('ep.timestampsRange', []);
 	module.component('timestampsRange', timestampsRange_component_1.timestampsRangeComponent);
 	Object.defineProperty(exports, "__esModule", { value: true });
@@ -3685,13 +3709,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 56 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var timestampsRange_controller_1 = __webpack_require__(57);
+	var timestampsRange_controller_1 = __webpack_require__(81);
 	exports.timestampsRangeComponent = {
-	    template: __webpack_require__(58),
+	    template: __webpack_require__(82),
 	    controllerAs: 'vm',
 	    controller: timestampsRange_controller_1.TimestampsRangeController,
 	    bindings: {
@@ -3704,11 +3728,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 57 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var momentTz = __webpack_require__(11);
+	var momentTz = __webpack_require__(35);
 	var DATE_FORMAT = 'ddd, MMM D, YYYY';
 	var TIME_FORMAT = 'h:mma';
 	var SHORT_TIME_FORMAT = 'ha';
@@ -3738,22 +3762,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 58 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"timestamps-range\">\n  <span class=\"bold\"><timestamp date=\"vm.start\" timezone=\"vm.tz\" format=\"vm.dateFormat\"></timestamp></span>\n  <timestamp date=\"vm.start\" timezone=\"vm.tz\" format=\"vm.startTimeFormat\"></timestamp>\n  <span ng-if=\"vm.end\">\n    <span>&#8211;</span>\n    <span ng-if=\"!vm.isSameDate\" class=\"bold\"><timestamp date=\"vm.end\" timezone=\"vm.tz\" format=\"vm.dateFormat\"></timestamp></span>\n    <timestamp date=\"vm.end\" timezone=\"vm.tz\" format=\"vm.endTimeFormat\"></timestamp>\n  </span>\n</div>\n"
 
 /***/ },
-/* 59 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(60);
+	var content = __webpack_require__(84);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -3770,10 +3794,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 60 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
