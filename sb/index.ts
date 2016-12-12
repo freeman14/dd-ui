@@ -10,6 +10,9 @@ import './style.less';
 // DD library
 import DDUI from '../src/index';
 
+// DD styles
+import '../src/styles';
+
 // Support for hot module reload
 // Remove this to turn off auto reload
 if (module.hot) {
