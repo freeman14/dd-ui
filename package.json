@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "1.5.5",
-    "angular-date-range-picker": "https://github.com/freeman14/angular-date-range-picker.git",
+    "angular-date-range-picker": "github:freeman14/angular-date-range-picker.git",
     "moment": "~2.15.1",
     "moment-timezone": "~0.5.7",
     "normalize.css": "~5.0.0"
