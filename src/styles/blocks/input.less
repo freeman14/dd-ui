@@ -123,14 +123,6 @@ form {
         border-radius: 4px;
         border: 1px solid @gainsboro;
 
-        &.ng-invalid {
-            border-color: @guardsman-red;
-        }
-
-        &:focus {
-            border:solid 1px @shakespeare;
-        }
-
         &::-webkit-input-placeholder {
             color: @silver;
         }
@@ -153,8 +145,6 @@ form {
 .dd__textarea {
     display: flex;
     height: @textarea-height;
-    border-radius: 4px;
-    border: 1px solid @gainsboro;
     margin: 0 0 20px;
     overflow: hidden;
     color: @silver;
@@ -162,8 +152,9 @@ form {
     textarea {
         width: 100%;
         outline: none;
-        color: @limed-spruce;   
-        border: none;
+        color: @limed-spruce;
+        border-radius: 4px;
+        border: 1px solid @gainsboro;
         padding: 10px;
         font-weight: 300;
         box-sizing: border-box;
@@ -187,4 +178,14 @@ form {
 
     }
 
+}
+
+.dd__input input, .dd__textarea textarea {
+    &.ng-invalid {
+        border-color: @guardsman-red;
+    }
+
+    &:focus {
+        border:solid 1px @shakespeare;
+    }
 }
