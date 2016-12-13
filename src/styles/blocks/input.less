@@ -89,37 +89,30 @@ form {
 
 .dd__input {
     display: flex;
-    align-items: center;
-    height: @input-height;
-    border-radius: 4px;
-    border: 1px solid @gainsboro;
+    flex-direction: column;
     margin: 0 0 20px;
-    overflow: hidden;
-    color: @silver;
+    position: relative;
     
     .icon {
         margin-left: 10px;
     }
 
-    .text-limit-wrapper {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-    }
-
     .limit-indicator {
-        position: relative;
-        bottom: auto;
+        position: absolute;
+        right: 15px;
+        top: 15px;
     }
 
     input {
+        border: 1px solid @gainsboro;
+        border-radius: 4px;
         width: 100%;
         height: @input-height;
         outline: none;
         color: @limed-spruce;   
-        border: none;
-        padding: 0 10px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        padding: 0 15px 0 15px;
         font-weight: 300;
         box-sizing: border-box;
 
@@ -139,24 +132,51 @@ form {
             color: @silver
         }
 
+        // &:focus {
+        //     border-color: @shakespeare;
+        // }
+
+        &.ng-invalid {
+            border-color: @guardsman-red;
+        }
+
+    }
+
+    .input__message {
+        display: none;
+        margin-top: 6px;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: @guardsman-red;
+        font-weight: 600;
+    }
+
+    .ng-invalid ~ .input__message {
+        display: block
+    } 
+
+    &.dd__limit input {
+        padding: 0 43px 0 15px;
     }
 }
 
 .dd__textarea {
     display: flex;
-    height: @textarea-height;
-    border-radius: 4px;
-    border: 1px solid @gainsboro;
+    position: relative;
+    min-height: @textarea-height;
     margin: 0 0 20px;
-    overflow: hidden;
-    color: @silver;
+
+    .text-limit-wrapper {
+        display: flex;
+    }
 
     textarea {
+        border: 1px solid #dedede;
+        border-radius: 4px;
         width: 100%;
         outline: none;
         color: @limed-spruce;   
-        border: none;
-        padding: 10px;
+        padding: 15px;
         font-weight: 300;
         box-sizing: border-box;
         resize: none;

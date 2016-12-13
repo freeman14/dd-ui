@@ -26,8 +26,8 @@ export class InputLimit {
         const self: InputLimit = this;
 
         scope.textLimit = attrs.textLimit;
-
-        element.wrap('<div class="text-limit-wrapper"></div>');
+        element.parent('div').addClass('dd__limit');
+        // element.wrap('<div class="text-limit-wrapper"></div>');
         element.after(indicator);
 
         self.countText(scope, element, attrs.textLimit);
