@@ -9,6 +9,15 @@
         </div>
     </div>
 
+    <form name="validation">
+        <div class="subtitle">Input error</div>
+        <div class="block">
+            <div class="dd__input">
+                <input ng-model='test' ng-required="true" type="text" placeholder="Input with err">
+            </div>
+        </div>
+    </form>
+
     <div class="subtitle">Input with limit</div>
     <div class="block">
         <div class="dd__input">
@@ -29,6 +38,13 @@
         <div class="lable" for="description">Message <span>Optional</span></div>
         <div class="dd__textarea">
             <textarea placeholder="Check out this audience report" text-limit="50"></textarea>
+        </div>
+    </div>
+
+    <div class="subtitle">Text Area Error</div>
+    <div class="block row">
+        <div class="dd__textarea">
+            <textarea ng-model='textArea' placeholder="Check out this audience report" ng-required='true' text-limit="50"></textarea>
         </div>
     </div>
 
