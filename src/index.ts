@@ -1,5 +1,4 @@
 import * as angular from 'angular';
-import './styles';
 import directives from './directives/directives.module';
 import datePickerModule from './dateRangePicker/dateRangePicker.module';
 import tooltipModule from './tooltip/tooltip.module';

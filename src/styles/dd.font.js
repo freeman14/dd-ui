@@ -3,7 +3,7 @@ module.exports = {
         "svg/**/*.svg"
     ],
     "fontName": "dd-icon-font",
-    "classPrefix": "icon-",
-    "baseClass": "icon",
+    "classPrefix": "dd__icon-",
+    "baseClass": "dd__icon",
     "fixedWidth": true
-}
+};
