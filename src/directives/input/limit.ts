@@ -26,13 +26,13 @@ export class InputLimit {
         const self: InputLimit = this;
 
         scope.textLimit = attrs.textLimit;
+        element.parent('div').addClass('dd__limit');
 
-        element.wrap('<div class="text-limit-wrapper"></div>');
         element.after(indicator);
 
         self.countText(scope, element, attrs.textLimit);
 
-        element.bind('keyup cut change paste', function (event: JQueryKeyEventObject): void {
+        element.bind('keyup cut change paste', function(event: JQueryKeyEventObject): void {
             setTimeout(() => {
                 self.countText(scope, element, attrs.textLimit);
             });
