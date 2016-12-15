@@ -93,8 +93,16 @@ form {
     margin: 0 0 20px;
     position: relative;
     
-    .icon {
-        margin-left: 10px;
+    .dd__icon {
+        position: absolute;
+        left: 0;
+        width: 37px;
+        text-align: center;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .limit-indicator {
@@ -136,7 +144,7 @@ form {
         //     border-color: @shakespeare;
         // }
 
-        &.ng-invalid {
+        &.ng-invalid:not(.ng-pristine) {
             border-color: @guardsman-red;
         }
 
@@ -151,14 +159,21 @@ form {
         font-weight: 600;
     }
 
-    .ng-invalid ~ .input__message {
+    .ng-invalid:not(.ng-pristine) ~ .input__message {
         display: block
     } 
 
     &.dd__limit input {
         padding: 0 43px 0 15px;
     }
+
+    &.dd__input-icon input { 
+        padding-left: 35px;
+    }
+
 }
+
+
 
 .dd__textarea {
     display: flex;
