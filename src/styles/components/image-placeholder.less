@@ -1,0 +1,36 @@
+@size: 60px;
+@diagonal-top-margin: -3px;
+@diagonal-side-margin: -2px;
+
+.dd__img__placeholder {
+  position: relative;
+  width: @size;
+  height: @size;
+
+  background: @porcelain;
+
+  &.dd__img__placeholder--phone {
+    background: @sushi;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    width: @size * 1.5;
+    top: @diagonal-top-margin;
+
+    border-bottom: 1px solid @white;
+  }
+
+  &:before {
+    left: @diagonal-side-margin;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    right: @diagonal-side-margin;
+    transform-origin: 100% 0;
+    transform: rotate(-45deg);
+  }
+}
