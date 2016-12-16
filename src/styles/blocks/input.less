@@ -4,6 +4,8 @@ form {
 
 /* Checkboxes */
 
+@labelMargin: 30px;
+
 .dd__checkbox {
 
     position: relative;
@@ -58,8 +60,12 @@ form {
         -moz-user-select: text;
         -ms-user-select: text;
         user-select: text;
-        margin-left: 30px;
+        max-width: calc(100% - @labelMargin);
+        margin-left: @labelMargin;
         margin-right: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &.checked .checkbox__label {
