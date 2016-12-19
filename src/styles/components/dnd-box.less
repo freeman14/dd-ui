@@ -1,0 +1,72 @@
+@height: 145px;
+
+.dd__dnd__box {
+  position: relative;
+  width: 440px;
+  height: @height;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: dashed 2px @gainsboro;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &.dd__dnd__box--default {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .dd__dnd__box__file__label {
+    color: @submarine;
+    .font-face(300, 12px);
+    margin-bottom: 10px;
+  }
+
+  .dd__dnd__box__text {
+    color: @submarine;
+    margin: 0;
+
+    &.dd__dnd__box__text--small {
+      .font-face(300, 14px);
+      line-height: normal;
+    }
+  }
+
+  .dd__dnd__box__opener {
+    color: @blaze-orange;
+    .clickable;
+  }
+
+  &.dd__dnd__box--image {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .dd__dnd__box__image {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .dd__dnd__box__content {
+      padding: 20px 20px 20px 0;
+
+      .dd__dnd__box__content__header {
+        color: @limed-spruce;
+        .font-face(600, 15px);
+        margin-bottom: 5px;
+      }
+      .dd__dnd__box__content__text {
+        .font-face(300, 12px);
+        color: @dusty-gray;
+        margin: 0 0 10px;
+        line-height: normal;
+      }
+      .dd__dnd__box__img__size {
+        .font-face(300, 15px);
+        float: right;
+      }
+    }
+  }
+}
