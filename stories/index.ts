@@ -7,6 +7,7 @@ import './jsComponents/dateRangePicker';
 import './jsComponents/tooltip';
 import './jsComponents/toggleButtons';
 import './jsComponents/timestamp';
+import './jsComponents/carousel';
 import './directives/inputLimit';
 
 import './styleGuide/atoms/index';
