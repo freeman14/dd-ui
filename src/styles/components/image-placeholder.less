@@ -1,4 +1,5 @@
 @size: 60px;
+@size-long: 12px;
 @diagonal-top-margin: -3px;
 @diagonal-side-margin: -2px;
 
@@ -6,11 +7,28 @@
   position: relative;
   width: @size;
   height: @size;
+  overflow: hidden;
 
   background: @porcelain;
 
   &.dd__img__placeholder--phone {
     background: @sushi;
+  }
+
+  &.dd__img__placeholder--long {
+    height: @size-long;
+
+    &:before, &:after {
+      top: -0.5px;
+    }
+
+    &:before {
+      transform: rotate(11deg);
+    }
+
+    &:after {
+      transform: rotate(-11deg);
+    }
   }
 
   &:before, &:after {

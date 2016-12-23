@@ -11,3 +11,4 @@ import './jsComponents/carousel';
 import './directives/inputLimit';
 
 import './styleGuide/atoms/index';
+import './styleGuide/moleculs/index';
