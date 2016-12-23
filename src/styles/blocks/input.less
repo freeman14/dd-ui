@@ -225,6 +225,7 @@ form {
 
 .dd__radio {
     display: inline-block;
+    
     .radio__label {
         display: inline-block;
         position: relative;
@@ -242,11 +243,12 @@ form {
         position: absolute;
     }
 
-    input[type=radio]:checked ~ .radio__label {
+    // Any direction near input with type radio
+    input[type=radio]:checked ~ .radio__label,
+    input[type=radio]:checked + .radio__label {
         border-color: @cerulean;
     }
 
-    // Any direction near input with type radio
     input[type=radio]:checked + .radio__label,
     input[type=radio]:checked ~ .radio__label {
         &::after {
