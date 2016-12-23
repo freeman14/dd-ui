@@ -221,3 +221,50 @@ form {
     }
 
 }
+
+
+.dd__radio {
+    display: inline-block;
+    .radio__label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width:20px;
+        height:20px;
+        border: solid 2px @submarine;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin: 10px 0;
+    }
+
+    input[type=radio] {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    input[type=radio]:checked ~ .radio__label {
+        border-color: @cerulean;
+    }
+
+    // Any direction near input with type radio
+    input[type=radio]:checked + .radio__label,
+    input[type=radio]:checked ~ .radio__label {
+        &::after {
+            border: solid 1px @cerulean;
+            width:10px;
+            height:10px;
+            display: block;
+            border-radius: 50%;
+            content: '';
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin: auto;
+            background-color: @cerulean;
+        }
+
+    }
+
+}
