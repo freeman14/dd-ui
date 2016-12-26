@@ -1,0 +1,18 @@
+<div class="style__guide">
+    <div class="title">Select</div>
+
+    <div class="subtitle">Simple select</div>
+    <div class="block">
+        <ui-select ng-model="vm.country.selected" title="Choose a country" class="dd__select">
+            <ui-select-match placeholder="Select or search a country in the list...">
+                {{$select.selected.name}}
+            </ui-select-match>
+            <ui-select-choices repeat="country in vm.countries | filter: $select.search">
+                <span ng-bind-html="country.name | highlight: $select.search"></span>
+                <small ng-bind-html="country.code | highlight: $select.search"></small>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+
+
+</div>

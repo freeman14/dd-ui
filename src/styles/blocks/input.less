@@ -10,6 +10,15 @@ form {
 
     position: relative;
 
+    &:focus {
+        outline: 0;
+        .checkbox__body {
+            outline: 0;
+            border-color: @shakespeare;
+            box-shadow: 0 0 10px @shakespeare;
+        }
+    }
+
     .checkbox__body {
         background: #FFFFFF;
         border: 1px solid @submarine;
@@ -124,7 +133,6 @@ form {
         height: @input-height;
         outline: none;
         color: @limed-spruce;
-        border: 1px solid #ccc;
         overflow: hidden;
         padding: 0 15px 0 15px;
         font-weight: 300;
@@ -134,15 +142,15 @@ form {
             color: @silver;
         }
 
-        ::-moz-placeholder {
+        &::-moz-placeholder {
             color: @silver;
         }
 
-        :-moz-placeholder {
+        &:-moz-placeholder {
             color: @silver;
         }
 
-        :-ms-input-placeholder {
+        &:-ms-input-placeholder {
             color: @silver
         }
 

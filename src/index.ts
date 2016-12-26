@@ -7,15 +7,17 @@ import modalModule from './modal/modal.module';
 import carouselModule from './carousel/carousel.module';
 import timestampModule from './timestamp/timestamp.module';
 import timestampsRangeModule from './timestampsRange/timestampsRange.module';
+import select from './select/select.module';
 
 const module: ng.IModule = angular.module('dd-ui', [
-  datePickerModule,
+  //datePickerModule,
   tooltipModule,
   toggleButtonsModule,
   modalModule,
   carouselModule,
   timestampModule,
   timestampsRangeModule,
+  select,
   directives
 ]);
 
