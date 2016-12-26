@@ -17,6 +17,9 @@ export default () => {
             });
 
             scope.toggle = () => {
+                if (model.$viewValue === attrs.value) {
+                  return;
+                }
                 scope.isSelected = !scope.isSelected;
                 model.$setViewValue(attrs.value);
             };
