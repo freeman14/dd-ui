@@ -10,6 +10,15 @@ form {
 
     position: relative;
 
+    &:focus {
+        outline: 0;
+        .checkbox__body {
+            outline: 0;
+            border-color: @shakespeare;
+            box-shadow: 0 0 10px @shakespeare;
+        }
+    }
+
     .checkbox__body {
         background: #FFFFFF;
         border: 1px solid @submarine;
