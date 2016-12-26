@@ -9,7 +9,7 @@ import timestampModule from './timestamp/timestamp.module';
 import timestampsRangeModule from './timestampsRange/timestampsRange.module';
 
 const module: ng.IModule = angular.module('dd-ui', [
-  datePickerModule,
+  //datePickerModule,
   tooltipModule,
   toggleButtonsModule,
   modalModule,
