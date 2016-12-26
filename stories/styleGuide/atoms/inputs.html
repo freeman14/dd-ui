@@ -52,24 +52,28 @@
 
     <div class="subtitle">Checkbox</div>
     <div class="block row">
-        <checkbox ng-model="value">
+        <checkbox ng-model="option">
             <span>Label</span>
         </checkbox>
     </div>
 
-    <div class="subtitle">Radio buttons</div>
+  <div class="subtitle">Radio button</div>
 
-    <div class="dd__radio">
-        <input type="radio" name='a' placeholder="Simple input" id="simple-input-1">
-        <label class="radio__label" for="simple-input-1"></label>
-        <label for="simple-input-1">Some another text</label>
+  <div class="block row">
+    <radio-button ng-model="value" value="option1">
+      <span>Radio option label</span>
+    </radio-button>
+  </div>
+
+    <div class="subtitle">Radio buttons (group)</div>
+
+    <div class="block row">
+      <radio-button ng-model="vm.radioButtons.value" value="option1">
+        <span>Radio option label 1</span>
+      </radio-button>
+      <radio-button ng-model="vm.radioButtons.value" value="option2">
+        <span>Radio option label 2</span>
+      </radio-button>
     </div>
-
-    <div class="dd__radio">
-        <input type="radio" name='a' placeholder="Simple input" id="simple-input-2">
-        <label class="radio__label" for="simple-input-2"></label>
-        <label for="simple-input-2">Some another text</label>
-    </div>
-
 
 </div>

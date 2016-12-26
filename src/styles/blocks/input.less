@@ -98,7 +98,7 @@ form {
     flex-direction: column;
     margin: 0 0 20px;
     position: relative;
-    
+
     .dd__icon {
         position: absolute;
         left: 0;
@@ -123,7 +123,7 @@ form {
         width: 100%;
         height: @input-height;
         outline: none;
-        color: @limed-spruce;   
+        color: @limed-spruce;
         border: 1px solid #ccc;
         overflow: hidden;
         padding: 0 15px 0 15px;
@@ -137,11 +137,11 @@ form {
         ::-moz-placeholder {
             color: @silver;
         }
-        
+
         :-moz-placeholder {
             color: @silver;
         }
-        
+
         :-ms-input-placeholder {
             color: @silver
         }
@@ -167,13 +167,13 @@ form {
 
     .ng-invalid:not(.ng-pristine) ~ .input__message {
         display: block
-    } 
+    }
 
     &.dd__limit input {
         padding: 0 43px 0 15px;
     }
 
-    &.dd__input-icon input { 
+    &.dd__input-icon input {
         padding-left: 35px;
     }
 
@@ -196,7 +196,7 @@ form {
         border-radius: 4px;
         width: 100%;
         outline: none;
-        color: @limed-spruce;   
+        color: @limed-spruce;
         padding: 15px;
         font-weight: 300;
         box-sizing: border-box;
@@ -209,11 +209,11 @@ form {
         ::-moz-placeholder {
             color: @silver;
         }
-        
+
         :-moz-placeholder {
             color: @silver;
         }
-        
+
         :-ms-input-placeholder {
             color: @silver
         }
@@ -222,51 +222,51 @@ form {
 
 }
 
+.dd__radiobutton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
 
-.dd__radio {
-    display: inline-block;
-    
-    .radio__label {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        width:20px;
-        height:20px;
-        border: solid 2px @submarine;
-        border-radius: 50%;
-        vertical-align: middle;
-        margin: 10px 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: @limed-spruce;
+    opacity: 0.8;
+
+    .radiobutton__body {
+      position: relative;
+      height: 20px;
+      min-width: 20px;
+      margin-right: 6px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: solid 2px @submarine;
+      cursor: pointer;
     }
 
-    input[type=radio] {
-        visibility: hidden;
-        position: absolute;
-    }
+    &.selected {
+        opacity: 1;
 
-    // Any direction near input with type radio
-    input[type=radio]:checked ~ .radio__label,
-    input[type=radio]:checked + .radio__label {
-        border-color: @cerulean;
-    }
+      .radiobutton__body {
+          border: solid 2px @shakespeare;
 
-    input[type=radio]:checked + .radio__label,
-    input[type=radio]:checked ~ .radio__label {
-        &::after {
-            border: solid 1px @cerulean;
-            width:10px;
-            height:10px;
-            display: block;
+          &::after {
+            box-sizing: border-box;
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-color: #529CCF;
             border-radius: 50%;
             content: '';
-            position: absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            margin: auto;
-            background-color: @cerulean;
-        }
+          }
+      }
 
-    }
-
+  }
 }
