@@ -21,7 +21,8 @@
     "angular-date-range-picker": "github:freeman14/angular-date-range-picker",
     "moment": "~2.15.1",
     "moment-timezone": "~0.5.7",
-    "normalize.css": "~5.0.0"
+    "normalize.css": "~5.0.0",
+    "ui-select": "~0.19.6"
   },
   "devDependencies": {
     "json-loader": "~0.5.4",
