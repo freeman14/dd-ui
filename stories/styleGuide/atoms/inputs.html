@@ -57,4 +57,23 @@
         </checkbox>
     </div>
 
+  <div class="subtitle">Radio button</div>
+
+  <div class="block row">
+    <radio-button ng-model="option" value="option1">
+      <span>Radio option label</span>
+    </radio-button>
+  </div>
+
+    <div class="subtitle">Radio buttons (group)</div>
+
+    <div class="block row">
+      <radio-button ng-model="vm.radioButtons.value" value="option1">
+        <span>Radio option label 1</span>
+      </radio-button>
+      <radio-button ng-model="vm.radioButtons.value" value="option2">
+        <span>Radio option label 2</span>
+      </radio-button>
+    </div>
+
 </div>
