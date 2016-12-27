@@ -1,6 +1,5 @@
 {
   "name": "dd-ui",
-  "version": "0.0.1",
   "description": "DoubleDutch UI library",
   "main": "index.js",
   "scripts": {
@@ -8,11 +7,12 @@
     "postinstall": "typings i",
     "sb": "node ./sb/.webpack/server.js --NODE_ENV=dev",
     "sb-build": "webpack --config ./sb/.webpack/webpack.build.babel.js --NODE_ENV=production",
-    "sb-publish": "node sb/.script/ghpages.js"
+    "sb-publish": "node sb/.script/ghpages.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "https://ddgit.me/ddubovetskyi/dd-ui.git"
+    "url": "https://github.com/freeman14/dd-ui"
   },
   "author": "DoubleDutch",
   "license": "ISC",
@@ -77,6 +77,7 @@
     "url-loader": "0.5.7",
     "wallaby-webpack": "0.0.22",
     "webpack": "1.13.1",
-    "webpack-hot-middleware": "~2.13.0"
+    "webpack-hot-middleware": "~2.13.0",
+    "semantic-release": "^6.3.2"
   }
 }
