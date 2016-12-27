@@ -8,8 +8,7 @@ const module: ng.IModule = angular.module('ep', [
 
 module.config(function (uiSelectConfig: any): void {
     uiSelectConfig.theme = 'selectize';
-    // uiSelectConfig.resetSearchInput = true;
-    // uiSelectConfig.appendToBody = true;
+    uiSelectConfig.removeSelected = false;
 });
 
 export default module.name;
