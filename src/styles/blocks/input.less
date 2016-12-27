@@ -247,6 +247,16 @@ form {
     color: @limed-spruce;
     opacity: 0.8;
 
+    &:active,
+    &:focus,
+    &.active {
+      background-image: none;
+      outline: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+
     .radiobutton__body {
       position: relative;
       height: 20px;
