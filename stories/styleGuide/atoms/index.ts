@@ -5,7 +5,7 @@ atoms.story('Atoms')
     .add('Typography', require('./typography.html'))
     .add('Inputs', require('./inputs.html'), {
       radioButtons: {
-        value: 'option1',
+        value: true,
         default: true
       }
     })
