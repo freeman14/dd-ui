@@ -154,9 +154,9 @@ form {
             color: @silver
         }
 
-        // &:focus {
-        //     border-color: @shakespeare;
-        // }
+        &:focus {
+            border-color: @shakespeare;
+        }
 
         &.ng-invalid:not(.ng-pristine) {
             border-color: @guardsman-red;
@@ -200,7 +200,7 @@ form {
     }
 
     textarea {
-        border: 1px solid #dedede;
+        border: 1px solid @gainsboro;
         border-radius: 4px;
         width: 100%;
         outline: none;
@@ -224,6 +224,10 @@ form {
 
         :-ms-input-placeholder {
             color: @silver
+        }
+
+        &:focus {
+          border-color: @shakespeare;
         }
 
     }
