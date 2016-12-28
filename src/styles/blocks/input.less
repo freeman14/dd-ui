@@ -86,9 +86,9 @@ form {
 /* Inputs */
 
 @input-height: 44px;
-@textarea-height: 80px;
+@textarea-height: 100px;
 
-.lable {
+.label {
 
     .font-face(600, 15px);
     color: @limed-spruce;
@@ -145,11 +145,11 @@ form {
         &::-moz-placeholder {
             color: @silver;
         }
-        
+
         &:-moz-placeholder {
             color: @silver;
         }
-        
+
         &:-ms-input-placeholder {
             color: @silver
         }
@@ -165,12 +165,7 @@ form {
     }
 
     .input__message {
-        display: none;
-        margin-top: 6px;
-        text-transform: uppercase;
-        font-size: 11px;
-        color: @guardsman-red;
-        font-weight: 600;
+      .input-error;
     }
 
     .ng-invalid:not(.ng-pristine) ~ .input__message {
@@ -191,8 +186,9 @@ form {
 
 .dd__textarea {
     display: flex;
+    flex-direction: column;
     position: relative;
-    min-height: @textarea-height;
+    height: @textarea-height;
     margin: 0 0 20px;
 
     .text-limit-wrapper {
@@ -203,6 +199,7 @@ form {
         border: 1px solid @gainsboro;
         border-radius: 4px;
         width: 100%;
+        height: 100%;
         outline: none;
         color: @limed-spruce;
         padding: 15px;
@@ -214,15 +211,15 @@ form {
             color: @silver;
         }
 
-        ::-moz-placeholder {
+        &::-moz-placeholder {
             color: @silver;
         }
 
-        :-moz-placeholder {
+        &:-moz-placeholder {
             color: @silver;
         }
 
-        :-ms-input-placeholder {
+        &:-ms-input-placeholder {
             color: @silver
         }
 
@@ -230,8 +227,18 @@ form {
           border-color: @shakespeare;
         }
 
+        &.ng-invalid:not(.ng-pristine) {
+          border-color: @guardsman-red;
+        }
     }
 
+  .input__message {
+    .input-error;
+  }
+
+  .ng-invalid:not(.ng-pristine) ~ .input__message {
+    display: block
+  }
 }
 
 .dd__radiobutton {
