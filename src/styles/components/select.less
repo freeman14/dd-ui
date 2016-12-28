@@ -2,6 +2,18 @@
     width: 100%;
 }
 
+.dd__select.multi .selectize-input {
+    min-height: 44px;   
+    height: auto;
+    padding: 7px;
+    padding-bottom: 0;
+}
+
+.selectize-control.multi.ng-empty > .selectize-input > input {
+    position: relative;
+    top: 6px;
+}
+
 .selectize-input {
     position: relative;
     z-index: 1;
@@ -49,9 +61,12 @@
 
 }
 
-.selectize-dropdown [data-selectable],
-.selectize-dropdown .optgroup-header {
-  padding: 8px 15px;
+.selectize-dropdown [data-selectable] > div{
+  padding: 10px 15px;
+}
+
+.dd__select:not(.multi) .selectize-dropdown [data-selectable] {
+    padding: 10px 15px;
 }
 
 .selectize-dropdown .active {
@@ -74,4 +89,48 @@
     border-radius: 0 0 3px 3px;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+
+.dd__select--not__find {
+    text-align: center;
+    color: @submarine;
+    font-size: 14px;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+    background-color: @porcelain;
+    border-radius: 4px;
+}
+
+.selectize-control.multi .selectize-input > div {
+  padding: 6px 11px;
+  margin: 0 8px 8px 0;
+  color: @limed-spruce;
+  cursor: pointer;
+}
+
+.selectize-control.plugin-remove_button [data-value] .remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 17px;
+    padding: 6px 4px 0 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: @dusty-gray;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+
+.ui-select-choices-row {
+    color: @limed-spruce;
+}
+
+.ui-select-choices-row.disabled {
+    background: @porcelain;
+    font-weight: 600;
 }
