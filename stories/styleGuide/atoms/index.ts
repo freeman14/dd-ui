@@ -7,7 +7,7 @@ atoms.story('Atoms')
       inputText: 'Hello world!',
       textAreaText: 'Hello world!',
       radioButtons: {
-        value: 'option1',
+        value: true,
         default: true
       }
     })
