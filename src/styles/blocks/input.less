@@ -145,11 +145,11 @@ form {
         &::-moz-placeholder {
             color: @silver;
         }
-        
+
         &:-moz-placeholder {
             color: @silver;
         }
-        
+
         &:-ms-input-placeholder {
             color: @silver
         }
@@ -262,7 +262,7 @@ form {
       height: 20px;
       min-width: 20px;
       margin-right: 6px;
-      background-color: #ffffff;
+      background-color: @white;
       border-radius: 50%;
       border: solid 2px @submarine;
       cursor: pointer;
@@ -284,11 +284,60 @@ form {
             right: 0;
             left: 0;
             margin: auto;
-            background-color: #529CCF;
+            background-color: @shakespeare;
             border-radius: 50%;
             content: '';
           }
       }
 
+  }
+}
+
+.dd__toggle {
+  @toggle-mark-size: 26px;
+  @transition-time: .3s;
+
+  &.dd__toggle--checked {
+    .dd__toggle__body {
+      background-color: #bdd8ea;
+
+      &:after {
+        left: 19px;
+        background-color: @shakespeare;
+        border-color: @shakespeare;
+      }
+    }
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  .dd__toggle__body {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 18px;
+    background-color: @submarine;
+    .clickable;
+    .border-radius(11px);
+    .transition(background-color @transition-time ease);
+
+    &:after {
+      position: absolute;
+      top: -25%;
+      left: -14px;
+      content: '';
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      width: @toggle-mark-size;
+      height: @toggle-mark-size;
+      background-color: @white;
+      border: 1px solid @gainsboro;
+      .clickable;
+      .box-sizing(border-box);
+      .transition(all @transition-time ease);
+    }
   }
 }
