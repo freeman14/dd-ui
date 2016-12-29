@@ -61,12 +61,14 @@
 
     <div class="subtitle">Checkboxes</div>
     <div class="block row">
-        <checkbox ng-model="model1">
-            <span>Label</span>
+        <checkbox ng-model="vm.checkboxes.normal">
+            <span>Normal</span>
         </checkbox>
-        <checkbox ng-model="model2" small>
-          <span>Label</span>
+      <span ng-bind="vm.checkboxes.normal"></span>
+        <checkbox ng-model="vm.checkboxes.small" small>
+          <span>Small</span>
         </checkbox>
+      <span ng-bind="vm.checkboxes.small"></span>
     </div>
 
   <div class="subtitle">Radio button</div>

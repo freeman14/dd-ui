@@ -9,6 +9,10 @@ atoms.story('Atoms')
       radioButtons: {
         value: true,
         default: true
+      },
+      checkboxes: {
+        normal: true,
+        small: false
       }
     })
     .add('Loading', require('./loading.html'))
