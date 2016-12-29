@@ -1,5 +1,4 @@
 export default () => {
-
     return {
         restrict: 'E',
         require: 'ngModel',
@@ -7,21 +6,22 @@ export default () => {
         transclude: true,
         template: require('./radiobutton.partial.html'),
         scope: {
-            ngModel: '='
+          value: '<ngValue'
         },
-        link: (scope: any, element: any, attrs: any, model: any) => {
-          model.$formatters.unshift(key => {
-              scope.isSelected = key === attrs.value;
-              return key;
-          });
+        link: {
+            post: (scope: any, element: any, attrs: any, model: any) => {
+                model.$formatters.push(key => {
+                  scope.isSelected = key === scope.value;
+                  return key;
+                });
 
-          scope.toggle = () => {
-              if (!scope.isSelected) {
-                scope.isSelected = !scope.isSelected;
-                model.$setViewValue(attrs.value);
-              }
-          };
+                scope.toggle = () => {
+                  if (!scope.isSelected) {
+                    scope.isSelected = !scope.isSelected;
+                    model.$setViewValue(scope.value);
+                  }
+                };
+            }
         }
     };
-
 };

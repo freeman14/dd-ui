@@ -12,3 +12,4 @@ import './directives/inputLimit';
 
 import './styleGuide/atoms/index';
 import './styleGuide/moleculs/index';
+import './styleGuide/organisms/index';
