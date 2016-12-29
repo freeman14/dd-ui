@@ -1,4 +1,5 @@
 export default function run($templateCache: ng.ITemplateCacheService): void {
+    'ngInject';
 
     $templateCache.put('uib/template/tabs/tabset.html',
         `<div>
