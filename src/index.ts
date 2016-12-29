@@ -8,6 +8,7 @@ import carouselModule from './carousel/carousel.module';
 import timestampModule from './timestamp/timestamp.module';
 import timestampsRangeModule from './timestampsRange/timestampsRange.module';
 import select from './select/select.module';
+import tabs from './tabs/tabs.module';
 
 const module: ng.IModule = angular.module('dd-ui', [
   //datePickerModule,
@@ -18,7 +19,8 @@ const module: ng.IModule = angular.module('dd-ui', [
   timestampModule,
   timestampsRangeModule,
   select,
-  directives
+  directives,
+  tabs
 ]);
 
 export default module.name;
