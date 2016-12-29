@@ -4,8 +4,10 @@ atoms.story('Atoms')
     .add('Buttons', require('./buttons.html'))
     .add('Typography', require('./typography.html'))
     .add('Inputs', require('./inputs.html'), {
+      inputText: 'Hello world!',
+      textAreaText: 'Hello world!',
       radioButtons: {
-        value: 'option1',
+        value: true,
         default: true
       }
     })

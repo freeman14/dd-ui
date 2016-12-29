@@ -58,3 +58,14 @@ h6 {
 .text__center {
   text-align: center;
 }
+
+.text__link {
+  color: @blaze-orange;
+  .clickable;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    .no--outlined;
+  }
+}
