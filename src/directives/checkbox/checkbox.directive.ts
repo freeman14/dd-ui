@@ -10,6 +10,7 @@ export default () => {
             ngModel: '='
         },
         link: (scope: any, element: any, attrs: any, model: any) => {
+            scope.isSmall = attrs.small !== undefined;
 
             model.$formatters.unshift(value => {
                 scope.isChecked = value === true;

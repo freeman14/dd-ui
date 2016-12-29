@@ -9,6 +9,7 @@ form {
 .dd__checkbox {
 
     position: relative;
+    margin: 5px;
 
     &:focus {
         outline: 0;
@@ -69,7 +70,7 @@ form {
         -moz-user-select: text;
         -ms-user-select: text;
         user-select: text;
-        max-width: calc(~"100% - "@labelMargin);
+        width: 100%;
         margin-left: @labelMargin;
         margin-right: 0;
         white-space: nowrap;
@@ -83,6 +84,83 @@ form {
 
 }
 
+.dd__checkbox--small {
+
+  position: relative;
+  margin: 5px;
+
+  &:focus {
+    outline: 0;
+    .checkbox__body {
+      outline: 0;
+      border-color: @shakespeare;
+      box-shadow: 0 0 10px @shakespeare;
+    }
+  }
+
+  .checkbox__body {
+    background: #FFFFFF;
+    border: 1px solid @submarine;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: auto;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+  }
+
+  &.checked .checkbox__body {
+    border: 1px solid @shakespeare;
+    background: @shakespeare;
+    color: #FFF;
+
+    &::before {
+      box-sizing: border-box;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      display: table;
+      width: 3px;
+      height: 8px;
+      border-width: 1px;
+      border-style: solid;
+      border-top: 0;
+      border-left: 0;
+      content: '';
+    }
+
+  }
+
+  .checkbox__label {
+    color: @gray;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    width: 100%;
+    margin-left: @labelMargin;
+    margin-right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.checked .checkbox__label {
+    color: @river-bed;
+  }
+
+}
 /* Inputs */
 
 @input-height: 44px;
