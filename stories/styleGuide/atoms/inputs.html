@@ -64,11 +64,12 @@
         <checkbox ng-model="vm.checkboxes.normal">
             <span>Normal</span>
         </checkbox>
-      <span ng-bind="vm.checkboxes.normal"></span>
+      <checkbox ng-model="vm.checkboxes.prechecked" prechecked>
+        <span>Prechecked</span>
+      </checkbox>
         <checkbox ng-model="vm.checkboxes.small" small>
           <span>Small</span>
         </checkbox>
-      <span ng-bind="vm.checkboxes.small"></span>
     </div>
 
   <div class="subtitle">Radio button</div>

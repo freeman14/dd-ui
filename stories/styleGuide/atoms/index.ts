@@ -12,7 +12,8 @@ atoms.story('Atoms')
       },
       checkboxes: {
         normal: true,
-        small: false
+        small: false,
+        prechecked: true
       }
     })
     .add('Loading', require('./loading.html'))
