@@ -2,6 +2,7 @@ let moleculs: stotybook.ISection = sb.section('Moleculs');
 
 moleculs.story('Moleculs')
   .add('Image uploader', require('./uploaders.html'))
+  .add('Toggle group', require('./toggleGroup.html'))
   .add('Select', require('./select.html'), {
     country: {},
     countries: [
