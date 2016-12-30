@@ -70,7 +70,7 @@ form {
         -moz-user-select: text;
         -ms-user-select: text;
         user-select: text;
-        width: 100%;
+        max-width: calc(~"100% - "@labelMargin);
         margin-left: @labelMargin;
         margin-right: 0;
         white-space: nowrap;
@@ -82,161 +82,52 @@ form {
         color: @river-bed;
     }
 
-}
+    &.dd__checkbox--small {
+      .checkbox__body {
+        border-radius: 3px;
+        width: 14px;
+        height: 14px;
+      }
 
-.dd__checkbox--small {
+      &.checked .checkbox__body {
 
-  position: relative;
-  margin: 5px;
-
-  &:focus {
-    outline: 0;
-    .checkbox__body {
-      outline: 0;
-      border-color: @shakespeare;
-      box-shadow: 0 0 10px @shakespeare;
-    }
-  }
-
-  .checkbox__body {
-    background: #FFFFFF;
-    border: 1px solid @submarine;
-    border-radius: 3px;
-    width: 14px;
-    height: 14px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: auto;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-  }
-
-  &.checked .checkbox__body {
-    border: 1px solid @shakespeare;
-    background: @shakespeare;
-    color: #FFF;
-
-    &::before {
-      box-sizing: border-box;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      position: absolute;
-      left: 5px;
-      top: 1px;
-      display: table;
-      width: 3px;
-      height: 8px;
-      border-width: 1px;
-      border-style: solid;
-      border-top: 0;
-      border-left: 0;
-      content: '';
+        &::before {
+          left: 5px;
+          top: 1px;
+          width: 3px;
+          height: 8px;
+          border-width: 1px;
+        }
+      }
     }
 
-  }
+    &.dd__checkbox--prechecked {
+      &.checked .checkbox__body {
+        border: 1px solid @shakespeare;
+        background: #FFFFFF;
+        color: #FFF;
 
-  .checkbox__label {
-    color: @gray;
-    box-sizing: border-box;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-    width: 100%;
-    margin-left: @labelMargin;
-    margin-right: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+        &::after {
+          box-sizing: border-box;
+          background: @shakespeare;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 2px;
+          height: 10px;
+          content: '';
+        }
 
-  &.checked .checkbox__label {
-    color: @river-bed;
-  }
+      }
+    }
 
 }
 
-.dd__checkbox--prechecked {
-
-  position: relative;
-  margin: 5px;
-
-  &:focus {
-    outline: 0;
-    .checkbox__body {
-      outline: 0;
-      border-color: @shakespeare;
-      box-shadow: 0 0 10px @shakespeare;
-    }
-  }
-
-  .checkbox__body {
-    background: #FFFFFF;
-    border: 1px solid @submarine;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: auto;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-  }
-
-  &.checked .checkbox__body {
-    border: 1px solid @shakespeare;
-    color: #FFF;
-
-    &::before {
-      box-sizing: border-box;
-      background: @shakespeare;
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      width: 2px;
-      height: 10px;
-      content: '';
-    }
-
-  }
-
-  .checkbox__label {
-    color: @gray;
-    box-sizing: border-box;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-    width: 100%;
-    margin-left: @labelMargin;
-    margin-right: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &.checked .checkbox__label {
-    color: @river-bed;
-  }
-
-}
 /* Inputs */
 
 @input-height: 44px;

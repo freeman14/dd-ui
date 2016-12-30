@@ -7,10 +7,12 @@ export default () => {
         transclude: true,
         template: require('./checkbox.partial.html'),
         scope: {
-            ngModel: '='
+            ngModel: '=',
+            checkboxPrechecked: '<',
+            checkboxSmall: '<'
         },
         link: (scope: any, element: any, attrs: any, model: any) => {
-            scope.modificator = (attrs.small !== undefined && '--small') || (attrs.prechecked !== undefined && '--prechecked') || '';
+            scope.modificator = (attrs.checkboxSmall !== undefined && 'small') || (attrs.checkboxPrechecked !== undefined && 'prechecked') || '';
 
             model.$formatters.unshift(value => {
                 scope.isChecked = value === true;

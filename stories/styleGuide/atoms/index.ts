@@ -12,7 +12,7 @@ atoms.story('Atoms')
       },
       checkboxes: {
         normal: true,
-        small: false,
+        small: true,
         prechecked: true
       }
     })
