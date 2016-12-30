@@ -33,14 +33,12 @@
       top: -25%;
       left: 0;
       content: '';
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
       width: @toggle-mark-size;
       height: @toggle-mark-size;
       background-color: @white;
       border: 1px solid @gainsboro;
       .clickable;
+      .border-radius(50%);
       .box-sizing(border-box);
       .transition(all @transition-time ease);
     }
@@ -60,11 +58,11 @@
   .dd__toggle__group__item {
     height: 62px;
     border-bottom: 1px solid @gainsboro;
-    .box-sizing(border-box);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 12px 15px;
+    .box-sizing(border-box);
 
     .dd__toggle__group__item__heading {
       .font-face(normal, 14px);
