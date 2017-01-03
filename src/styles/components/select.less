@@ -91,10 +91,19 @@
     box-sizing: border-box;
 }
 
+.dd__select .dd__select--not__find {
+    padding: 10px 15px;
+}
+
 .dd__select--not__find {
     text-align: center;
     color: @submarine;
     font-size: 14px;
+    display: none;
+}
+
+.dd__select.open .dd__select--not__find {
+    display: block;
 }
 
 .selectize-control.multi .selectize-input [data-value] {
