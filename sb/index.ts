@@ -3,6 +3,7 @@
 import * as angular from 'angular';
 import 'ui-storybook/helpers/ng';
 import 'angular-sanitize';
+import 'ngclipboard';
 
 // SB basic styles
 import './style.less';
@@ -21,6 +22,7 @@ if (module.hot) {
 
 const mainModule: ng.IModule = angular.module('sb', [
   'helper',
+  'ngclipboard',
   DDUI
 ]);
 

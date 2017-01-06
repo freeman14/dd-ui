@@ -12,5 +12,6 @@ atoms.story('Atoms')
       }
     })
     .add('Loading', require('./loading.html'))
-    .add('Placeholders', require('./placeholders.html'));
+    .add('Placeholders', require('./placeholders.html'))
+    .add('Icons', require('./icons.html'));
 
