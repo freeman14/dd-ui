@@ -26,4 +26,5 @@ moleculs.story('Moleculs')
       { name: 'Bahrain', code: 'BH' },
       { name: 'Bangladesh', code: 'BD' }
     ]
-  });
+  })
+  .add('Dropdown', require('./dropdown.html'));
