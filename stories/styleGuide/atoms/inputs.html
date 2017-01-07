@@ -59,10 +59,16 @@
         </div>
     </div>
 
-    <div class="subtitle">Checkbox</div>
+    <div class="subtitle">Checkboxes</div>
     <div class="block row">
-        <checkbox ng-model="value">
-            <span>Label</span>
+        <checkbox ng-model="vm.checkboxes.normal">
+            <span>Normal</span>
+        </checkbox>
+      <checkbox ng-model="vm.checkboxes.prechecked" checkbox-prechecked>
+        <span>Prechecked</span>
+      </checkbox>
+        <checkbox ng-model="vm.checkboxes.small" checkbox-small>
+          <span>Small</span>
         </checkbox>
     </div>
 
