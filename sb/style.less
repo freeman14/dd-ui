@@ -29,6 +29,7 @@ preview-helper {
 }
 
 .style__guide {
+  @border-color: #c1c1c1;
 
     padding: 20px;
 
@@ -36,7 +37,7 @@ preview-helper {
         display: flex;
         align-items: center;
         margin: 10px 0;
-        border-bottom: 1px solid #c1c1c1;
+        border-bottom: 1px solid @border-color;
         padding-bottom: 20px;
 
         &.row {
@@ -50,7 +51,7 @@ preview-helper {
         font-family: 'Open-Sans', Helvetica, sans-serif;
         font-size: 16px;
         text-transform: uppercase;
-        border-bottom: 1px solid #C1C1C1;
+        border-bottom: 1px solid @border-color;
         padding-bottom: 4px;
         color: #364347;
         font-weight: bold;
@@ -66,6 +67,36 @@ preview-helper {
             font-weight: 600;
         }
 
+    }
+
+    .icon-wrapper {
+      width: 25px;
+    }
+
+    .class-name {
+      border: 1px solid @border-color;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      margin-left: 20px;
+
+      .class-name-label {
+        padding: 5px;
+        width: 300px;
+        border: 0;
+        border-right: 1px solid @border-color;
+      }
+
+      .class-name-copy {
+        background: none;
+        border: 0;
+        outline: 0;
+        padding: 5px;
+
+        &:hover {
+          background: #cccccc;
+        }
+      }
     }
 
     h1, h2, h3, h4, h5, h6 {

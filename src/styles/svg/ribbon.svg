@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="22px" viewBox="0 0 12 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ribbon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="680x680" transform="translate(-374.000000, -609.000000)" fill="#231F1F">
+            <g id="Row-8" transform="translate(52.000000, 605.000000)">
+                <path d="M329.023785,22.110925 L332.843847,25.8071342 C333.270941,26.2192691 334,25.9271735 334,25.3439827 L334,5.5044922 C334,4.67322025 333.302999,4 332.44364,4 L323.55636,4 C322.697001,4 322,4.67322025 322,5.5044922 L322,25.3439827 C322,25.9271735 322.729059,26.2192691 323.155119,25.8071342 L326.976215,22.110925 C327.541882,21.5647463 328.458118,21.5647463 329.023785,22.110925" id="ribbon"></path>
+            </g>
+        </g>
+    </g>
+</svg>
