@@ -52,7 +52,11 @@
 
   & > .dropdown-menu > li.menuitem .dd__icon {
     position: absolute;
+    opacity: 0;
     left: 20px;
+  }
+  & > .dropdown-menu > li.menuitem.active .dd__icon {
+    opacity: 1;
   }
 }
 

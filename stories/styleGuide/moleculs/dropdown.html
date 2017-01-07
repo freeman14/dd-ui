@@ -7,21 +7,21 @@
         Forced btn--lg
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" uib-dropdown-menu>
-        <li><a href="#">Item 1</a></li>
-        <li class="active"><a href="#">Item 2 (active)</a></li>
+      <ul class="dropdown-menu" uib-dropdown-menu ng-init="activeItem = 'item2'" >
+        <li ng-class="{'active':activeItem == 'item1'}"><a href="#" ng-click="activeItem = 'item1'">Item 1</a></li>
+        <li ng-class="{'active':activeItem == 'item2'}"><a href="#" ng-click="activeItem = 'item2'">Item 2</a></li>
         <li class="divider"></li>
-        <li><a href="#">Item 3</a></li>
+        <li ng-class="{'active':activeItem == 'item3'}"><a href="#" ng-click="activeItem = 'item3'">Item 3</a></li>
       </ul>
     </div>
-    <div class="dd__dropdown btn-group" uib-dropdown auto-close="outsideClick">
+    <div class="dd__dropdown btn-group" uib-dropdown>
       <button class="btn btn--default" uib-dropdown-toggle>
         Forced dropdown-menu-right
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu>
         <li><a href="#">Item 1</a></li>
-        <li class="active"><a href="#">Item 2 (active)</a></li>
+        <li><a href="#">Item 2</a></li>
         <li class="divider"></li>
         <li><a href="#">Item 3</a></li>
       </ul>
@@ -36,18 +36,16 @@
       </button>
       <ul class="dropdown-menu" uib-dropdown-menu>
         <li class="menutitle"><span>Title:</span></li>
-        <li class="menuitem">
-          <a href="#">Item 1</a>
-        </li>
-        <li class="menuitem active"><a href="#"><span class="dd__icon dd__icon-ribbon"></span>Item 2 (active)</a></li>
+        <li class="menuitem" ng-class="{'active':activeItem == 'item1'}"><a href="#" ng-click="activeItem = 'item1'"><span class="dd__icon dd__icon-ribbon"></span>Item 1</a></li>
+        <li class="menuitem" ng-class="{'active':activeItem == 'item2'}"><a href="#" ng-click="activeItem = 'item2'"><span class="dd__icon dd__icon-ribbon"></span>Item 2</a></li>
         <li class="divider"></li>
-        <li class="menuitem"><a href="#">Item 3</a></li>
+        <li class="menuitem" ng-class="{'active':activeItem == 'item3'}"><a href="#" ng-click="activeItem = 'item3'"><span class="dd__icon dd__icon-ribbon"></span>Item 3</a></li>
       </ul>
     </div>
   </div>
   <div class="subtitle">Splitted dropdown</div>
   <div class="block">
-    <div class="dd__dropdown btn-group" uib-dropdown auto-close="outsideClick">
+    <div class="dd__dropdown btn-group" uib-dropdown>
       <button class="btn btn--hollow"
               popover-trigger="'mouseenter'"
               popover-placement="auto bottom"
@@ -57,7 +55,7 @@
       </button>
       <ul class="dropdown-menu" uib-dropdown-menu>
         <li><a href="#">Item 1</a></li>
-        <li class="active"><a href="#">Item 2 (active)</a></li>
+        <li><a href="#">Item 2</a></li>
         <li class="divider"></li>
         <li><a href="#">Item 3</a></li>
       </ul>
