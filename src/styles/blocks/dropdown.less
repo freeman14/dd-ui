@@ -1,7 +1,4 @@
-@border-color: #DEDEDE;
 @arrow-border-color: rgba(0, 0, 0, 0.15);
-@shadow-color: rgba(0, 0, 0, 0.2);
-@arrow-size: 10px;
 
 .dd__dropdown {
   .dropdown-menu {
@@ -59,11 +56,11 @@
   }
   .dropdown-menu > li:not(.menutitle) > *:hover,
   .dropdown-menu > li:not(.menutitle) > *:focus {
-    background-color: #f8f9fa;
+    background-color: @athens-gray;
   }
   .dropdown-menu > li.menutitle > *:hover,
   .dropdown-menu > li.menutitle > *:focus {
-    background-color: #ffffff;
+    background-color: @white;
   }
   .dropdown-menu > .active:not(.menutitle) > *,
   .dropdown-menu > .active:not(.menutitle) > *:hover,
@@ -71,7 +68,7 @@
     text-decoration: none;
     outline: 0;
     font-weight: 600;
-    background-color: #f0f1f2;
+    background-color: @porcelain;
   }
 
   &.btn-group > .btn {
