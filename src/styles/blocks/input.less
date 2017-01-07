@@ -9,6 +9,7 @@ form {
 .dd__checkbox {
 
     position: relative;
+    margin: 5px;
 
     &:focus {
         outline: 0;
@@ -79,6 +80,50 @@ form {
 
     &.checked .checkbox__label {
         color: @river-bed;
+    }
+
+    &.dd__checkbox--small {
+      .checkbox__body {
+        border-radius: 3px;
+        width: 14px;
+        height: 14px;
+      }
+
+      &.checked .checkbox__body {
+
+        &::before {
+          left: 5px;
+          top: 1px;
+          width: 3px;
+          height: 8px;
+          border-width: 1px;
+        }
+      }
+    }
+
+    &.dd__checkbox--prechecked {
+      &.checked .checkbox__body {
+        border: 1px solid @shakespeare;
+        background: #FFFFFF;
+        color: #FFF;
+
+        &::after {
+          box-sizing: border-box;
+          background: @shakespeare;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 2px;
+          height: 10px;
+          content: '';
+        }
+
+      }
     }
 
 }
