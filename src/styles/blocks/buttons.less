@@ -1,9 +1,9 @@
 /* Mixins */
 
 .btn__link__mixin (@color, @hover-color) {
-    
+
     color: @color;
-    
+
     &:hover {
         color: @hover-color;
         text-decoration: underline;
@@ -16,10 +16,10 @@
     &:disabled {
         opacity: 0.3;
     }
-} 
+}
 
 .btn__mixin (@background, @border-color, @color, @background-hover, @border-hover-color, @hover-color) {
-  
+
   color: @color;
   background-color: @background;
   border: 1px solid @border-color;
@@ -69,9 +69,19 @@
     .btn__mixin(@white, @blaze-orange, @blaze-orange, @clementine, @clementine, @white)
 }
 
+.btn--neon {
+  .btn__mixin(@white, @shakespeare, @shakespeare, @cerulean, @cerulean, @white)
+}
+
 /* Normal buttons end */
 
+/* Large button start */
 
+.btn--lg {
+  min-width: 200px;
+}
+
+/* Large button end */
 
 /* Small buttons start */
 
@@ -125,7 +135,7 @@
     &.btn__icon--small {
         width: 33px;
         height: 33px;
-    }    
+    }
 
 }
 

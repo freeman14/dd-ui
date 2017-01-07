@@ -2,36 +2,50 @@
   <div class="title">Dropdown</div>
   <div class="subtitle">Simple dropdown</div>
   <div class="block">
-    <div class="btn-group" uib-dropdown>
-      <button class="btn" uib-dropdown-toggle>
-        Inline Dropdown
+    <div class="dd__dropdown btn-group" uib-dropdown auto-close="outsideClick">
+      <button class="btn btn--primary btn--lg" uib-dropdown-toggle>
+        Primary (btn--lg)
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" uib-dropdown-menu role="menu">
-        <li role="menuitem"><a href="#">Action</a></li>
-        <li role="menuitem"><a href="#">Another action</a></li>
-        <li role="menuitem"><a href="#">Something else here</a></li>
+      <ul class="dropdown-menu" uib-dropdown-menu>
+        <li><a href="#">Another action</a></li>
+        <li class="active"><a href="#">Something else here</a></li>
         <li class="divider"></li>
-        <li role="menuitem"><a href="#">Separated link</a></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="subtitle">Simple dropdown with title</div>
+  <div class="block">
+    <div class="dd__dropdown btn-group" uib-dropdown auto-close="outsideClick">
+      <button class="btn btn--neon" uib-dropdown-toggle>
+        Neon
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" uib-dropdown-menu>
+        <li class="menutitle"><span>Title:</span></li>
+        <li class="menuitem"><a href="#">Another action</a></li>
+        <li class="menuitem active"><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li class="menuitem"><a href="#">Separated link</a></li>
       </ul>
     </div>
   </div>
   <div class="subtitle">Splitted dropdown</div>
   <div class="block">
-    <div class="btn-group" uib-dropdown>
-      <button class="btn"
+    <div class="dd__dropdown btn-group" uib-dropdown auto-close="outsideClick">
+      <button class="btn btn--hollow"
               popover-trigger="'mouseenter'"
               popover-placement="auto bottom"
-              uib-popover-html="'Tooltip Text'">Inline Dropdown</button>
-      <button class="btn" uib-dropdown-toggle>
+              uib-popover-html="'Tooltip Text'">Hollow</button>
+      <button class="btn btn--hollow" uib-dropdown-toggle>
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" uib-dropdown-menu role="menu">
-        <li role="menuitem"><a href="#">Action</a></li>
-        <li role="menuitem"><a href="#">Another action</a></li>
-        <li role="menuitem"><a href="#">Something else here</a></li>
+      <ul class="dropdown-menu" uib-dropdown-menu>
+        <li><a href="#">Something else here</a></li>
+        <li class="active"><a href="#">Something else here</a></li>
         <li class="divider"></li>
-        <li role="menuitem"><a href="#">Separated link</a></li>
+        <li><a href="#">Separated link</a></li>
       </ul>
     </div>
   </div>

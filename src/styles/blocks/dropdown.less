@@ -1,0 +1,77 @@
+.dd__dropdown {
+  &.btn-group > .btn {
+
+    &.btn--default {
+      .btn__mixin__dropdown--nohover(@white, @submarine, @submarine);
+    }
+    &.btn--primary {
+      .btn__mixin__dropdown--nohover(@blaze-orange, @blaze-orange, @white);
+    }
+    &.btn--hollow {
+      .btn__mixin__dropdown--nohover(@white, @blaze-orange, @blaze-orange);
+    }
+    &.btn--neon {
+      .btn__mixin__dropdown--nohover(@white, @shakespeare, @shakespeare);
+    }
+
+    &.btn--lg {
+      min-width: 200px;
+    }
+
+  }
+  &.btn-group .btn--lg.dropdown-toggle:first-child:not(:last-child) {
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: -3px;
+      border-top: 5px dashed;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      content: ' ';
+    }
+    & > .caret {
+      display: none;
+    }
+  }
+  &.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-right-color: transparent;
+    cursor: default;
+  }
+  &.btn-group > .btn:last-child:not(:first-child),
+  &.btn-group > .dropdown-toggle:not(:first-child) {
+    border-left-color: transparent;
+  }
+  &.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+
+  & > .dropdown-menu > li.menuitem > * {
+    /* TODO: add absolute positioned blocks */
+  }
+}
+
+
+.btn__mixin__dropdown--nohover (@background, @border-color, @color) {
+
+  color: @color;
+  background-color: @background;
+  border: 1px solid @border-color;
+
+  &:hover {
+    color: @color;
+    background-color: @background;
+    border-color: @border-color;
+  }
+
+  &:disabled {
+    border: 1px solid @border-color;
+    background-color: @background;
+    opacity: 0.3;
+  }
+
+}
