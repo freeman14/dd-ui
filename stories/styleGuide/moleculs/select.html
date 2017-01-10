@@ -16,9 +16,24 @@
             </ui-select-no-choice>
         </ui-select>
     </div>
+    <div class="subtitle">Simple select (small)</div>
+    <div class="block">
+      <ui-select ng-model="vm.country.selected" title="Choose a country" class="dd__select dd__select--small">
+        <ui-select-match placeholder="Select or search a country in the list...">
+          {{$select.selected.name}}
+        </ui-select-match>
+        <ui-select-choices repeat="country in vm.countries | filter: $select.search">
+          <span ng-bind-html="country.name | highlight: $select.search"></span>
+          <small ng-bind-html="country.code | highlight: $select.search"></small>
+        </ui-select-choices>
+        <ui-select-no-choice class="dd__select--not__find">
+          No results found
+        </ui-select-no-choice>
+      </ui-select>
+    </div>
     <div class="subtitle">Multi select</div>
     <div class="block">
-        <ui-select close-on-select="false" multiple ng-model="vm.country.selected" title="Choose a country" class="dd__select">
+        <ui-select close-on-select="false" multiple ng-model="vm.country.multiSelected" title="Choose a country" class="dd__select">
             <ui-select-match placeholder="Select or search a country in the list...">
                 {{$item.name}}
             </ui-select-match>
@@ -37,5 +52,27 @@
                 No results found
             </ui-select-no-choice>
         </ui-select>
+    </div>
+    <div class="subtitle">Multi select (small)</div>
+    <div class="block">
+      <ui-select close-on-select="false" multiple ng-model="vm.country.multiSelected" title="Choose a country" class="dd__select dd__select--small">
+        <ui-select-match placeholder="Select or search a country in the list...">
+          {{$item.name}}
+        </ui-select-match>
+        <ui-select-choices repeat="country in vm.countries | filter: $select.search">
+          <div ng-click="$select.isDisabled(this) && $selectMultiple.removeChoice($select.selected.indexOf(this[$select.itemProperty])) && $event.stopPropagation()">
+            <div class="dd__checkbox" ng-class="{'checked': $select.isDisabled(this)}" ng-click="toggle()">
+              <div class="checkbox__body"></div>
+              <div class="checkbox__label">
+                <span ng-bind-html="country.name | highlight: $select.search"></span>
+                <small ng-bind-html="country.code | highlight: $select.search"></small>
+              </div>
+            </div>
+          </div>
+        </ui-select-choices>
+        <ui-select-no-choice class="dd__select--not__find">
+          No results found
+        </ui-select-no-choice>
+      </ui-select>
     </div>
 </div>
