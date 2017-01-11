@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>tag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="680x680" transform="translate(-129.000000, -49.000000)" fill="#000000">
+            <g id="Row-1" transform="translate(51.000000, 47.000000)">
+                <path d="M94.618,2.717 L89.791,3.037 C89.262,3.073 88.763,3.299 88.388,3.674 L78.396,13.667 C77.826,14.236 77.826,15.159 78.396,15.729 L86.237,23.571 C86.807,24.14 87.73,24.14 88.3,23.571 L98.293,13.578 C98.668,13.203 98.894,12.704 98.929,12.175 L99.249,7.348 C99.286,6.784 99.078,6.23 98.678,5.83 L96.137,3.288 C95.736,2.888 95.183,2.68 94.618,2.717 L94.618,2.717 Z M95.926,8.545 C95.193,9.277 94.006,9.277 93.274,8.545 C92.542,7.812 92.542,6.625 93.274,5.893 C94.006,5.161 95.193,5.161 95.926,5.893 C96.658,6.625 96.658,7.812 95.926,8.545 L95.926,8.545 Z" id="tag"></path>
+            </g>
+        </g>
+    </g>
+</svg>
