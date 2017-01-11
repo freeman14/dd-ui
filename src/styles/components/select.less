@@ -4,9 +4,9 @@
 }
 
 .dd__select.dd__select--small  {
-  min-height: 36px !important;
+  min-height: 36px;
   .selectize-input {
-    min-height: 36px !important;
+    min-height: 36px;
     padding: 10px 16px;
     font-size: 13px;
     & > input {
@@ -22,7 +22,7 @@
 }
 
 .dd__select.multi.dd__select--small .selectize-input {
-  padding: 4px !important;
+  padding: 4px 4px 0;
   & > div {
     margin: 0 4px 4px 0;
   }
@@ -102,7 +102,7 @@
     position: absolute;
     z-index: 10;
     margin: -3px 0 0 0;
-    background: #ffffff;
+    background: @white;
     border: 1px solid @shakespeare;
     border-top: 0 none;
     border-radius: 0 0 3px 3px;
