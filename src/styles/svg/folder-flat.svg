@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>folder-flat</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="680x680" transform="translate(-132.000000, -132.000000)" fill="#231F1F">
+            <g id="Row-2" transform="translate(51.000000, 129.000000)">
+                <path d="M92.132,5.41 L91.341,3.807 C91.098,3.313 90.595,3 90.044,3 L82.345,3 C81.602,3 81,3.602 81,4.345 L81,18.857 C81,19.601 81.602,20.203 82.345,20.203 L100.698,20.203 C101.442,20.203 102.044,19.601 102.044,18.857 L102.044,7.563 C102.044,6.82 101.442,6.217 100.698,6.217 L93.429,6.217 C92.878,6.217 92.375,5.905 92.132,5.41" id="folder-flat"></path>
+            </g>
+        </g>
+    </g>
+</svg>
