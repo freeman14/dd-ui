@@ -17,6 +17,8 @@ atoms.story('Atoms')
       }
     })
     .add('Loading', require('./loading.html'))
+    .add('Text links', require('./textLinks.html'))
+    .add('Tags', require('./tags.html'))
     .add('Placeholders', require('./placeholders.html'))
     .add('Icons', require('./icons.html'));
 
