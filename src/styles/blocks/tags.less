@@ -1,0 +1,41 @@
+.dd__tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: @porcelain;
+  .border-radius(4px);
+
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  &>* {
+    vertical-align: middle;
+  }
+
+  .dd__tag__text {
+    max-width: 300px;
+    font-size: 12px;
+    font-weight: normal;
+    color: @limed-spruce;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: normal;
+    margin-right: 15px;
+  }
+
+  .dd__icon {
+    color: @dusty-gray;
+    opacity: .5;
+    font-size: 8px;
+    cursor: pointer;
+
+    &:before {
+      vertical-align: middle;
+    }
+  }
+}

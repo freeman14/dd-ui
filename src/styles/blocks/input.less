@@ -178,27 +178,25 @@ form {
         outline: none;
         color: @limed-spruce;
         overflow: hidden;
-        padding: 0 15px 0 15px;
+        padding: 0 15px;
         font-weight: 300;
         box-sizing: border-box;
 
-        &::-webkit-input-placeholder {
-            color: @silver;
-        }
-
-        &::-moz-placeholder {
-            color: @silver;
-        }
-
-        &:-moz-placeholder {
-            color: @silver;
-        }
-
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-moz-placeholder,
         &:-ms-input-placeholder {
-            color: @silver
+            color: @silver;
         }
 
-        &:focus {
+        &:disabled,
+        &[readonly] {
+          background-color: @porcelain;
+          color: @submarine;
+          .user-select();
+        }
+
+        &:not(:disabled):not([readonly]):focus {
             border-color: @shakespeare;
         }
 
