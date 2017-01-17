@@ -1,0 +1,67 @@
+/*  TEXT INPUT GROUP  */
+
+.dd__splitted-group {
+  display: flex;
+  align-items: center;
+
+  & > .dd__splitted-item {
+    margin: 0;
+  }
+
+  & > .dd__splitted-item:first-child:not(:last-child), & > .dd__splitted-item:first-child:not(:last-child) > input {
+    border-right-color: transparent;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > .dd__splitted-item:last-child:not(:first-child), & > .dd__splitted-item:last-child:not(:first-child) > input {
+    border-left-color: transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+  }
+
+  & > .dd__splitted-item:not(:first-child):not(:last-child), & > .dd__splitted-item:not(:first-child):not(:last-child) > input {
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+  }
+}
+
+/* Poll Option */
+
+.dd__splitted-group.dd__poll__option {
+  .dd__input.dd__input-icon {
+    min-width: 400px;
+  }
+  .dd__input .dd__limit__indicator {
+    top: 14px !important;
+  }
+  .btn.btn--default {
+    min-width: 44px;
+    background-color: @athens-gray;
+    border: 1px solid @gainsboro;
+    .dd__icon {
+      font-size: 10px;
+      line-height: 2.5em !important;
+    }
+  }
+}
+
+/* List Filter */
+
+.dd__splitted-group.dd__list__filter {
+  .btn {
+    color: @dark-slay;
+    &:not(:first-child):not(:last-child) {
+      border-left: 1px solid @submarine;
+      border-right: 1px solid @submarine;
+    }
+    &:active, &.active {
+      color: @white;
+      background-color: @dark-slay;
+      border: 1px solid @dark-slay !important;
+    }
+  }
+}
+
