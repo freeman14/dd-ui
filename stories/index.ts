@@ -8,6 +8,7 @@ import './jsComponents/tooltip';
 import './jsComponents/toggleButtons';
 import './jsComponents/timestamp';
 import './jsComponents/carousel';
+import './jsComponents/modal';
 import './directives/inputLimit';
 
 import './styleGuide/atoms/index';
