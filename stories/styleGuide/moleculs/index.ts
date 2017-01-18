@@ -27,4 +27,5 @@ moleculs.story('Moleculs')
       { name: 'Bangladesh', code: 'BD' }
     ]
   })
-  .add('Dropdown', require('./dropdown.html'));
+  .add('Dropdown', require('./dropdown.html'))
+  .add('Grouped Items', require('./inputGroup.html'));
