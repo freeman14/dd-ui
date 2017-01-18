@@ -10,6 +10,7 @@ import timestampModule from './timestamp/timestamp.module';
 import timestampsRangeModule from './timestampsRange/timestampsRange.module';
 import select from './select/select.module';
 import tabs from './tabs/tabs.module';
+import errorPage from './errorPage/error.module';
 
 const module: ng.IModule = angular.module('dd-ui', [
   //datePickerModule,
@@ -22,7 +23,8 @@ const module: ng.IModule = angular.module('dd-ui', [
   timestampsRangeModule,
   select,
   directives,
-  tabs
+  tabs,
+  errorPage
 ]);
 
 export default module.name;

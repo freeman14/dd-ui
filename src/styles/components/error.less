@@ -1,0 +1,98 @@
+@header-height: 60px;
+
+.error-page {
+  &.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @porcelain;
+    height: @header-height;
+  }
+
+  .img-logo {
+    width: 129px;
+    height: @header-height;
+    //background-size: contain;
+    //background: require('assets/images/doubledutch-logo-dark.png') no-repeat center;
+    cursor: pointer;
+  }
+
+  .header-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: @submarine;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: @dusty-gray;
+    }
+  }
+
+  *:active,
+  *:focus,
+  *.active {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+}
+
+.app-error-icon {
+	//background: require('assets/images/unknown-error-icon.png') no-repeat 0 0;
+	//background-size: cover;
+	height: 100px;
+	width: 100px;
+}
+
+.app-error-container {
+	margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.app-error-message {
+	max-width: 530px;
+  margin-top: 10px;
+	margin-bottom: 40px;
+  font-weight: 300;
+  line-height: 1.44em;
+}
+
+.app-error-footer {
+	height: 36px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+	.app-error-splitter {
+		display: inline-block;
+		width: 2px;
+		height: inherit;
+		width: 2px;
+		background-color: @gainsboro;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.app-error-link {
+		font-weight: 400;
+		color: @blaze-orange;
+		cursor: pointer;
+		opacity: 0.7;
+	}
+
+	*:active,
+	*:focus,
+	*.active {
+		background-image: none;
+		outline: 0;
+    box-shadow: none;
+	}
+}
+
