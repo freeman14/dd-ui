@@ -194,6 +194,10 @@ form {
           background-color: @porcelain;
           color: @submarine;
           .user-select();
+
+          & + .dd__limit__indicator {
+            display: none;
+          }
         }
 
         &:not(:disabled):not([readonly]):focus {
@@ -271,6 +275,11 @@ form {
 
         &.ng-invalid:not(.ng-pristine) {
           border-color: @guardsman-red;
+        }
+
+        & + .dd__limit__indicator {
+          bottom: 12px;
+          right: 15px;
         }
     }
 
