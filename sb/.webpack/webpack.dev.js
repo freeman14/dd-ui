@@ -36,7 +36,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new sprite({
           'source' : path.resolve(__dirname, '..', '..', 'src/assets/images/'),
-          'imgPath': path.resolve(__dirname, '..', '..', 'src/styles/sprites/'),
+          'imgPath': path.resolve(__dirname, '..', '..', 'src/assets/sprites/'),
           'cssPath': path.resolve(__dirname, '..', '..', 'src/styles/sprites/'),
           'prefix': 'dd-image',
           'spriteName': 'dd-sprite',
