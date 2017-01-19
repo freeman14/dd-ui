@@ -2,6 +2,8 @@ var loaders = require("./loaders");
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var path = require('path');
+var sprite = require('sprite-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -36,6 +38,14 @@ module.exports = {
                 warnings: false
             },
             mangle: false
+        }),
+        new sprite({
+          'source' : path.resolve(__dirname, '..', '..', 'src/assets/images/'),
+          'imgPath': path.resolve(__dirname, '..', '..', 'src/assets/sprites/'),
+          'cssPath': path.resolve(__dirname, '..', '..', 'src/styles/sprites/'),
+          'prefix': 'dd-image',
+          'spriteName': 'dd-sprite',
+          'processor': 'less'
         })
     ],
     module: {
