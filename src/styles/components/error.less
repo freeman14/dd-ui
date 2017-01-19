@@ -1,7 +1,8 @@
 @header-height: 60px;
 
-.error-page {
-  &.app-header {
+.dd__error__page {
+
+  .error-page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,12 +10,12 @@
     height: @header-height;
   }
 
-  .img-logo {
+  .error-page-img-logo {
     margin-left: 20px;
     cursor: pointer;
   }
 
-  .header-link {
+  .error-page-header-link {
     font-size: 16px;
     font-weight: 600;
     color: @submarine;
@@ -36,56 +37,48 @@
     box-shadow: none;
   }
 
-}
+  .error-page-icon {
+    margin-bottom: 20px;
+  }
 
-.app-error-icon {
-	margin-bottom: 20px;
-}
+  .error-page-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.app-error-container {
-	margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+  .error-page-message {
+    max-width: 530px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.44em;
+  }
 
-.app-error-message {
-	max-width: 530px;
-  margin-top: 10px;
-	margin-bottom: 40px;
-  font-weight: 300;
-  line-height: 1.44em;
-}
+  .error-page-footer {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 
-.app-error-footer {
-	height: 36px;
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
+    .error-page-splitter {
+      display: inline-block;
+      width: 2px;
+      height: inherit;
+      width: 2px;
+      background-color: @gainsboro;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
-	.app-error-splitter {
-		display: inline-block;
-		width: 2px;
-		height: inherit;
-		width: 2px;
-		background-color: @gainsboro;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
+    .error-page-link {
+      font-weight: 300;
+      color: @blaze-orange;
+      cursor: pointer;
+    }
+  }
 
-	.app-error-link {
-		font-weight: 300;
-		color: @blaze-orange;
-		cursor: pointer;
-	}
-
-	*:active,
-	*:focus,
-	*.active {
-		background-image: none;
-		outline: 0;
-    box-shadow: none;
-	}
 }
 
