@@ -1,0 +1,48 @@
+@dd-image-doubledutch: 0px, 0px, 129px, 20px;
+@dd-image-404: 0px, -20px, 120px, 120px;
+@dd-image-error: 0px, -140px, 120px, 120px;
+@dd-image-maintenance: 0px, -260px, 121px, 120px;
+
+.sprite-width(@sprite) {
+  width: extract(@sprite, 3);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 4);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 1);
+  @sprite-offset-y: extract(@sprite, 2);
+  background-position: @sprite-offset-x  @sprite-offset-y;
+}
+
+.sprite(@sprite) {
+  .sprite-position(@sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+.dd-image-doubledutch {
+  background-image: url('dd-sprite-base.png');
+  .sprite(@dd-image-doubledutch);
+}
+
+.dd-image-404 {
+  background-image: url('dd-sprite-base.png');
+  .sprite(@dd-image-404);
+}
+
+.dd-image-error {
+  background-image: url('dd-sprite-base.png');
+  .sprite(@dd-image-error);
+}
+
+.dd-image-maintenance {
+  background-image: url('dd-sprite-base.png');
+  .sprite(@dd-image-maintenance);
+}
+
