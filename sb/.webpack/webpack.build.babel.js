@@ -27,6 +27,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: './sb/.static/preview.html', to: 'preview.html' },
             { from: './sb/.static/index.html', to: 'index.html' }
+            // , { from: './src/assets/sprites/dd-sprite-base.png', to: 'images/dd-sprite-set.png' }
         ]),
         new ngAnnotatePlugin({
             add: true
@@ -41,7 +42,7 @@ module.exports = {
         }),
         new sprite({
           'source' : path.resolve(__dirname, '..', '..', 'src/assets/images/'),
-          'imgPath': path.resolve(__dirname, '..', '..', 'src/assets/sprites/'),
+          'imgPath': path.resolve(__dirname, '..', 'sb-build/images/'),
           'cssPath': path.resolve(__dirname, '..', '..', 'src/styles/sprites/'),
           'prefix': 'dd-image',
           'spriteName': 'dd-sprite',
