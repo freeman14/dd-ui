@@ -2,6 +2,7 @@ var loaders = require("./loaders");
 var webpack = require('webpack');
 var NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 var sprite = require('sprite-webpack-plugin');
 
@@ -38,15 +39,19 @@ module.exports = {
       warning: false,
       mangle: true,
       comments: false
-    }),
-    new sprite({
+    })
+    ,new sprite({
       'source' : path.resolve(__dirname, '..', 'src/assets/images/'),
-      'imgPath': path.resolve(__dirname, '..', 'src/assets/sprites/'),
+      // 'imgPath': path.resolve(__dirname, '..', 'src/assets/sprites/'),
+      'imgPath': path.resolve(__dirname, '..', 'dist/images/'),
       'cssPath': path.resolve(__dirname, '..', 'src/styles/sprites/'),
       'prefix': 'dd-image',
       'spriteName': 'dd-sprite',
       'processor': 'less'
     })
+    // ,new CopyWebpackPlugin([
+    //   { from: './src/assets/sprites/dd-sprite-base.png', to: 'images/dd-sprite-set.png' }
+    // ])
   ],
   module: {
     loaders: loaders,

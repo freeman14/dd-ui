@@ -1,7 +1,8 @@
 @dd-image-doubledutch: 0px, 0px, 129px, 20px;
-@dd-image-404: 0px, -20px, 120px, 120px;
-@dd-image-error: 0px, -140px, 120px, 120px;
-@dd-image-maintenance: 0px, -260px, 121px, 120px;
+@dd-image-dd: 0px, -20px, 100px, 100px;
+@dd-image-404: 0px, -120px, 120px, 120px;
+@dd-image-error: 0px, -240px, 120px, 120px;
+@dd-image-maintenance: 0px, -360px, 121px, 120px;
 
 .sprite-width(@sprite) {
   width: extract(@sprite, 3);
@@ -29,6 +30,11 @@
 .dd-image-doubledutch {
   background-image: url('../../assets/sprites/dd-sprite-base.png');
   .sprite(@dd-image-doubledutch);
+}
+
+.dd-image-dd {
+  background-image: url('../../assets/sprites/dd-sprite-base.png');
+  .sprite(@dd-image-dd);
 }
 
 .dd-image-404 {
