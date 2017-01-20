@@ -27,7 +27,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: './sb/.static/preview.html', to: 'preview.html' },
             { from: './sb/.static/index.html', to: 'index.html' }
-            // , { from: './src/assets/sprites/*', to: 'images/[name].[ext]' }
+            , { from: './src/assets/sprites/*', to: 'images/[name].[ext]' }
         ]),
         new ngAnnotatePlugin({
             add: true
