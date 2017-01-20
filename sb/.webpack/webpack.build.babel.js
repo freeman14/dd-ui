@@ -42,7 +42,7 @@ module.exports = {
         }),
         new sprite({
           'source' : './src/assets/images/',
-          'imgPath': 'images/',
+          'imgPath': './sb-build/images/',
           'cssPath': './src/styles/sprites/',
           'prefix': 'dd-image',
           'spriteName': 'dd-sprite',
