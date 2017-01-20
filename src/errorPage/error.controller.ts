@@ -10,10 +10,11 @@ interface IErrorPageConfig {
 export class ErrorController {
 	public config: IErrorPageConfig;
 
-	// @ngInject
 	constructor(
 		private $window: ng.IWindowService
-	) {}
+	) {
+    'ngInject';
+  }
 
 	reload(): void {
 		this.$window.location.reload();
