@@ -18,6 +18,12 @@ export function DropdownElement(): any {
           element.addClass('dd__dropdown--hover');
         } else {
 
+          const elementClick: any = (event) => {
+            if (event.target === element[0]) {
+              element.toggleClass('dd__dropdown--open');
+            }
+          };
+
           const bodyListener: any = (event) => {
 
             if (!scope.preventBodyClose) {
@@ -32,16 +38,15 @@ export function DropdownElement(): any {
           };
 
           // Handle click only on trigger button
-          element.bind('click', (event) => {
-            if (event.target === element[0]) {
-              element.toggleClass('dd__dropdown--open');
-            }
-          });
+          element.bind('click', elementClick);
 
           // Handle body click
           angular.element(document.body).bind('click', bodyListener);
 
-          scope.$on('$destroy', () => angular.element(document.body).off('click', bodyListener));
+          scope.$on('$destroy', () => {
+            element.off('click', elementClick);
+            angular.element(document.body).off('click', bodyListener)
+          });
 
         }
 
