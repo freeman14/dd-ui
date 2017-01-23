@@ -6,3 +6,5 @@ node_modules
 *.log
 .idea
 app
+/src/styles/sprites/dd-sprite-base.less
+/src/assets/sprites/dd-sprite-base.png
