@@ -10,7 +10,7 @@ export class ErrorComponent implements ng.IComponentOptions {
         this.bindings = {
           config: '<'
         };
-		    this.controller = ErrorController;
+        this.controller = ErrorController;
         this.template = require('./templates/error.partial.html');
         this.controllerAs = 'vm';
     }

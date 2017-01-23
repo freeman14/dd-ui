@@ -10,7 +10,7 @@ export class NotFoundComponent implements ng.IComponentOptions {
         this.bindings = {
           config: '<'
         };
-		    this.controller = ErrorController;
+        this.controller = ErrorController;
         this.template = require('./templates/notFound.partial.html');
         this.controllerAs = 'vm';
     }

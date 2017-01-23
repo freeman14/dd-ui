@@ -10,7 +10,7 @@ export class MaintenanceComponent implements ng.IComponentOptions {
         this.bindings = {
           config: '<'
         };
-		    this.controller = ErrorController;
+        this.controller = ErrorController;
         this.template = require('./templates/maintenance.partial.html');
         this.controllerAs = 'vm';
     }
