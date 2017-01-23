@@ -40,9 +40,9 @@ module.exports = {
       comments: false
     })
     ,new sprite({
-      'source' : path.resolve(__dirname, '..', 'src/assets/images/'),
-      'imgPath': path.resolve(__dirname, '..', 'dist/images/'),
-      'cssPath': path.resolve(__dirname, '..', 'src/styles/sprites/'),
+      'source' : path.resolve(__dirname, '../src/assets/images/'),
+      'imgPath': path.resolve(__dirname, '../dist/images/'),
+      'cssPath': path.resolve(__dirname, '../src/styles/sprites/'),
       'prefix': 'dd-image',
       'spriteName': 'dd-sprite',
       'processor': 'less'
