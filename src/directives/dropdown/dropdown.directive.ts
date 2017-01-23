@@ -18,15 +18,7 @@ export function DropdownElement(): any {
           element.addClass('dd__dropdown--hover');
         } else {
 
-          // Handle click only on trigger button
-          element.bind('click', (event) => {
-            if (event.target === element[0]) {
-              element.toggleClass('dd__dropdown--open');
-            }
-          });
-
-          // Handle body click
-          angular.element(document.body).bind('click', (event) => {
+          const bodyListener: any = (event) => {
 
             if (!scope.preventBodyClose) {
               const target: ng.IAugmentedJQuery = angular.element(event.target);
@@ -37,7 +29,20 @@ export function DropdownElement(): any {
 
             }
 
+          };
+
+          // Handle click only on trigger button
+          element.bind('click', (event) => {
+            if (event.target === element[0]) {
+              element.toggleClass('dd__dropdown--open');
+            }
           });
+
+          // Handle body click
+          angular.element(document.body).bind('click', bodyListener);
+
+          scope.$on('$destroy', () => angular.element(document.body).off('click', bodyListener));
+
         }
 
       }
