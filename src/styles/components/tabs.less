@@ -20,11 +20,14 @@
             box-sizing: border-box;
             text-decoration: none;
             border-right: 1px solid @gainsboro;
-            border-bottom: 1px solid @gainsboro;
             border-top: 1px solid @gainsboro;
+            border-bottom: 1px solid @gainsboro;
+            position: relative;
+            z-index: 100;
         }
 
         &.active a {
+            border-bottom: none;
             color: @limed-spruce;
             background: @white;
             border-bottom: 0;
@@ -60,6 +63,9 @@
 }
 
 .dd__tab-content {
+    position: relative;
+    top: -1px;
+    border: 1px solid @gainsboro;
     padding: 20px;
 
     .dd__content-item {

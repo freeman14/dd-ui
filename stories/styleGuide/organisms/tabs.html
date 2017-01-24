@@ -1,79 +1,85 @@
-<uib-tabset active="active">
-    <uib-tab>
-        <uib-tab-heading>
-            Email
-        </uib-tab-heading>
+<div class="style__guide">
+    <div class="title">Tabs</div>
 
-        <form ng-submit="vm.saveAudience()" name="vm.shareAudience" novalidate>
+    <div class="subtitle">Normal tabs</div>
+    <uib-tabset active="active">
+        <uib-tab>
+            <uib-tab-heading>
+                Email
+            </uib-tab-heading>
 
-            <div class="lable" for="name">Share with</div>
-            <div class="dd__input">
-                <input autofocus type="email" ng-model="vm.emails" placeholder="Email address" type="text">
-            </div>
+            <form ng-submit="vm.saveAudience()" name="vm.shareAudience" novalidate>
 
-            <div class="lable" for="description">Message <span>Optional</span></div>
-            <div class="dd__textarea">
-                <textarea ng-model="vm.description" placeholder="Check out this audience report">
+                <div class="lable" for="name">Share with</div>
+                <div class="dd__input">
+                    <input autofocus type="email" ng-model="vm.emails" placeholder="Email address" type="text">
+                </div>
+
+                <div class="lable" for="description">Message <span>Optional</span></div>
+                <div class="dd__textarea">
+                    <textarea ng-model="vm.description" placeholder="Check out this audience report">
                     </textarea>
+                </div>
+
+                <div class="share__form--footer">
+                    <button ng-click="vm.shareToEmail()" ng-disabled="vm.shareAudience.$invalid" type="submit" class="btn btn--primary share__btn">Share Audience</button>
+                </div>
+
+            </form>
+
+        </uib-tab>
+        <uib-tab>
+            <uib-tab-heading>
+                Download CSV
+            </uib-tab-heading>
+            <div class="share__csv">
+                <div class="text">
+                    Download our simple and powerful CSV report to import into a CRM, marketing automation system, or manipulate the data as
+                    you see fit.
+                </div>
+                <button ng-click="vm.downloadCSV()" class="btn btn--primary share__btn" ng-bind="vm.status.scv.state"></button>
             </div>
+        </uib-tab>
+    </uib-tabset>
 
-            <div class="share__form--footer">
-                <button ng-click="vm.shareToEmail()" ng-disabled="vm.shareAudience.$invalid" type="submit" class="btn btn--primary share__btn">Share Audience</button>
-            </div>
+    <div class="subtitle">Tabs with full width menu</div>
+    <uib-tabset active="active" class="dd__tabs--full__width">
+        <uib-tab>
+            <uib-tab-heading>
+                Email
+            </uib-tab-heading>
 
-        </form>
+            <form ng-submit="vm.saveAudience()" name="vm.shareAudience" novalidate>
 
-    </uib-tab>
-    <uib-tab>
-        <uib-tab-heading>
-            Download CSV
-        </uib-tab-heading>
-        <div class="share__csv">
-            <div class="text">
-                Download our simple and powerful CSV report to import into a CRM, marketing automation system, or manipulate the data as
-                you see fit.
-            </div>
-            <button ng-click="vm.downloadCSV()" class="btn btn--primary share__btn" ng-bind="vm.status.scv.state"></button>
-        </div>
-    </uib-tab>
-</uib-tabset>
+                <div class="lable" for="name">Share with</div>
+                <div class="dd__input">
+                    <input autofocus type="email" ng-model="vm.emails" placeholder="Email address" type="text">
+                </div>
 
-<uib-tabset active="active" class="dd__tabs--full__width">
-    <uib-tab>
-        <uib-tab-heading>
-            Email
-        </uib-tab-heading>
-
-        <form ng-submit="vm.saveAudience()" name="vm.shareAudience" novalidate>
-
-            <div class="lable" for="name">Share with</div>
-            <div class="dd__input">
-                <input autofocus type="email" ng-model="vm.emails" placeholder="Email address" type="text">
-            </div>
-
-            <div class="lable" for="description">Message <span>Optional</span></div>
-            <div class="dd__textarea">
-                <textarea ng-model="vm.description" placeholder="Check out this audience report">
+                <div class="lable" for="description">Message <span>Optional</span></div>
+                <div class="dd__textarea">
+                    <textarea ng-model="vm.description" placeholder="Check out this audience report">
                     </textarea>
-            </div>
+                </div>
 
-            <div class="share__form--footer">
-                <button ng-click="vm.shareToEmail()" ng-disabled="vm.shareAudience.$invalid" type="submit" class="btn btn--primary share__btn">Share Audience</button>
-            </div>
+                <div class="share__form--footer">
+                    <button ng-click="vm.shareToEmail()" ng-disabled="vm.shareAudience.$invalid" type="submit" class="btn btn--primary share__btn">Share Audience</button>
+                </div>
 
-        </form>
+            </form>
 
-    </uib-tab>
-    <uib-tab>
-        <uib-tab-heading>
-            Download CSV
-        </uib-tab-heading>
-        <div class="share__csv">
-            <div class="text">
-                Download our simple and powerful CSV report to import into a CRM, marketing automation system, or manipulate the data as
-                you see fit.
+        </uib-tab>
+        <uib-tab>
+            <uib-tab-heading>
+                Download CSV
+            </uib-tab-heading>
+            <div class="share__csv">
+                <div class="text">
+                    Download our simple and powerful CSV report to import into a CRM, marketing automation system, or manipulate the data as
+                    you see fit.
+                </div>
+                <button ng-click="vm.downloadCSV()" class="btn btn--primary share__btn" ng-bind="vm.status.scv.state"></button>
             </div>
-            <button ng-click="vm.downloadCSV()" class="btn btn--primary share__btn" ng-bind="vm.status.scv.state"></button>
-        </div>
-    </uib-tab>
-</uib-tabset>
+        </uib-tab>
+    </uib-tabset>
+</div>
