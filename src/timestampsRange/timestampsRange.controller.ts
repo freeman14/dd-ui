@@ -39,10 +39,10 @@ export class TimestampsRangeController {
 
       if (this.isTimeFormat) {
         this.dateFormat = this.dateFormat.replace(matched[0], '');
-        this.isSameDate = startMoment.isSame(endMoment, 'day');
-        this.startTimeFormat = this.getTimeFormat(startMoment);
-        this.endTimeFormat = this.getTimeFormat(endMoment);
       }
+      this.isSameDate = startMoment.isSame(endMoment, 'day');
+      this.startTimeFormat = this.getTimeFormat(startMoment);
+      this.endTimeFormat = this.getTimeFormat(endMoment);
     }
 
     private getTimeFormat(moment: moment.Moment): string {
