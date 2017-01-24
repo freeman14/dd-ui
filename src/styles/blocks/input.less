@@ -195,12 +195,16 @@ form {
           color: @submarine;
           .user-select();
 
+          &:focus {
+            border-color: @gainsboro;
+          }
+
           & + .dd__limit__indicator {
             display: none;
           }
         }
 
-        &:not(:disabled):not([readonly]):focus {
+        &:focus {
             border-color: @shakespeare;
         }
 

@@ -2,6 +2,7 @@ var loaders = require("./loaders");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
+var sprite = require('sprite-webpack-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
@@ -32,7 +33,15 @@ module.exports = {
             { from: './sb/.static/preview.html', to: 'preview.html' },
             { from: './sb/.static/index.html', to: 'index.html' }
         ]),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new sprite({
+          'source' : path.resolve(__dirname, '../../src/assets/images/'),
+          'imgPath': path.resolve(__dirname, '../sb-dist/images/'),
+          'cssPath': path.resolve(__dirname, '../../src/styles/sprites/'),
+          'prefix': 'dd-image',
+          'spriteName': 'dd-sprite',
+          'processor': 'less'
+        })
     ],
     module: {
         loaders: loaders

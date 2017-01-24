@@ -4,8 +4,6 @@
   position: relative;
   width: 440px;
   height: @height;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   border: dashed 2px @gainsboro;
   display: flex;
@@ -39,6 +37,7 @@
   }
 
   .dd__dnd__box__opener {
+    .font-face(400, 14px);
     color: @blaze-orange;
     .clickable;
   }
@@ -49,8 +48,7 @@
     align-items: center;
 
     .dd__dnd__box__image {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 0 20px;
 
       & > * {
         max-width: 60px;

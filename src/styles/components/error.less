@@ -1,0 +1,80 @@
+@header-height: 60px;
+
+.dd__error__page {
+
+  .error-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @porcelain;
+    height: @header-height;
+  }
+
+  .error-page-img-logo {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .error-page-header-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: @submarine;
+    padding: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: @dusty-gray;
+    }
+  }
+
+  *:active,
+  *:focus,
+  *.active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .error-page-icon {
+    margin-bottom: 20px;
+  }
+
+  .error-page-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .error-page-message {
+    max-width: 530px;
+    margin: 10px 0 40px;
+    font-weight: 300;
+    line-height: 1.44em;
+  }
+
+  .error-page-footer {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .error-page-splitter {
+      display: inline-block;
+      width: 2px;
+      height: inherit;
+      width: 2px;
+      background-color: @gainsboro;
+      margin: 0 10px;
+    }
+
+    .error-page-link {
+      font-weight: 300;
+      color: @blaze-orange;
+      cursor: pointer;
+    }
+  }
+
+}
+

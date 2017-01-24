@@ -28,4 +28,5 @@ moleculs.story('Moleculs')
     ]
   })
   .add('Dropdown', require('./dropdown.html'))
+  .add('DD Dropdown', require('./dd-dropdown.html'))
   .add('Grouped Items', require('./inputGroup.html'));
