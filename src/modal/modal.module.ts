@@ -20,7 +20,8 @@ const module: ng.IModule = angular.module('ep.modal', [
 
       this.openModal = () => {
         $uibModal.open({
-          template: '<div style="width: 300px; height: 200px; background: white"></div>',
+          template: '<div style="width: 300px; height: 200px; background: green"></div>',
+          windowClass: 'modal--default'
         });
       };
     }
