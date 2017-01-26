@@ -9,7 +9,7 @@ form {
 .dd__checkbox {
 
     position: relative;
-    margin: 5px;
+    cursor: pointer;
 
     &:focus {
         outline: 0;
@@ -22,7 +22,7 @@ form {
     .checkbox__body {
         background: #FFFFFF;
         border: 1px solid @submarine;
-        border-radius: 4px;
+        border-radius: 2px;
         width: 20px;
         height: 20px;
         display: inline-block;
@@ -34,10 +34,10 @@ form {
         box-sizing: border-box;
     }
 
-    &.checked .checkbox__body {
+    &.dd__checkbox--checked .checkbox__body {
         border: 1px solid @shakespeare;
         background: @shakespeare;
-        color: #FFF;
+        color: @white;
 
         &::before {
             box-sizing: border-box;
@@ -75,20 +75,20 @@ form {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        line-height: normal;
     }
 
-    &.checked .checkbox__label {
+    &.dd__checkbox--checked .checkbox__label {
         color: @river-bed;
     }
 
     &.dd__checkbox--small {
       .checkbox__body {
-        border-radius: 3px;
         width: 14px;
         height: 14px;
       }
 
-      &.checked .checkbox__body {
+      &.dd__checkbox--checked .checkbox__body {
 
         &::before {
           left: 5px;
@@ -101,10 +101,17 @@ form {
     }
 
     &.dd__checkbox--prechecked {
-      &.checked .checkbox__body {
+
+      &.dd__checkbox--small {
+        &.dd__checkbox--checked .checkbox__body::after {
+          height: 6px;
+        }
+      }
+
+      &.dd__checkbox--checked .checkbox__body {
         border: 1px solid @shakespeare;
-        background: #FFFFFF;
-        color: #FFF;
+        background: @white;
+        color: @white;
 
         &::after {
           box-sizing: border-box;
@@ -117,11 +124,10 @@ form {
           right: 0;
           left: 0;
           margin: auto;
-          width: 2px;
+          width: 1px;
           height: 10px;
           content: '';
         }
-
       }
     }
 
