@@ -13,7 +13,7 @@ import tabs from './tabs/tabs.module';
 import errorPage from './errorPage/error.module';
 
 const module: ng.IModule = angular.module('dd-ui', [
-  //datePickerModule,
+  datePickerModule,
   tooltipModule,
   toggleButtonsModule,
   modalModule,
