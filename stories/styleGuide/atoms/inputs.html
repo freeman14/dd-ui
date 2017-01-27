@@ -71,13 +71,13 @@
       <checkbox ng-model="vm.checkboxes.normal">
         <span>Normal</span>
       </checkbox>
-      <checkbox ng-model="vm.checkboxes.prechecked" checkbox-prechecked>
+      <checkbox ng-model="vm.checkboxes.prechecked" checkbox-prechecked="vm.checkboxes.normal">
         <span>Prechecked</span>
       </checkbox>
       <checkbox ng-model="vm.checkboxes.small" checkbox-small>
         <span>Small</span>
       </checkbox>
-      <checkbox ng-model="vm.checkboxes.smallPrechecked" checkbox-small checkbox-prechecked>
+      <checkbox ng-model="vm.checkboxes.smallPrechecked" checkbox-small checkbox-prechecked="vm.checkboxes.small">
         <span>Small prechecked</span>
       </checkbox>
     </div>
