@@ -8,15 +8,24 @@ export default () => {
         template: require('./checkbox.partial.html'),
         scope: {
             ngModel: '=',
-            prechecked: '<?checkboxPrechecked'
+            prechecked: '<?checkboxPrechecked',
+            activeColor: '<?color'
         },
         link: (scope: any, element: any, attrs: any, model: any) => {
             scope.small = attrs.checkboxSmall !== undefined;
 
             model.$formatters.unshift(value => {
-                scope.isChecked = value === true;
+                scope.isChecked = value;
                 return value;
             });
+
+            scope.getColors = (): any => {
+              if (scope.prechecked) {
+                return { 'border-color': scope.activeColor, color: scope.activeColor };
+              } else if (scope.isChecked) {
+                return { 'border-color': scope.activeColor, background: scope.activeColor };
+              }
+            };
 
             scope.toggle = () => {
                 scope.isChecked = !scope.isChecked;
