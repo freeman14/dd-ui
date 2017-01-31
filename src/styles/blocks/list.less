@@ -1,205 +1,211 @@
-.dd__list__heading {
-  position: relative;
+.dd__list {
   width: 100%;
-  height: 60px;
-  box-sizing: border-box;
-  background-color: @porcelain;
-  box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  padding: 0 20px;
 
-  .ng-hide.ng-hide-animate {
-    display: none !important;
-  }
+  .dd__list-heading {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: @porcelain;
+    box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding: 0 20px;
 
-  .dd__list__heading__section {
-    height: 100%;
-    color: @dark-slay;
-
-    &.dd__list__heading__section--active {
-      color: @shakespeare;
-
-      .dd__list__heading__section__item {
-        cursor: pointer;
-      }
+    .ng-hide.ng-hide-animate {
+      display: none !important; //angular ng-show, ng-hide fix
     }
 
-    &.dd__list__heading__section--left {
-      float: left;
-      display: flex;
-      align-items: center;
-
-      //overwrites
-      .dd__checkbox.dd__checkbox--checked .checkbox__label {
-        color: @dusty-gray;
-      }
-
-      .checkbox__label {
-        margin-left: 36px;
-      }
+    & ~ .dd__list-item {
+      box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 0 0 0 @gainsboro;
     }
 
-    &.dd__list__heading__section--right {
-      float: right;
-      display: table;
-      padding: 1px 0;
-    }
+    .dd__list-section {
+      height: 100%;
+      color: @dark-slay;
 
-    .dd__list__heading__section__item {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 0 15px;
+      &.dd__list-section--active {
+        color: @shakespeare;
 
-      &:focus {
-        outline: 0;
+        .dd__list-section__item {
+          cursor: pointer;
+        }
       }
 
-      &.dropdown.open {
-        background: @white;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+      &.dd__list-section--left {
+        float: left;
+        display: flex;
+        align-items: center;
 
-        &:before {
-          content: '';
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          height: 1px;
+        //overwrites
+        .dd__checkbox + div {
+          color: @dusty-gray;
+          font-size: 14px;
+          font-weight: normal;
+        }
+
+        .checkbox__label {
+          margin-left: 36px;
+        }
+      }
+
+      &.dd__list-section--right {
+        float: right;
+        display: table;
+        padding: 1px 0;
+      }
+
+      .dd__list-section__item {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 15px;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &.dropdown.open {
           background: @white;
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: @white;
+          }
+        }
+
+        .dropdown-menu {
+          .dd__checkbox {
+            &.dd__checkbox--checked .checkbox__label {
+              font-weight: 600;
+            }
+
+            .checkbox__label {
+              color: @limed-spruce;
+            }
+          }
+        }
+
+        .dd__input.dd__list__filter {
+          margin-bottom: 0;
+
+          .dd__icon-search {
+            color: @silver;
+          }
+
+          input {
+            height: 36px;
+          }
         }
       }
 
       .dropdown-menu {
-        .dd__checkbox {
-          &.dd__checkbox--checked .checkbox__label {
-            font-weight: 600;
-          }
+        margin-top: 1px;
+        padding: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.2);
+        border: solid 1px @gainsboro;
+        border-top: 0;
 
-          .checkbox__label {
-            color: @limed-spruce;
-          }
+        &.dropdown-menu--right {
+          right: -1px;
+          left: auto;
+        }
+
+        &.dropdown-menu--left {
+          left: -1px;
+          right: auto;
+        }
+
+        &.dropdown-menu--center {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .divider {
+          margin: 0;
+          height: 0;
         }
       }
 
-      .dd__input.dd__list__filter {
-        margin-bottom: 0;
+      .dropdown-menu > li > * {
+        padding: 8px 15px;
 
-        .dd__icon-search {
-          color: @silver;
-        }
-
-        input {
-          height: 36px;
+        &.no--hover:hover {
+          background: none;
         }
       }
     }
 
-    .dropdown-menu {
-      margin-top: 1px;
-      padding: 0;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.2);
-      border: solid 1px @gainsboro;
-      border-top: 0;
-
-      &.dropdown-menu--right {
-        right: -1px;
-        left: auto;
-      }
-
-      &.dropdown-menu--left {
-        left: -1px;
-        right: auto;
-      }
-
-      &.dropdown-menu--center {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .divider {
-        margin: 0;
-        height: 0;
-      }
-    }
-
-    .dropdown-menu > li > * {
-      padding: 8px 15px;
-
-      &.no--hover:hover {
-        background: none;
-      }
+    .caret {
+      display: inline-block;
+      margin-left: 2px;
+      vertical-align: middle;
+      top: 50%;
+      width: 0;
+      height: 0;
+      margin-top: -3px;
+      border-top: 5px dashed;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
     }
   }
 
-  .caret {
-    display: inline-block;
-    margin-left: 2px;
-    vertical-align: middle;
-    top: 50%;
-    width: 0;
-    height: 0;
-    margin-top: -3px;
-    border-top: 5px dashed;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-  }
-}
+  .dd__list-item {
+    position: relative;
+    min-height: 78px;
+    width: 100%;
+    box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.dd__list__item {
-  position: relative;
-  min-height: 78px;
-  width: 100%;
-  box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
-  padding: 15px 20px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &.dd__list__item--active {
-    background-color: rgba(82, 156, 207, 0.1); //@shakespeare
-  }
-
-  &.dd__list__item--inactive {
-    & > * {
-      opacity: .5;
+    &.dd__list-item--active {
+      background-color: rgba(82, 156, 207, 0.1); //@shakespeare
     }
-  }
 
-  .dd__checkbox .checkbox__label {
-    color: @limed-spruce;
-    font-weight: 600;
-    font-size: 14px;
+    &.dd__list-item--inactive {
+      .dd__checkbox {
+        opacity: 1;
+      }
 
-    small {
-      font-weight: normal;
+      & > * {
+        opacity: .5;
+      }
+    }
+
+    .dd__checkbox .checkbox__label {
+      color: @limed-spruce;
+      font-weight: 600;
+      font-size: 14px;
+
+      small {
+        font-weight: normal;
+        font-size: 12px;
+        color: @dusty-gray;
+      }
+    }
+
+    .dd__tag + small {
       font-size: 12px;
+      font-weight: normal;
       color: @dusty-gray;
     }
-  }
 
-  .dd__tag + small {
-    font-size: 12px;
-    font-weight: normal;
-    color: @dusty-gray;
-  }
-
-  aside {
-    font-size: 12px;
-    font-weight: normal;
-    text-align: right;
-    color: @dusty-gray;
-    line-height: normal;
-  }
-}
-
-.dd__list {
-  width: 100%;
-
-  .dd__list__item {
-    box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 0 0 0 @gainsboro;
+    aside {
+      font-size: 12px;
+      font-weight: normal;
+      text-align: right;
+      color: @dusty-gray;
+      line-height: normal;
+    }
   }
 }
