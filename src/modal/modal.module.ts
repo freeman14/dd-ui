@@ -6,6 +6,8 @@ import './modal.less';
 
 import run from './modal.run';
 
+import ConfirmModalComponent from './confirmModal/confirmModal.component';
+
 const module: ng.IModule = angular.module('ep.modal', [
   'ngSanitize',
   'ui.bootstrap.modal'
@@ -28,5 +30,7 @@ const module: ng.IModule = angular.module('ep.modal', [
   });
 
 module.run(run);
+
+module.component('ddConfirmModal', new ConfirmModalComponent());
 
 export default module.name;
