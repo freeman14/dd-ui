@@ -54,7 +54,6 @@ form {
             border-left: 0;
             content: '';
         }
-
     }
 
     .checkbox__label {
@@ -103,28 +102,30 @@ form {
 
       &.dd__checkbox--small {
         .checkbox__body::after {
-          height: 6px;
+          width: 6px;
         }
       }
 
       .checkbox__body {
         border: 1px solid @shakespeare;
         background: @white;
-        color: @white;
+        color: @shakespeare;
+
+        &::before {
+          display: none;
+        }
 
         &::after {
           box-sizing: border-box;
-          background: @shakespeare;
-          -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
           position: absolute;
           top: 0;
           bottom: 0;
           right: 0;
           left: 0;
           margin: auto;
-          width: 1px;
-          height: 10px;
+          border-bottom: 1px solid;
+          width: 10px;
+          height: 0;
           content: '';
         }
       }
