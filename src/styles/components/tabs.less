@@ -24,6 +24,12 @@
             border-bottom: 1px solid @gainsboro;
             position: relative;
             z-index: 100;
+
+          .dd__icon {
+            display: none;
+            margin-right: 5px;
+            font-size: 12px;
+          }
         }
 
         &.active a {
@@ -31,6 +37,10 @@
             color: @limed-spruce;
             background: @white;
             border-bottom: 0;
+
+          .dd__icon {
+            display: inline-block;
+          }
         }
 
     }
@@ -47,7 +57,7 @@
 }
 
 .dd__tabs--full__width .dd__tabs{
-    justify-content: space-around;   
+    justify-content: space-around;
 
     .dd__tab-item {
         flex-grow: 1;
