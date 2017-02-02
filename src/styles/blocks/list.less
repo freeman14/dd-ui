@@ -64,6 +64,11 @@
           outline: 0;
         }
 
+        &.dd__list-section__item--inactive {
+          color: @submarine;
+          pointer-events: none;
+        }
+
         &.dropdown.open {
           background: @white;
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -156,56 +161,56 @@
       border-left: 5px solid transparent;
     }
   }
+}
 
-  .dd__list-item {
-    position: relative;
-    min-height: 78px;
-    width: 100%;
-    box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.dd__list-item {
+  position: relative;
+  min-height: 78px;
+  width: 100%;
+  box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    &.dd__list-item--active {
-      background-color: rgba(82, 156, 207, 0.1); //@shakespeare
+  &.dd__list-item--active {
+    background-color: rgba(82, 156, 207, 0.1); //@shakespeare
+  }
+
+  &.dd__list-item--inactive {
+    .dd__checkbox {
+      opacity: 1;
     }
 
-    &.dd__list-item--inactive {
-      .dd__checkbox {
-        opacity: 1;
-      }
-
-      & > * {
-        opacity: .5;
-      }
+    & > * {
+      opacity: .5;
     }
+  }
 
-    .dd__checkbox .checkbox__label {
-      color: @limed-spruce;
-      font-weight: 600;
-      font-size: 14px;
+  .dd__checkbox .checkbox__label {
+    color: @limed-spruce;
+    font-weight: 600;
+    font-size: 14px;
 
-      small {
-        font-weight: normal;
-        font-size: 12px;
-        color: @dusty-gray;
-      }
-    }
-
-    .dd__tag + small {
-      font-size: 12px;
+    small {
       font-weight: normal;
+      font-size: 12px;
       color: @dusty-gray;
     }
+  }
 
-    aside {
-      font-size: 12px;
-      font-weight: normal;
-      text-align: right;
-      color: @dusty-gray;
-      line-height: normal;
-    }
+  .dd__tag + small {
+    font-size: 12px;
+    font-weight: normal;
+    color: @dusty-gray;
+  }
+
+  aside {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: right;
+    color: @dusty-gray;
+    line-height: normal;
   }
 }
