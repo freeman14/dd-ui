@@ -6,7 +6,8 @@ export default () => {
         transclude: true,
         template: require('./radiobutton.partial.html'),
         scope: {
-          value: '<ngValue'
+          value: '<ngValue',
+          disabled: '<?disabled'
         },
         link: {
             post: (scope: any, element: any, attrs: any, model: any) => {
@@ -16,9 +17,11 @@ export default () => {
                 });
 
                 scope.toggle = () => {
-                  if (!scope.isSelected) {
-                    scope.isSelected = !scope.isSelected;
-                    model.$setViewValue(scope.value);
+                  if(!scope.disabled) {
+                    if (!scope.isSelected) {
+                      scope.isSelected = !scope.isSelected;
+                      model.$setViewValue(scope.value);
+                    }
                   }
                 };
             }

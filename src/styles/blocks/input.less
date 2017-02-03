@@ -334,6 +334,13 @@ form {
       border: solid 2px @submarine;
       cursor: pointer;
     }
+    &.dd__radiobutton--disabled {
+      opacity: 0.5 !important;
+
+      .radiobutton__body {
+        cursor: default;
+      }
+    }
 
     &.selected {
         opacity: 1;

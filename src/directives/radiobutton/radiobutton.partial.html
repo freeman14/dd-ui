@@ -1,5 +1,5 @@
 <div class="dd__radiobutton-wrapper">
-	<div class="dd__radiobutton" ng-class="{'selected': isSelected}" ng-click="toggle()">
+	<div class="dd__radiobutton" ng-class="{'selected': isSelected, 'dd__radiobutton--disabled': disabled}" ng-click="toggle()">
 		<div class="radiobutton__body"></div>
 		<div class="radiobutton__label" ng-transclude></div>
 	</div>
