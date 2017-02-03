@@ -17,12 +17,10 @@ export default () => {
                 });
 
                 scope.toggle = () => {
-                  if(!scope.disabled) {
-                    if (!scope.isSelected) {
+                    if (!scope.disabled && !scope.isSelected) {
                       scope.isSelected = !scope.isSelected;
                       model.$setViewValue(scope.value);
                     }
-                  }
                 };
             }
         }

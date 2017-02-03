@@ -301,6 +301,14 @@ form {
   }
 }
 
+.dd__radiobutton-wrapper.dd__radiobutton--disabled {
+  opacity: 0.5;
+
+  .radiobutton__body {
+    cursor: default;
+  }
+}
+
 .dd__radiobutton {
     display: flex;
     flex-direction: row;
@@ -333,13 +341,6 @@ form {
       border-radius: 50%;
       border: solid 2px @submarine;
       cursor: pointer;
-    }
-    &.dd__radiobutton--disabled {
-      opacity: 0.5 !important;
-
-      .radiobutton__body {
-        cursor: default;
-      }
     }
 
     &.selected {
