@@ -1,3 +1,13 @@
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+.spin {
+    animation: loading 1s linear infinite;
+}
+
 .height-animation() {
 
     &.ng-enter, &.ng-leave {
@@ -80,3 +90,9 @@
     }
 }
 
+@keyframes loading {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

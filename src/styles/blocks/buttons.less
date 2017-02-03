@@ -36,6 +36,10 @@
       opacity: 0.3;
   }
 
+  &.btn--loading i {
+      color: @color;
+  }
+
 }
 
 /* Mixins end */
@@ -199,6 +203,32 @@
             opacity: 1;
         }
 
+    }
+
+}
+
+.btn--loading {
+    position: relative;
+    color: transparent;
+
+    &:hover {
+        color: transparent;
+    }
+
+    &:focus {
+        color: transparent;
+    }
+
+    i {
+        .spin();
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
