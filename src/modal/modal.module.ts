@@ -23,9 +23,9 @@ const module: ng.IModule = angular.module('ep.modal', [
       this.openModal = () => {
         $uibModal.open({
           template: `
-                      <div class="modal-header"></div>
-                      <div class="modal-body"></div>
-                      <div class="modal-footer"></div>
+                      <div class="modal-header">Modal header</div>
+                      <div class="modal-body">Modal body</div>
+                      <div class="modal-footer">Modal footer</div>
                      `,
           windowClass: 'modal--default'
         });
