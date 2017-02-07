@@ -39,7 +39,7 @@
             </ui-select-match>
             <ui-select-choices repeat="country in vm.countries | filter: $select.search">
                 <div ng-click="$select.isDisabled(this) && $selectMultiple.removeChoice($select.selected.indexOf(this[$select.itemProperty])) && $event.stopPropagation()">
-                    <div class="dd__checkbox" ng-class="{'checked': $select.isDisabled(this)}" ng-click="toggle()">
+                    <div class="dd__checkbox" ng-class="{'dd__checkbox--checked': $select.isDisabled(this)}" ng-click="toggle()">
                         <div class="checkbox__body"></div>
                         <div class="checkbox__label">
                             <span ng-bind-html="country.name | highlight: $select.search"></span>
@@ -61,7 +61,7 @@
         </ui-select-match>
         <ui-select-choices repeat="country in vm.countries | filter: $select.search">
           <div ng-click="$select.isDisabled(this) && $selectMultiple.removeChoice($select.selected.indexOf(this[$select.itemProperty])) && $event.stopPropagation()">
-            <div class="dd__checkbox" ng-class="{'checked': $select.isDisabled(this)}" ng-click="toggle()">
+            <div class="dd__checkbox" ng-class="{'dd__checkbox--checked': $select.isDisabled(this)}" ng-click="toggle()">
               <div class="checkbox__body"></div>
               <div class="checkbox__label">
                 <span ng-bind-html="country.name | highlight: $select.search"></span>
