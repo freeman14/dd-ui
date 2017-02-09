@@ -8,7 +8,9 @@ atoms.story('Atoms')
       textAreaText: 'Hello world!',
       radioButtons: {
         value: true,
-        default: true
+        value2: true,
+        default: true,
+        disabled: true
       },
       checkboxes: {
         normal: true,

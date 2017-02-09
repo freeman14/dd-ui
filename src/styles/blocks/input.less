@@ -172,7 +172,9 @@ form {
     .dd__limit__indicator {
         position: absolute;
         right: 15px;
-        top: 15px;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
     }
 
     input {
@@ -298,6 +300,14 @@ form {
 
   .ng-invalid:not(.ng-pristine) ~ .input__message {
     display: block
+  }
+}
+
+.dd__radiobutton-wrapper.dd__radiobutton--disabled {
+  opacity: 0.5;
+
+  .radiobutton__body {
+    cursor: default;
   }
 }
 
