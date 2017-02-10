@@ -1,5 +1,4 @@
-import * as moment from 'moment';
-import * as momentTz from 'moment-timezone';
+import * as moment from 'moment-timezone';
 
 const DATE_FORMAT: string = 'ddd, MMM D, YYYY';
 const MONTH_FORMAT: string = 'MMM D, YYYY';
@@ -33,8 +32,8 @@ export class TimestampsRangeController {
     }
 
     private processDates(start: string, end: string, tz: string): void {
-      const startMoment: moment.Moment = momentTz.tz(start, tz);
-      const endMoment: moment.Moment = momentTz.tz(end, tz);
+      const startMoment: moment.Moment = moment.tz(start, tz);
+      const endMoment: moment.Moment = moment.tz(end, tz);
 
       const timeMatched = this.dateFormat.match(new RegExp('(,?\s*h:?m*a?)', 'i'));
       this.isTimeFormat = timeMatched && timeMatched.length > 0;
