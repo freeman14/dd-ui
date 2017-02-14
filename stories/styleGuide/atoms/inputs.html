@@ -1,91 +1,95 @@
 <div class="style__guide">
-    <div class="title">Inputs</div>
+  <div class="title">Inputs</div>
 
 
-    <div class="subtitle">Input</div>
-    <div class="block">
-        <div class="dd__input">
-            <input autofocus type="text" placeholder="Simple input">
-        </div>
+  <div class="subtitle">Input</div>
+  <div class="block">
+    <div class="dd__input">
+      <input autofocus type="text" placeholder="Simple input">
     </div>
+  </div>
 
-    <div class="subtitle">Disabled input</div>
-    <div class="block">
-      <div class="dd__input">
-        <input disabled type="text" placeholder="Simple input" value="Some text..." text-limit="20" ng-model="vm.disabledValue">
-      </div>
+  <div class="subtitle">Disabled input</div>
+  <div class="block">
+    <div class="dd__input">
+      <input disabled type="text" placeholder="Simple input" value="Some text..." text-limit="20" ng-model="vm.disabledValue">
     </div>
+  </div>
 
-    <div class="subtitle">Input with limit</div>
-    <div class="block">
-        <div class="dd__input">
-            <input placeholder="East Coast Sales Leads" ng-model="vm.inputText" text-limit="50" ng-model-options="{ debounce: 2000 }" required type="text">
-        </div>
+  <div class="subtitle">Input with limit</div>
+  <div class="block">
+    <div class="dd__input">
+      <input placeholder="East Coast Sales Leads" ng-model="vm.inputText" text-limit="50" ng-model-options="{ debounce: 2000 }"
+        required type="text">
     </div>
+  </div>
 
-    <div class="subtitle">With Label</div>
-    <div class="block row">
-        <div class="dd__label" for="description">Description <span>Optional</span></div>
-        <div class="dd__input">
-            <input placeholder="East Coast Sales Leads" required type="text">
-        </div>
+  <div class="subtitle">With Label</div>
+  <div class="block row">
+    <div class="dd__label" for="description">Description <span>Optional</span></div>
+    <div class="dd__input">
+      <input placeholder="East Coast Sales Leads" required type="text">
     </div>
+  </div>
 
-    <div class="subtitle">With Error</div>
-    <div class="block row">
-        <div class="dd__label" for="description">Description <span>Optional</span></div>
-        <div class="dd__input">
-            <input class="ng-invalid" placeholder="East Coast Sales Leads" required type="text">
-            <div class="input__message">Error Text</div>
-        </div>
+  <div class="subtitle">With Error</div>
+  <div class="block row">
+    <div class="dd__label" for="description">Description <span>Optional</span></div>
+    <div class="dd__input">
+      <input class="ng-invalid" placeholder="East Coast Sales Leads" required type="text">
+      <div class="input__message">Error Text</div>
     </div>
+  </div>
 
-    <div class="subtitle">Text Area</div>
-    <div class="block row">
-        <div class="dd__label" for="description">Message <span>Optional</span></div>
-        <div class="dd__textarea">
-            <textarea placeholder="Check out this audience report" ng-model="vm.textAreaText" text-limit="150"></textarea>
-        </div>
+  <div class="subtitle">Text Area</div>
+  <div class="block row">
+    <div class="dd__label" for="description">Message <span>Optional</span></div>
+    <div class="dd__textarea">
+      <textarea placeholder="Check out this audience report" ng-model="vm.textAreaText" text-limit="150"></textarea>
     </div>
+  </div>
 
-    <div class="subtitle">Text Area with error</div>
-    <div class="block row">
-      <div class="dd__label" for="description">Message <span>Optional</span></div>
-      <div class="dd__textarea">
-        <textarea placeholder="Check out this audience report" class="ng-invalid"></textarea>
-        <div class="input__message">Text area error</div>
-      </div>
+  <div class="subtitle">Text Area with error</div>
+  <div class="block row">
+    <div class="dd__label" for="description">Message <span>Optional</span></div>
+    <div class="dd__textarea">
+      <textarea placeholder="Check out this audience report" class="ng-invalid"></textarea>
+      <div class="input__message">Text area error</div>
     </div>
+  </div>
 
-    <div class="subtitle">Input with icon</div>
-    <div class="block row">
-        <div class="dd__label" for="description">Description <span>Optional</span></div>
-        <div class="dd__input dd__input-icon">
-            <i class="dd__icon dd__icon-search"></i>
-            <input placeholder="East Coast Sales Leads" text-limit="50" ng-model="vm.text" required type="text">
-        </div>
+  <div class="subtitle">Input with icon</div>
+  <div class="block row">
+    <div class="dd__label" for="description">Description <span>Optional</span></div>
+    <div class="dd__input dd__input-icon">
+      <i class="dd__icon dd__icon-search"></i>
+      <input placeholder="East Coast Sales Leads" text-limit="50" ng-model="vm.text" required type="text">
     </div>
+  </div>
 
-    <div class="subtitle">Checkboxes</div>
-    <div class="block row">
-      <checkbox ng-model="vm.checkboxes.normal" color="'#f3bc65'">
-        <span>Normal</span>
-      </checkbox>
-      <checkbox ng-model="vm.checkboxes.prechecked" checkbox-prechecked="vm.checkboxes.normal">
-        <span>Prechecked</span>
-      </checkbox>
-      <checkbox ng-model="vm.checkboxes.small" checkbox-small>
-        <span>Small</span>
-      </checkbox>
-      <checkbox ng-model="vm.checkboxes.smallPrechecked" color="'#f3bc65'" checkbox-small checkbox-prechecked="vm.checkboxes.small">
-        <span>Small prechecked</span>
-      </checkbox>
-    </div>
+  <div class="subtitle">Checkboxes</div>
+  <div class="block row">
+    <checkbox ng-model="vm.checkboxes.normal" color="'#f3bc65'">
+      <span>Normal</span>
+    </checkbox>
+    <checkbox ng-model="vm.checkboxes.prechecked" checkbox-prechecked="vm.checkboxes.normal">
+      <span>Prechecked</span>
+    </checkbox>
+    <checkbox ng-model="vm.checkboxes.small" checkbox-small>
+      <span>Small</span>
+    </checkbox>
+    <checkbox ng-model="vm.checkboxes.smallPrechecked" color="'#f3bc65'" checkbox-small checkbox-prechecked="vm.checkboxes.small">
+      <span>Small prechecked</span>
+    </checkbox>
+    <checkbox ng-model="vm.checkboxes.normal" color="'#f3bc65'" disabled='true'>
+      <span>Normal disabled</span>
+    </checkbox>
+  </div>
 
-    <div class="subtitle">Toggle</div>
-    <div class="block row">
-      <toggle ng-model="vm.test"></toggle>
-    </div>
+  <div class="subtitle">Toggle</div>
+  <div class="block row">
+    <toggle ng-model="vm.test"></toggle>
+  </div>
 
   <div class="subtitle">Radio button</div>
 
@@ -95,18 +99,18 @@
     </radio-button>
   </div>
 
-    <div class="subtitle">Radio buttons (group)</div>
+  <div class="subtitle">Radio buttons (group)</div>
 
-    <div class="block row">
-      <radio-button ng-model="vm.radioButtons.value" ng-value="vm.radioButtons.default">
-        <span>Radio option label 1</span>
-      </radio-button>
-      <radio-button ng-model="vm.radioButtons.value" ng-value="'option2'">
-        <span>Radio option label 2</span>
-      </radio-button>
-      <radio-button ng-model="vm.radioButtons.value2" ng-value="vm.radioButtons.default" disabled="vm.radioButtons.disabled">
-        <span>Radio button disabled</span>
-      </radio-button>
-    </div>
+  <div class="block row">
+    <radio-button ng-model="vm.radioButtons.value" ng-value="vm.radioButtons.default">
+      <span>Radio option label 1</span>
+    </radio-button>
+    <radio-button ng-model="vm.radioButtons.value" ng-value="'option2'">
+      <span>Radio option label 2</span>
+    </radio-button>
+    <radio-button ng-model="vm.radioButtons.value2" ng-value="vm.radioButtons.default" disabled="vm.radioButtons.disabled">
+      <span>Radio button disabled</span>
+    </radio-button>
+  </div>
 
 </div>
