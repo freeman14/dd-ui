@@ -1,8 +1,9 @@
 <div class="dd__checkbox" ng-class="{
 	'dd__checkbox--checked': isChecked,
 	'dd__checkbox--small': small,
-	'dd__checkbox--prechecked': prechecked
+	'dd__checkbox--prechecked': prechecked,
+  'dd__checkbox--disabled': disabled
 	}" ng-click="toggle()">
   <div class="checkbox__body" ng-style="getColors()"></div>
   <div class="checkbox__label" ng-transclude></div>
-</div>
+  </div>
