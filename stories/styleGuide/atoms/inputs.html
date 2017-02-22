@@ -19,7 +19,7 @@
   <div class="subtitle">Input with limit</div>
   <div class="block">
     <div class="dd__input">
-      <input placeholder="East Coast Sales Leads" ng-model="vm.inputText" text-limit="50" ng-model-options="{ debounce: 2000 }"
+      <input placeholder="East Coast Sales Leads" ng-model="vm.inputText" text-limit="{{vm.maxlen}}" ng-model-options="{ debounce: 2000 }"
         required type="text">
     </div>
   </div>
