@@ -16,7 +16,8 @@ atoms.story('Atoms')
         normal: true,
         small: true,
         prechecked: true
-      }
+      },
+      maxlen: 50
     })
     .add('Loading', require('./loading.html'))
     .add('Text links', require('./textLinks.html'))
