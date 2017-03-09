@@ -273,7 +273,6 @@ form {
         outline: none;
         color: @limed-spruce;
         padding: 15px;
-        font-weight: 300;
         box-sizing: border-box;
         resize: none;
 
@@ -381,4 +380,20 @@ form {
       }
 
   }
+}
+
+
+.dd__form--inline {
+    display: flex;
+
+    .dd__input {
+        width: 100%;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
 }

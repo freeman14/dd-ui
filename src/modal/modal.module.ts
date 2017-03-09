@@ -31,6 +31,42 @@ const module: ng.IModule = angular.module('ep.modal', [
         });
       };
     }
+  })
+  .component('fullScreenModal', {
+    template: `<div>
+                <button ng-click="vm.openModal()" class="btn btn--primary">Open modal</button>
+              </div>`,
+    controllerAs: 'vm',
+    controller: function ($uibModal) {
+      'ngInject';
+
+      this.openModal = () => {
+        $uibModal.open({
+          template: `
+                      <div class="modal-header">Modal header</div>
+                      <div class="modal-body">Modal body</div>
+                      <div class="modal-footer">Modal footer</div>
+                     `,
+          windowClass: 'modal--fullscreen'
+        });
+      };
+    }
+  })
+  .component('newHeaderModal', {
+    template: `<div>
+                <button ng-click="vm.openModal()" class="btn btn--primary">Open modal</button>
+              </div>`,
+    controllerAs: 'vm',
+    controller: function ($uibModal) {
+      'ngInject';
+
+      this.openModal = () => {
+        $uibModal.open({
+          template: require('./modal.partial.html'),
+          windowClass: 'modal--default'
+        });
+      };
+    }
   });
 
 module.run(run);

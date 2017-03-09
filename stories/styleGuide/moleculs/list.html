@@ -136,7 +136,7 @@
   <div class="subtitle">List item(active)</div>
   <div class="block row">
     <div class="dd__list">
-      <div class="dd__list-item dd__list__item--active">
+      <div class="dd__list-item dd__list-item--active">
         <checkbox ng-model="vm.check5">
           <div>Look Up In The Sky</div>
           <small><span class="text__link">View file</span></small>
@@ -157,16 +157,16 @@
     <div class="dd__list">
       <div class="dd__list-item dd__list__item--active dd__list-item--inactive">
         <checkbox ng-model="vm.check6">
-          <div>Look Up In The Sky</div>
-          <small><b>Sun. Nov 27</b> 9am – 9:50am</small>
+          <div class="dd__fadable">Look Up In The Sky</div>
+          <small class="dd__fadable"><b>Sun. Nov 27</b> 9am – 9:50am</small>
         </checkbox>
-        <div>
+        <div class="dd__fadable">
           <div class="dd__tag"><span class="dd__tag__text">Design</span></div>
           <div class="dd__tag"><span class="dd__tag__text">Visual Arts</span></div>
           <div class="dd__tag"><span class="dd__tag__text">All Access Pass</span></div>
           <small>+1 more</small>
         </div>
-        <aside>Updated Nov 28, 2016 12:40pm<br>by apotter@doubledutch.me</aside>
+        <aside class="dd__fadable">Updated Nov 28, 2016 12:40pm<br>by apotter@doubledutch.me</aside>
       </div>
     </div>
   </div>
@@ -211,7 +211,6 @@
       </div>
       <div class="dd__list-item">
         <checkbox ng-model="vm.check8">
-          <img src="" style="width: 122px; height: 65px; vertical-align: middle;" alt="">
           <div style="display: inline-block; vertical-align: middle;">
             <div>Look Up In The Sky</div>
             <small><b>Sun. Nov 27</b> 9am – 9:50am</small>
