@@ -151,6 +151,7 @@ form {
 @textarea-height: 100px;
 
 .dd__label {
+    display: flex;
 
     .font-face(600, 15px);
     color: @limed-spruce;
@@ -169,6 +170,12 @@ form {
     flex-direction: column;
     margin: 0 0 20px;
     position: relative;
+
+    &.dd__input--sm {
+        input {
+            height: 36px;
+        }
+    }
 
     .dd__icon {
         position: absolute;
