@@ -1,0 +1,31 @@
+.dd__alert {
+  position: relative;
+  padding: 18px 45px 18px 20px;
+  width: 100%;
+  color: @white;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 4px;
+
+  .dd__alert-header {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .dd__alert-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: .5;
+    font-size: 12px;
+    .clickable;
+  }
+
+  &.dd__alert--error {
+    background-color: @dark-salmon;
+  }
+
+  &.dd__alert--success {
+    background-color: @greeny-blue;
+  }
+}

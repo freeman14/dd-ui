@@ -26,19 +26,28 @@
     border-left-color: transparent;
     border-radius: 0;
   }
+
+  &.dd__splitted-group--default {
+    .dd__input {
+      flex-grow: 1;
+    }
+    .btn {
+      min-width: 120px;
+    }
+  }
 }
 
 /* Poll Option */
 
 .dd__splitted-group.dd__poll__option {
-  
+
   .dd__input.dd__input-icon {
     min-width: 400px;
 
     & > .dd__icon-draghandle {
       font-size: 19px;
     }
-    
+
   }
 
   .dd__input .dd__limit__indicator {
@@ -49,7 +58,7 @@
     min-width: 44px;
     background-color: @athens-gray;
     border: 1px solid @gainsboro;
-  
+
     .dd__icon {
       font-size: 10px;
       line-height: 2.5em !important;
@@ -62,7 +71,7 @@
 /* List Filter */
 
 .dd__splitted-group.dd__list__filter {
-  
+
   .btn {
     color: @dark-slay;
 
