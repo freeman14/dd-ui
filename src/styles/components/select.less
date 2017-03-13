@@ -31,6 +31,19 @@
 .selectize-control.multi.ng-empty > .selectize-input > input {
     position: relative;
     top: 6px;
+
+    &::-webkit-input-placeholder {
+      padding-left: 8px;
+    }
+    &::-moz-placeholder {
+      padding-left: 8px;
+    }
+    &:-moz-placeholder {
+      padding-left: 8px;
+    }
+    &:-ms-input-placeholder {
+      padding-left: 8px;
+    }
 }
 
 .selectize-input {
