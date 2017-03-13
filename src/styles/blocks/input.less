@@ -209,11 +209,17 @@ form {
         font-weight: 400;
         box-sizing: border-box;
 
-        &::-webkit-input-placeholder,
-        &::-moz-placeholder,
-        &:-moz-placeholder,
+        &::-webkit-input-placeholder {
+          color: @silver;
+        }
+        &::-moz-placeholder {
+          color: @silver;
+        }
+        &:-moz-placeholder {
+          color: @silver;
+        }
         &:-ms-input-placeholder {
-            color: @silver;
+          color: @silver
         }
 
         &:disabled,
