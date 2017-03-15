@@ -144,14 +144,22 @@
     justify-content: space-between;
   }
 
-  .modal-header {
-    padding: 20px 30px;
-    flex-shrink: 0;
-    border-bottom: solid 1px @gainsboro;
+  .modal-header, .modal-footer {
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
 
-    h3 {
-      display: flex;
-    }
+  }
+
+  .modal-header {
+    border-bottom: solid 1px @gainsboro;
+  }
+
+  .modal-footer {
+    border-top: solid 1px @gainsboro;
   }
 
   .modal-body {
@@ -161,13 +169,6 @@
     flex-grow: 1;
     flex-shrink: 1;
     overflow: auto;
-  }
-
-  .modal-footer {
-    display: flex;
-    flex-shrink: 0;
-    padding: 15px 20px;
-    border-top: solid 1px @gainsboro;
   }
 
   .modal-dismiss {
