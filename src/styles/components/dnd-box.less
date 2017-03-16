@@ -19,6 +19,14 @@
     border-color: @shakespeare;
   }
 
+  &.dd__dnd__box--error {
+    border-color: @guardsman-red;
+
+    .input__message {
+      display: block;
+    }
+  }
+
   &.dd__dnd__box--default {
     justify-content: center;
     flex-direction: column;
@@ -41,7 +49,6 @@
   }
 
   .dd__dnd__box__opener {
-    .font-face(400, 14px);
     color: @blaze-orange;
     .clickable;
   }
@@ -79,5 +86,9 @@
         float: right;
       }
     }
+  }
+
+  .input__message {
+    .input-error;
   }
 }

@@ -151,14 +151,15 @@ form {
 @textarea-height: 100px;
 
 .dd__label {
+    display: flex;
 
     .font-face(600, 15px);
     color: @limed-spruce;
     margin-bottom: 8px;
 
     span {
-        .font-face(300, 14px);
-        color: @gray;
+        .font-face(300, 15px);
+        color: @limed-spruce;
         margin-left: 8px;
     }
 
@@ -169,6 +170,12 @@ form {
     flex-direction: column;
     margin: 0 0 20px;
     position: relative;
+
+    &.dd__input--sm {
+        input {
+            height: 36px;
+        }
+    }
 
     .dd__icon {
         position: absolute;
@@ -202,11 +209,17 @@ form {
         font-weight: 400;
         box-sizing: border-box;
 
-        &::-webkit-input-placeholder,
-        &::-moz-placeholder,
-        &:-moz-placeholder,
+        &::-webkit-input-placeholder {
+          color: @silver;
+        }
+        &::-moz-placeholder {
+          color: @silver;
+        }
+        &:-moz-placeholder {
+          color: @silver;
+        }
         &:-ms-input-placeholder {
-            color: @silver;
+          color: @silver
         }
 
         &:disabled,

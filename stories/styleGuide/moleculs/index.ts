@@ -30,4 +30,5 @@ moleculs.story('Moleculs')
   .add('Dropdown', require('./dropdown.html'))
   .add('DD Dropdown', require('./dd-dropdown.html'))
   .add('Grouped Items', require('./inputGroup.html'))
+  .add('Alert', require('./alert.html'))
   .add('List', require('./list.html'), { check3: true, check5: true });
