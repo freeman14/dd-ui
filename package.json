@@ -4,6 +4,7 @@
   "description": "DoubleDutch UI library",
   "main": "index.js",
   "scripts": {
+    "start": "npm run sb",
     "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production",
     "postinstall": "./node_modules/.bin/typings i",
     "sb": "node ./sb/.webpack/server.js --NODE_ENV=dev",
