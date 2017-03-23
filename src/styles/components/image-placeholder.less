@@ -31,6 +31,28 @@
     }
   }
 
+  &.dd__img__placeholder--lg {
+    height: 153px;
+    width: 286px;
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      width: 286px * 1.5;
+      top: @diagonal-top-margin;
+    }
+
+    &:before {
+      top: -1px;
+      transform: rotate(28deg);
+    }
+
+    &:after {
+      top: -1px;
+      transform: rotate(-28deg);
+    }
+  }
+
   &:before, &:after {
     position: absolute;
     content: '';
