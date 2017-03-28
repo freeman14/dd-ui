@@ -52,13 +52,16 @@
       &.dd__list-section--right {
         float: right;
         display: table;
-        padding: 1px 0;
       }
 
       .dd__list-section__item {
         display: table-cell;
         vertical-align: middle;
         padding: 0 15px;
+
+        &:hover {
+          background: @white;
+        }
 
         &:focus {
           outline: 0;
