@@ -67,21 +67,28 @@
 /* List Filter */
 
 .dd__splitted-group.dd__list__filter {
-
   .btn {
-    color: @dark-slay;
+    font-size: 12px;
+    font-weight: normal;
+    border: 1px solid @submarine;
 
-    &:not(:last-child) {
-      border-right: 1px solid @submarine;
+    &:hover {
+      border-color: @dark-slay;
+    }
+
+    &:not(:first-child) {
+      border-left-color: @submarine;
     }
 
     &:active, &.active {
       color: @white;
       background-color: @dark-slay;
-      border: 1px solid @dark-slay !important;
+      border-color: @dark-slay;
+
+      & + .btn {
+        border-left-color: transparent;
+      }
     }
-
   }
-
 }
 
