@@ -31,10 +31,11 @@
   }
 
   &:disabled {
-      border: 1px solid @border-color;
-      background-color: @background;
-      opacity: 0.3;
-      cursor: default;
+    border: 1px solid @border-color;
+    background-color: @background;
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
   }
 
   &.btn--loading i {
