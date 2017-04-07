@@ -1,104 +1,130 @@
 .dd__select {
-    width: 100%;
-    min-height: 44px;
-}
+  width: 100%;
+  min-height: 44px;
 
-.dd__select.dd__select--small  {
-  min-height: 36px;
-  .selectize-input {
-    min-height: 36px;
-    padding: 10px 16px;
-    font-size: 13px;
-    & > input {
-      font-size: 13px;
-    }
-  }
-}
-
-.dd__select.multi:not(.dd__select--small) .selectize-input {
+  &.multi .selectize-input {
     height: auto;
-    padding: 7px;
-    padding-bottom: 0;
-}
+    padding: 6px 6px 0;
+  }
 
-.dd__select.multi.dd__select--small .selectize-input {
-  padding: 4px 4px 0;
-  & > div {
-    margin: 0 4px 4px 0;
+
+  &:not(.multi) .selectize-dropdown [data-selectable] {
+    padding: 10px 15px;
+  }
+
+  &.open .dd__select--not__find {
+    display: block;
+  }
+
+  &.ng-empty {
+    padding-bottom: 6px;
+  }
+
+  .open .selectize-input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0 none;
+  }
+
+  .dd__select--not__find {
+    padding: 10px 15px;
+  }
+
+  &.dd__select--small {
+    min-height: 36px;
+
+    &.ng-empty {
+      padding-bottom: 4px;
+    }
+
+    &.multi .selectize-input {
+      padding: 4px 4px 0;
+      & > div {
+        height: 26px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin: 0 4px 4px 0;
+      }
+
+      & > .ui-select-search {
+        top: 6px;
+      }
+    }
+
+    &.selectize-control.plugin-remove_button [data-value] .remove {
+      padding-top: 5px;
+    }
+
+    .selectize-input {
+      min-height: 36px;
+      padding: 10px 16px;
+      font-size: 13px;
+      & > input {
+        font-size: 13px;
+      }
+    }
   }
 }
 
 .selectize-control.multi.ng-empty > .selectize-input > input {
-    position: relative;
-    top: 6px;
+  position: relative;
+  top: 8px;
 
-    &::-webkit-input-placeholder {
-      padding-left: 8px;
-    }
-    &::-moz-placeholder {
-      padding-left: 8px;
-    }
-    &:-moz-placeholder {
-      padding-left: 8px;
-    }
-    &:-ms-input-placeholder {
-      padding-left: 8px;
-    }
+  &::-webkit-input-placeholder {
+    padding-left: 8px;
+  }
+  &::-moz-placeholder {
+    padding-left: 8px;
+  }
+  &:-moz-placeholder {
+    padding-left: 8px;
+  }
+  &:-ms-input-placeholder {
+    padding-left: 8px;
+  }
 }
 
 .selectize-input {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    width: 100%;
-    min-height: 44px;
-    padding: 12px 15px;
-    overflow: hidden;
-    border: 1px solid;
-    border-color: @gainsboro;
-    border-radius: 4px;
-    box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 15px;
+  overflow: hidden;
+  border: 1px solid @gainsboro;
+  border-radius: 4px;
+  box-sizing: border-box;
 
-    &.focus {
-        border-color: @shakespeare;
-    }
-
-}
-
-.dd__select .open .selectize-input{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom: 0 none;
+  &.focus {
+    border-color: @shakespeare;
+  }
 }
 
 .selectize-input > input {
-    font-size: 14px;
-    color: @limed-spruce;
+  font-size: 14px;
+  color: @limed-spruce;
 
-    &::-webkit-input-placeholder {
-        color: @silver;
-    }
+  &::-webkit-input-placeholder {
+    color: @silver;
+  }
 
-    &::-moz-placeholder {
-        color: @silver;
-    }
+  &::-moz-placeholder {
+    color: @silver;
+  }
 
-    &:-moz-placeholder {
-        color: @silver;
-    }
+  &:-moz-placeholder {
+    color: @silver;
+  }
 
-    &:-ms-input-placeholder {
-        color: @silver
-    }
+  &:-ms-input-placeholder {
+    color: @silver
+  }
 
 }
 
-.selectize-dropdown [data-selectable] > div{
+.selectize-dropdown [data-selectable] > div {
   padding: 10px 15px;
-}
-
-.dd__select:not(.multi) .selectize-dropdown [data-selectable] {
-    padding: 10px 15px;
 }
 
 .selectize-dropdown .active {
@@ -112,66 +138,63 @@
 }
 
 .selectize-dropdown {
-    position: absolute;
-    z-index: 1000;
-    margin: -8px 0 0 0;
-    background: @white;
-    border: 1px solid @shakespeare;
-    border-top: 0 none;
-    border-radius: 0 0 3px 3px;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-}
-
-.dd__select .dd__select--not__find {
-    padding: 10px 15px;
+  position: absolute;
+  z-index: 1000;
+  margin: -8px 0 0 0;
+  background: @white;
+  border: 1px solid @shakespeare;
+  border-top: 0 none;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .dd__select--not__find {
-    text-align: center;
-    color: @submarine;
-    font-size: 14px;
-    display: none;
-}
-
-.dd__select.open .dd__select--not__find {
-    display: block;
+  text-align: center;
+  color: @submarine;
+  font-size: 14px;
+  display: none;
 }
 
 .selectize-control.multi .selectize-input [data-value] {
-    background-color: @porcelain;
-    border-radius: 4px;
+  background-color: @porcelain;
+  border-radius: 4px;
 }
 
 .selectize-control.multi .selectize-input > div {
-  padding: 6px 11px;
-  margin: 0 8px 8px 0;
+  height: 30px;
+  padding: 5px 11px;
+  margin: 0 8px 6px 0;
   color: @limed-spruce;
   cursor: pointer;
+  box-sizing: border-box;
+
+  .ui-select-match-item {
+    vertical-align: middle;
+  }
 }
 
 .selectize-control.plugin-remove_button [data-value] .remove {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: inline-block;
-    width: 17px;
-    padding: 6px 4px 0 0;
-    font-size: 15px;
-    font-weight: bold;
-    color: @dusty-gray;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 17px;
+  padding: 6px 4px 0 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: @dusty-gray;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
-
 .ui-select-choices-row {
-    color: @limed-spruce;
+  color: @limed-spruce;
 }
 
 .ui-select-choices-row.disabled {
-    background: @porcelain;
-    font-weight: 600;
+  background: @porcelain;
+  font-weight: 600;
 }
