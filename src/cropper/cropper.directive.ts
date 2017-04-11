@@ -35,7 +35,7 @@ export class CropperDirective implements ng.IDirective {
     mouseZoom: '@',
     resultSizes: '<',
     croppedImage: '=',
-    // For extremal reasons, or tests porposes.
+    // For extremal reasons, or tests purposes.
     croppieClass: '='
   };
 
