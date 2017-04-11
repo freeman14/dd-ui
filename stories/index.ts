@@ -9,6 +9,7 @@ import './jsComponents/toggleButtons';
 import './jsComponents/timestamp';
 import './jsComponents/carousel';
 import './jsComponents/modal';
+import './jsComponents/cropper';
 import './directives/inputLimit';
 
 import './styleGuide/atoms/index';
