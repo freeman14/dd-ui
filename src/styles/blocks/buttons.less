@@ -2,20 +2,20 @@
 
 .btn__link__mixin (@color, @hover-color) {
 
+  color: @color;
+
+  &:hover {
+    color: @hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
     color: @color;
+  }
 
-    &:hover {
-        color: @hover-color;
-        text-decoration: underline;
-    }
-
-    &:focus {
-        color: @color;
-    }
-
-    &:disabled {
-        opacity: 0.3;
-    }
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .btn__mixin (@background, @border-color, @color, @background-hover, @border-hover-color, @hover-color) {
@@ -39,40 +39,39 @@
   }
 
   &.btn--loading i {
-      color: @color;
+    color: @color;
   }
 
 }
 
 /* Mixins end */
 
-
-
 /* Normal buttons start */
 
 .btn {
-    color: @white;
-    outline: none;
-    height: 44px;
-    min-width: 200px;
-    vertical-align: middle;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 0 13px;
-    border-radius: 4px;
-    margin: 0 5px;
+  color: @white;
+  outline: none;
+  height: 44px;
+  min-width: 200px;
+  vertical-align: middle;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 13px;
+  border-radius: 4px;
+  margin: 0 5px;
 }
 
 .btn--primary {
-    .btn__mixin(@blaze-orange, @blaze-orange, @white, @clementine, @clementine, @white);
+  .btn__mixin(@blaze-orange, @blaze-orange, @white, @clementine, @clementine, @white);
 }
 
 .btn--default {
-    .btn__mixin(@white, @dark-slay, @dark-slay, @dark-slay, @dark-slay, @white);
+  .btn__mixin(@white, @submarine, @submarine, @athens-gray, @submarine, @submarine);
+  //.btn__mixin(@white, @dark-slay, @dark-slay, @dark-slay, @dark-slay, @white);
 }
 
 .btn--hollow {
-    .btn__mixin(@white, @blaze-orange, @blaze-orange, @clementine, @clementine, @white);
+  .btn__mixin(@white, @blaze-orange, @blaze-orange, @clementine, @clementine, @white);
 }
 
 .btn--neon {
@@ -84,7 +83,7 @@
 }
 
 .btn--default--danger {
-  .btn__mixin(@white, @dark-slay, @dark-slay, @white, @guardsman-red, @guardsman-red);  
+  .btn__mixin(@white, @dark-slay, @dark-slay, @white, @guardsman-red, @guardsman-red);
 }
 
 .btn--semi--danger {
@@ -104,15 +103,15 @@
 /* Small buttons start */
 
 .btn--sm {
-    height: 36px;
-    min-width: 120px;
-    font-size: 13px;
+  height: 36px;
+  min-width: 120px;
+  font-size: 13px;
 }
 
 .btn--xs {
-    min-width: 36px;
-    height: 36px;
-    font-size: 13px;
+  min-width: 36px;
+  height: 36px;
+  font-size: 13px;
 }
 
 .btn--icon {
@@ -125,61 +124,56 @@
 
 /* Normal buttons end */
 
-
 /* Link buttons start */
 
 .btn__link {
-    background: none;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0 5px;
+  background: none;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
 }
 
 .btn__link--primary {
-    .btn__link__mixin(@shakespeare, @shakespeare)
+  .btn__link__mixin(@shakespeare, @shakespeare)
 }
 
 /* Normal buttons end */
 
-
-
 /* Icon buttons start */
 
 .btn__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 4px;
-    padding: 0;
-    outline: none;
-    cursor: pointer;
-    margin: 0 5px;
-    background: transparent;
-    border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 0 5px;
+  background: transparent;
+  border: none;
 
-    &.btn__icon--small {
-        width: 36px;
-        height: 36px;
-    }
+  &.btn__icon--small {
+    width: 36px;
+    height: 36px;
+  }
 
 }
 
 .btn__icon--inner {
-    border: none;
-    background: @white;
-    font-size: 8px;
-    cursor: pointer;
-    vertical-align: middle;
-    color: @river-bed;
-    padding: 0;
-    outline: none;
+  border: none;
+  background: @white;
+  font-size: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: @river-bed;
+  padding: 0;
+  outline: none;
 }
 
 /* Icon buttons end */
-
-
 
 /* Buttons animation */
 
@@ -187,70 +181,70 @@
 
 .btn--slide {
 
-    transition: max-width 0.2s;
-    overflow: hidden;
-    padding: 0;
+  transition: max-width 0.2s;
+  overflow: hidden;
+  padding: 0;
+
+  > span {
+    transition: opacity 0.2s;
+    display: block;
+    white-space: nowrap;
+  }
+
+  &.btn--xs {
+    max-width: 36px;
 
     > span {
-        transition: opacity 0.2s;
-        display: block;
-        white-space: nowrap;
+      padding: 11px;
     }
 
-    &.btn--xs {
-        max-width: 36px;
-
-        > span {
-            padding: 11px;
-        }
-
-        i {
-            margin-right: 7px;
-        }
-
+    i {
+      margin-right: 7px;
     }
 
-    &:hover {
-        max-width: 100%;
+  }
 
-        > span {
-            opacity: 1;
-        }
+  &:hover {
+    max-width: 100%;
 
+    > span {
+      opacity: 1;
     }
+
+  }
 
 }
 
 .btn--loading {
-    position: relative;
+  position: relative;
+  color: transparent;
+
+  &:hover {
     color: transparent;
+  }
 
-    &:hover {
-        color: transparent;
-    }
+  &:focus {
+    color: transparent;
+  }
 
-    &:focus {
-        color: transparent;
-    }
+  i {
+    .spin();
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    i {
-        .spin();
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icon--loading {
-        display: flex;
-    }
+  .icon--loading {
+    display: flex;
+  }
 
 }
 
 .icon--loading {
-    display: none;
+  display: none;
 }
