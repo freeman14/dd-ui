@@ -1,13 +1,13 @@
 .dd__list {
   width: 100%;
 
-  .dd__list-heading {
+  &-heading {
     position: relative;
     width: 100%;
     height: 60px;
     box-sizing: border-box;
     background-color: @porcelain;
-    box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
+    border: 1px solid @gainsboro;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     padding: 0 20px;
@@ -17,7 +17,7 @@
     }
 
     & ~ .dd__list-item {
-      box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 0 0 0 @gainsboro;
+      border-top: 0;
     }
 
     .dd__list-section {
@@ -37,7 +37,6 @@
         display: flex;
         align-items: center;
 
-        //overwrites
         .dd__checkbox + div {
           color: @dusty-gray;
           font-size: 14px;
@@ -78,7 +77,7 @@
 
         &.dropdown.open {
           background: @white;
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
           &:before {
             content: '';
@@ -125,7 +124,7 @@
         padding: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
         border: solid 1px @gainsboro;
         border-top: 0;
 
@@ -176,23 +175,39 @@
 
 .dd__list-item {
   position: relative;
-  min-height: 78px;
+  min-height: 60px;
   width: 100%;
-  box-shadow: inset -1px 0 0 0 @gainsboro, inset 0 -1px 0 0 @gainsboro, inset 1px 0 0 0 @gainsboro, inset 0 1px 0 0 @gainsboro;
+  border: 1px solid @gainsboro;
   padding: 15px 20px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  &.dd__list-item--active {
-    background-color: rgba(82, 156, 207, 0.1); //@shakespeare
+  &&--parts {
+    padding: 0;
   }
 
-  &.dd__list-item--inactive {
+  &&--active {
+    background-color: fade(@shakespeare, 10%);
+  }
+
+  &&--inactive {
    .dd__fadable {
      opacity: .5;
    }
+  }
+
+  &-part {
+    padding: 15px 0;
+
+    &:first-of-type {
+      padding-left: 20px;
+    }
+
+    &:last-of-type {
+      padding-right: 20px;
+    }
   }
 
   .dd__checkbox .checkbox__label {

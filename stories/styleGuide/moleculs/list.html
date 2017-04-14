@@ -155,7 +155,7 @@
   <div class="subtitle">List item(inactive)</div>
   <div class="block row">
     <div class="dd__list">
-      <div class="dd__list-item dd__list__item--active dd__list-item--inactive">
+      <div class="dd__list-item dd__list-item--active dd__list-item--inactive">
         <checkbox ng-model="vm.check6">
           <div class="dd__fadable">Look Up In The Sky</div>
           <small class="dd__fadable"><b>Sun. Nov 27</b> 9am – 9:50am</small>
@@ -223,6 +223,65 @@
           <small>+1 more</small>
         </div>
         <aside>Updated Nov 28, 2016 12:40pm<br>by apotter@doubledutch.me</aside>
+      </div>
+    </div>
+  </div>
+  <div class="subtitle">List</div>
+  <div class="block row">
+    <div class="dd__list">
+      <div class="dd__list-heading">
+        <div class="dd__list-section dd__list-section--left">
+          <checkbox ng-model="vm.check7" checkbox-prechecked>
+          </checkbox>
+          <div>718 sessions</div>
+        </div>
+        <div class="dd__list-section dd__list-section--right dd__list-section--active">
+          <div class="dd__list-section__item">Tracks</div>
+          <div class="dd__list-section__item" uib-dropdown>
+            <span uib-dropdown-toggle>Filters <span class="caret"></span></span>
+            <ul class="dropdown-menu dropdown-menu--left" uib-dropdown-menu>
+              <li><a href="#">Export sessions to CSV</a></li>
+              <li><a href="#">Export sessions to XLS</a></li>
+              <li><a href="#">Export sessions to XLSX</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Download import template</a></li>
+            </ul>
+          </div>
+          <div class="dd__list-section__item">Tiers</div>
+          <div class="dd__list-section__item">Delete</div>
+        </div>
+      </div>
+      <div class="dd__list-item dd__list-item--active">
+        <checkbox ng-model="vm.check8">
+          <div>Look Up In The Sky</div>
+          <small><b>Sun. Nov 27</b> 9am – 9:50am</small>
+        </checkbox>
+        <div>
+          <div class="dd__tag"><span class="dd__tag__text">Design</span></div>
+          <div class="dd__tag"><span class="dd__tag__text">Visual Arts</span></div>
+          <div class="dd__tag"><span class="dd__tag__text">All Access Pass</span></div>
+          <small>+1 more</small>
+        </div>
+        <aside>Updated Nov 28, 2016 12:40pm<br>by apotter@doubledutch.me</aside>
+      </div>
+      <div class="dd__list-item dd__list-item--parts">
+        <div class="dd__list-item-part">
+          <checkbox ng-model="vm.check8">
+          </checkbox>
+        </div>
+        <div class="dd__list-item-part">
+          <div style="display: inline-block; vertical-align: middle;">
+            <div>Look Up In The Sky</div>
+            <small><b>Sun. Nov 27</b> 9am – 9:50am</small>
+          </div>
+          <div style="display: inline-block; vertical-align: middle;">
+            <div class="dd__tag"><span class="dd__tag__text">Design</span></div>
+            <div class="dd__tag"><span class="dd__tag__text">Visual Arts</span></div>
+            <div class="dd__tag"><span class="dd__tag__text">All Access Pass</span></div>
+            <small>+1 more</small>
+          </div>
+          <aside style="display: inline-block; vertical-align: middle;">Updated Nov 28, 2016 12:40pm<br>by apotter@doubledutch.me</aside>
+        </div>
       </div>
     </div>
   </div>
