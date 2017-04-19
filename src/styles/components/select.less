@@ -12,8 +12,38 @@
     padding: 10px 15px;
   }
 
-  &.open .dd__select--not__find {
-    display: block;
+  &.open {
+    .dd__select--not__find {
+      display: block;
+    }
+
+    &:not(.multi).ng-not-empty {
+      .selectize-input {
+        .ui-select-match {
+          position: absolute;
+          opacity: .3;
+          pointer-events: none;
+        }
+
+        .ui-select-search {
+          &::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          &::-moz-placeholder {
+            color: transparent;
+          }
+
+          &:-moz-placeholder {
+            color: transparent;
+          }
+
+          &:-ms-input-placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
   }
 
   &.ng-empty {
@@ -120,7 +150,6 @@
   &:-ms-input-placeholder {
     color: @silver
   }
-
 }
 
 .selectize-dropdown [data-selectable] > div {
