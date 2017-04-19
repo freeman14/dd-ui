@@ -12,8 +12,38 @@
     padding: 10px 15px;
   }
 
-  &.open .dd__select--not__find {
-    display: block;
+  &.open {
+    .dd__select--not__find {
+      display: block;
+    }
+
+    &:not(.multi).ng-not-empty {
+      .selectize-input {
+        .ui-select-match {
+          position: absolute;
+          opacity: .3;
+          pointer-events: none;
+        }
+
+        .ui-select-search {
+          &::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          &::-moz-placeholder {
+            color: transparent;
+          }
+
+          &:-moz-placeholder {
+            color: transparent;
+          }
+
+          &:-ms-input-placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
   }
 
   &.ng-empty {
@@ -120,7 +150,6 @@
   &:-ms-input-placeholder {
     color: @silver
   }
-
 }
 
 .selectize-dropdown [data-selectable] > div {
@@ -129,12 +158,12 @@
 
 .selectize-dropdown .active {
   color: @limed-spruce;
-  background-color: @porcelain;
+  background-color: fade(@shakespeare, 10%);
 }
 
 .selectize-dropdown .active.create, .selectize-dropdown .create {
   color: @limed-spruce;
-  background-color: @porcelain;
+  background-color: fade(@shakespeare, 10%);
 }
 
 .selectize-dropdown {
@@ -156,21 +185,30 @@
   display: none;
 }
 
-.selectize-control.multi .selectize-input [data-value] {
-  background-color: @porcelain;
-  border-radius: 4px;
-}
+.selectize-control.multi {
+  .selectize-input {
+    [data-value] {
+      background-color: @porcelain;
+      border-radius: 4px;
+    }
 
-.selectize-control.multi .selectize-input > div {
-  height: 30px;
-  padding: 5px 11px;
-  margin: 0 8px 6px 0;
-  color: @limed-spruce;
-  cursor: pointer;
-  box-sizing: border-box;
+    & > div {
+      height: 30px;
+      padding: 5px 11px;
+      margin: 0 8px 6px 0;
+      color: @limed-spruce;
+      cursor: pointer;
+      box-sizing: border-box;
 
-  .ui-select-match-item {
-    vertical-align: middle;
+      .ui-select-match-item {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .selectize-dropdown .active {
+    color: @limed-spruce;
+    background-color: @porcelain;
   }
 }
 
@@ -195,6 +233,6 @@
 }
 
 .ui-select-choices-row.disabled {
-  background: @porcelain;
+  background: fade(@shakespeare, 10%);
   font-weight: 600;
 }
