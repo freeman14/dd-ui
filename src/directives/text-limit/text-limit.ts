@@ -28,9 +28,9 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
       let maxLength: number = +attrs.textLimit;
       const $setViewValue = ngModel.$setViewValue;
       const $render = ngModel.$render;
-
       $scope.textLimit = maxLength;
       element.attr('maxlength', maxLength);
+      attrs.$set('ngTrim', 'false');
       element.parent('div').addClass('dd__limit');
       element.after(indicator);
 
