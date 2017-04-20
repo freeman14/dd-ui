@@ -5,6 +5,7 @@ node_modules
 .settings
 *.log
 .idea
+.history
 app
 /src/styles/sprites/dd-sprite-base.less
 /src/assets/sprites/dd-sprite-base.png
