@@ -2,7 +2,7 @@
   @toggle-mark-size: 26px;
   @transition-time: .3s;
 
-  &.dd__toggle--checked {
+  &&--checked {
     .dd__toggle__body {
       background-color: #bdd8ea;
 
@@ -37,6 +37,7 @@
       content: 'OFF';
       color: @submarine;
       font-size: 10px;
+      font-weight: 600;
       line-height: 24px;
       text-align: center;
       width: @toggle-mark-size;
@@ -57,12 +58,12 @@
   border: 1px solid @gainsboro;
   .border-radius(4px);
 
-  &.dd__toggle__group--fluid {
+  &&--fluid {
     width: 100%;
   }
 
-  .dd__toggle__group__item {
-    height: 62px;
+  &__item {
+    min-height: 62px;
     border-bottom: 1px solid @gainsboro;
     display: flex;
     align-items: center;
