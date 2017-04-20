@@ -9,9 +9,10 @@ interface ITextLimitScope extends ng.IScope {
 export function textLimitDirective($compile, $timeout): ng.IDirective {
   'ngInject';
 
+  const getCharactersDiff = (value: string, max: number) => max - value.length;
   const updateCharactersLeft = ($scope: ITextLimitScope, maxLength: number, content: string) => {
     $timeout(() => {
-      $scope.textLimit = maxLength - content.length;
+      $scope.textLimit = getCharactersDiff(content, maxLength);
     });
   };
 
@@ -20,7 +21,10 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
     require: 'ngModel',
     scope: {},
     link($scope: ITextLimitScope, element: ng.IAugmentedJQuery, attrs: ITextLimitAttrs, ngModel: ng.INgModelController): void {
-      const indicator: ng.IAugmentedJQuery = $compile(`<span class='dd__limit__indicator' ng-bind="textLimit"></span>`)($scope);
+      const TEXT_VISIBLE_UNTIL: number = 10;
+      const ALWAYS_VISIBLE: boolean = 'visibleLimit' in attrs;
+      const display = ALWAYS_VISIBLE ? 'unset' : 'none';
+      const indicator: ng.IAugmentedJQuery = $compile(`<span class='dd__limit__indicator' style="display: ${display};" ng-bind="textLimit"></span>`)($scope);
       let maxLength: number = +attrs.textLimit;
       const $setViewValue = ngModel.$setViewValue;
       const $render = ngModel.$render;
@@ -46,6 +50,11 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
       ngModel.$setViewValue = (value, trigger) => {
         $setViewValue(value, trigger);
         if (trigger === 'input') {
+          if (!ALWAYS_VISIBLE && getCharactersDiff(value || element.val(), maxLength) > TEXT_VISIBLE_UNTIL) {
+            indicator.css('display', 'none');
+          } else {
+            indicator.css('display', 'unset');
+          }
           updateCharactersLeft($scope, maxLength, value || element.val());
         }
       };
