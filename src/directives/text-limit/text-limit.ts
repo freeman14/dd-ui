@@ -26,9 +26,8 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
       const display = ALWAYS_VISIBLE ? 'unset' : 'none';
       const indicator: ng.IAugmentedJQuery = $compile(`<span class='dd__limit__indicator' style="display: ${display};" ng-bind="textLimit"></span>`)($scope);
       let maxLength: number = +attrs.textLimit;
-      const $setViewValue = ngModel.$setViewValue;
-      const $render = ngModel.$render;
-
+      const $setViewValue = ngModel.$setViewValue.bind(ngModel);
+      const $render = ngModel.$render.bind(ngModel);
       $scope.textLimit = maxLength;
       element.attr('maxlength', maxLength);
       element.parent('div').addClass('dd__limit');
