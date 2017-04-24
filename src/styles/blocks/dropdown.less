@@ -76,16 +76,32 @@
   &.btn-group > .btn {
 
     &.btn--default {
-      .btn__mixin__dropdown--nohover(@white, @submarine, @submarine);
+      .btn__mixin__dropdown(@white, @submarine, @submarine);
+
+      &.btn--normal {
+        .btn__mixin__dropdown(@athens-gray, @submarine, @submarine);
+      }
     }
     &.btn--primary {
-      .btn__mixin__dropdown--nohover(@blaze-orange, @blaze-orange, @white);
+      .btn__mixin__dropdown(@blaze-orange, @blaze-orange, @white);
+
+      &.btn--normal {
+        .btn__mixin__dropdown(@clementine, @clementine, @white);
+      }
     }
     &.btn--hollow {
-      .btn__mixin__dropdown--nohover(@white, @blaze-orange, @blaze-orange);
+      .btn__mixin__dropdown(@white, @blaze-orange, @blaze-orange);
+
+      &.btn--normal {
+        .btn__mixin__dropdown(@clementine, @clementine, @white);
+      }
     }
     &.btn--neon {
-      .btn__mixin__dropdown--nohover(@white, @shakespeare, @shakespeare);
+      .btn__mixin__dropdown(@white, @shakespeare, @shakespeare);
+
+      &.btn--normal {
+        .btn__mixin__dropdown(@cerulean, @cerulean, @white);
+      }
     }
 
     &.btn--lg {
@@ -135,13 +151,8 @@
 }
 
 
-.btn__mixin__dropdown--nohover (@background, @border-color, @color) {
-
-  color: @color;
-  background-color: @background;
-  border: 1px solid @border-color;
-
-  &:hover {
+.btn__mixin__dropdown (@background, @border-color, @color) {
+  &:hover, &:focus {
     color: @color;
     background-color: @background;
     border-color: @border-color;
@@ -152,7 +163,6 @@
     background-color: @background;
     opacity: 0.3;
   }
-
 }
 
 

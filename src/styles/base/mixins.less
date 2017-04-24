@@ -1,3 +1,45 @@
+.btn__mixin (@background, @border-color, @color, @background-hover, @border-hover-color, @hover-color) {
+
+  color: @color;
+  background-color: @background;
+  border: 1px solid @border-color;
+
+  &:hover, &:focus {
+    border-color: @border-hover-color;
+    background-color: @background-hover;
+    color: @hover-color;
+  }
+
+  &:disabled {
+    border: 1px solid @border-color;
+    background-color: @background;
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.btn--loading i {
+    color: @color;
+  }
+}
+
+.btn__link__mixin (@color, @hover-color) {
+  color: @color;
+
+  &:hover {
+    color: @hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: @color;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
 .input-error() {
   display: none;
   margin-top: 6px;

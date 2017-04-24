@@ -96,24 +96,6 @@
   }
 }
 
-.selectize-control.multi.ng-empty > .selectize-input > input {
-  position: relative;
-  top: 8px;
-
-  &::-webkit-input-placeholder {
-    padding-left: 8px;
-  }
-  &::-moz-placeholder {
-    padding-left: 8px;
-  }
-  &:-moz-placeholder {
-    padding-left: 8px;
-  }
-  &:-ms-input-placeholder {
-    padding-left: 8px;
-  }
-}
-
 .selectize-input {
   position: relative;
   z-index: 1;
@@ -186,6 +168,24 @@
 }
 
 .selectize-control.multi {
+  &.ng-empty > .selectize-input > input {
+    position: relative;
+    top: 8px;
+
+    &::-webkit-input-placeholder {
+      padding-left: 8px;
+    }
+    &::-moz-placeholder {
+      padding-left: 8px;
+    }
+    &:-moz-placeholder {
+      padding-left: 8px;
+    }
+    &:-ms-input-placeholder {
+      padding-left: 8px;
+    }
+  }
+
   .selectize-input {
     [data-value] {
       background-color: @porcelain;
@@ -210,6 +210,17 @@
     color: @limed-spruce;
     background-color: @porcelain;
   }
+
+  .ui-select-choices-row {
+    &:hover {
+      background-color: @porcelain;
+    }
+
+    &.disabled {
+      background: fade(@shakespeare, 10%);
+      font-weight: 600;
+    }
+  }
 }
 
 .selectize-control.plugin-remove_button [data-value] .remove {
@@ -230,6 +241,10 @@
 
 .ui-select-choices-row {
   color: @limed-spruce;
+
+  &:hover {
+    background-color: fade(@shakespeare, 10%);
+  }
 }
 
 .ui-select-choices-row.disabled {
