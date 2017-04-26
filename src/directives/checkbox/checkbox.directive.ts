@@ -20,11 +20,23 @@ export default () => {
         return value;
       });
 
+      const isWhiteColor = (activeColor) => {
+        const white = ['#fff', '#ffffff'];
+        return activeColor && white.indexOf(activeColor.toLowerCase()) > -1;
+      };
+
       scope.getColors = (): any => {
-        if (scope.prechecked) {
-          return { 'border-color': scope.activeColor, color: scope.activeColor };
-        } else if (scope.isChecked) {
-          return { 'border-color': scope.activeColor, background: scope.activeColor };
+        /*
+            as we put both border and color styles
+            we need to omit white color and keep default style,
+            otherwise checkbox is disappearing
+        */
+        if (!isWhiteColor(scope.activeColor)) {
+          if (scope.prechecked) {
+            return { 'border-color': scope.activeColor, color: scope.activeColor };
+          } else if (scope.isChecked) {
+            return { 'border-color': scope.activeColor, background: scope.activeColor };
+          }
         }
       };
 
