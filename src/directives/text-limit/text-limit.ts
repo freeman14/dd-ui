@@ -48,8 +48,9 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
       };
 
       ngModel.$setViewValue = (value, trigger) => {
+        const ieInputEvent: boolean = trigger === 'keydown';
         $setViewValue(value, trigger);
-        if (trigger === 'input') {
+        if (trigger === 'input' || ieInputEvent) {
           if (!ALWAYS_VISIBLE && getCharactersDiff(value || element.val(), maxLength) > TEXT_VISIBLE_UNTIL) {
             indicator.css('display', 'none');
           } else {
