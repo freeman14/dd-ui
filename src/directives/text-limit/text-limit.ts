@@ -4,6 +4,7 @@ interface ITextLimitAttrs extends ng.IAttributes {
 
 interface ITextLimitScope extends ng.IScope {
   textLimit: number;
+  visibleLimit: boolean;
 }
 
 export function textLimitDirective($compile, $timeout): ng.IDirective {
@@ -19,10 +20,12 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
   return {
     restrict: 'A',
     require: 'ngModel',
-    scope: {},
+    scope: {
+      visibleLimit: '<?visibleLimit',
+    },
     link($scope: ITextLimitScope, element: ng.IAugmentedJQuery, attrs: ITextLimitAttrs, ngModel: ng.INgModelController): void {
       const TEXT_VISIBLE_UNTIL: number = 10;
-      const ALWAYS_VISIBLE: boolean = 'visibleLimit' in attrs;
+      const ALWAYS_VISIBLE: boolean = $scope.visibleLimit;
       const display = ALWAYS_VISIBLE ? 'unset' : 'none';
       const indicator: ng.IAugmentedJQuery = $compile(`<span class='dd__limit__indicator' style="display: ${display};" ng-bind="textLimit"></span>`)($scope);
       let maxLength: number = +attrs.textLimit;
