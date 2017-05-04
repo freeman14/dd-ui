@@ -177,9 +177,15 @@ export class CropperDirective implements ng.IDirective {
       const scaleImgTransformProp: string = element.find('img').css('transform');
 
       if (scaleImgTransformProp) {
-        const scaleProp: string = scaleImgTransformProp.match(/scale\((.*)\)/)[1];
-        if (scaleProp) {
-          result = Number(Number(scaleProp).toPrecision(2));
+        if (scaleImgTransformProp.indexOf('scale') > -1) {
+          const [, scaleProp] = scaleImgTransformProp.match(/scale\((.*)\)/);
+          if (scaleProp) {
+            result = Number(Number(scaleProp).toPrecision(2));
+          }
+        } else if (scaleImgTransformProp.indexOf('matrix') > -1) {
+            const transformations: string[] = scaleImgTransformProp.replace('matrix(', '').replace(')', '').split(', ');
+            // there are two scale measurements x(transformations[0]) and y(transformations[3]) and they should be the same
+            result = Number(Number(transformations[0]).toPrecision(2));
         }
       }
     }
