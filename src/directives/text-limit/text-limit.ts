@@ -1,5 +1,6 @@
 interface ITextLimitAttrs extends ng.IAttributes {
   textLimit: number;
+  visibleLimit: boolean;
 }
 
 interface ITextLimitScope extends ng.IScope {
@@ -26,7 +27,10 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
     link($scope: ITextLimitScope, element: ng.IAugmentedJQuery, attrs: ITextLimitAttrs, ngModel: ng.INgModelController): void {
       const TEXT_VISIBLE_UNTIL: number = 10;
       const ALWAYS_VISIBLE: boolean = $scope.visibleLimit;
-      const display = ALWAYS_VISIBLE ? 'unset' : 'none';
+      let display: string = 'unset';
+      if (attrs.visibleLimit) {
+        display = ALWAYS_VISIBLE ? 'unset' : 'none';
+      }
       const indicator: ng.IAugmentedJQuery = $compile(`<span class='dd__limit__indicator' style="display: ${display};" ng-bind="textLimit"></span>`)($scope);
       let maxLength: number = +attrs.textLimit;
       const $setViewValue = ngModel.$setViewValue;
@@ -54,7 +58,7 @@ export function textLimitDirective($compile, $timeout): ng.IDirective {
         const ieInputEvent: boolean = trigger === 'keydown';
         $setViewValue(value, trigger);
         if (trigger === 'input' || ieInputEvent) {
-          if (!ALWAYS_VISIBLE && getCharactersDiff(value || element.val(), maxLength) > TEXT_VISIBLE_UNTIL) {
+          if (attrs.visibleLimit && !ALWAYS_VISIBLE && getCharactersDiff(value || element.val(), maxLength) > TEXT_VISIBLE_UNTIL) {
             indicator.css('display', 'none');
           } else {
             indicator.css('display', 'unset');
