@@ -16,12 +16,13 @@
     </div>
   </div>
 
-  <div class="subtitle">Input with limit</div>
+  <div class="subtitle">Form input with limit</div>
   <div class="block">
     <div class="dd__input">
-      <input placeholder="East Coast Sales Leads" ng-model="vm.inputText" text-limit="{{vm.maxlen}}" ng-model-options="{ debounce: 2000 }"
+      <input placeholder="East Coast Sales Leads" form-input ng-model="vm.inputText" text-limit="{{vm.maxlen}}" ng-model-options="{ debounce: 2000 }"
         required type="text">
     </div>
+    <div ng-bind="vm.inputText"></div>
   </div>
 
   <div class="subtitle">With Label</div>
