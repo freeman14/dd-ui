@@ -22,6 +22,7 @@
     "angular": "1.5.5",
     "angular-date-range-picker": "github:freeman14/angular-date-range-picker",
     "croppie": "~2.4.1",
+    "flatpickr": "~2.6.1",
     "moment": "~2.15.1",
     "moment-timezone": "~0.5.7",
     "ngclipboard": "~1.1.1",
