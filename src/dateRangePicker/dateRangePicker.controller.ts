@@ -58,7 +58,9 @@ export class DateRangePickerController {
     this.api = {
       close: this.closeCalendar.bind(this)
     };
+  }
 
+  $postLink() {
     this.popover = document.querySelector('.date-range-picker-popover');
     this.popover.addEventListener('click', this.stopEventPropagation, false);
 
